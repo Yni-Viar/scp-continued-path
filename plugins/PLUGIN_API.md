@@ -1,4 +1,4 @@
-# How to create plugin for SCP: Continued Procedures?
+# How to create plugin for SCP: Continued Path?
 ⚠️ Currently, only puppets are supported!
 ## Plugin structure
 Structure of a plugin:
@@ -15,7 +15,7 @@ Structure of a plugin:
 [Where to find that folder?](./README.md)
 
 ## mila.gd
-SCP: Continued Procedures uses [mila.gd](https://codeberg.org/ratrogue/mila.gd) (previously GOMPL or SLang.GD) as scripting language.
+SCP: Continued Path uses [mila.gd](https://codeberg.org/ratrogue/mila.gd) (previously GOMPL or SLang.GD) as scripting language.
 
 SLang.GD syntax
 ```

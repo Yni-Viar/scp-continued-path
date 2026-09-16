@@ -1,10 +1,10 @@
-# SCP: Continued Procedures
+# SCP: Continued Path
 
 Available on [GameJolt](https://gamejolt.com/games/scpcontpr/998566), [itch.io](https://yniviar.itch.io/scp-continued-procedures)
 
 ## About
 
-SCP: Continued Procedures is a 3rd-person singleplayer Research-simulator SCP game.
+SCP: Continued Path is a 3rd-person singleplayer Research-simulator SCP game.
 Enjoy the short story about Janusz Krzystofski, the senior researcher of Site-19...
 Or do your daily job in Casual Mode - you need to study anomalies, such as SCP-067, SCP-812, and others.
 

@@ -60,7 +60,7 @@ func _load_plugins():
 				if is_plugin_valid(plugin_dict):
 					# Compatibility - handle extension change in 10.2.0
 					if int(plugin_dict["api_version"][0]) == 10 && int(plugin_dict["api_version"][1]) == 1 && sub_dir.dir_exists("scripts"):
-						Console.print_info("[Plugin system] Detected scripts, created for SCP: Continued Procedures 10.1.0. Upgrading them to 10.2.0", true)
+						Console.print_info("[Plugin system] Detected scripts, created for SCP: Continued Path 10.1.0. Upgrading them to 10.2.0", true)
 						var scripts_dir: DirAccess = DirAccess.open("user://mods/puppets/custom".path_join(sub_dir_name).path_join("scripts"))
 						for script_file in scripts_dir.get_files():
 							if script_file.ends_with(".gompl"):

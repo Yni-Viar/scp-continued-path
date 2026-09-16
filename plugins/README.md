@@ -1,6 +1,6 @@
 # Plugin System
 
-Plugin system allows to customize SCP: Continued Procedures via code.
+Plugin system allows to customize SCP: Continued Path via code.
 
 You can create either new NPCs, or customize existing ones.
 > You can customize only SCP-131, SCP-173, SCP-650, SCP-737 or SCP-1507

@@ -1,6 +1,10 @@
-# SCP: Continued Procedures
+# SCP: Continued Path
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
+
+## v10.2.5 (2026.09.16)
+
+- \[Feedback\] - Re-branded to SCP: Continued Path
 
 ## v10.2.4 (2026.08.30)
 

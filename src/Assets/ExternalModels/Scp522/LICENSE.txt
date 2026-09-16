@@ -1,4 +1,4 @@
-This model is original (for the SCP: Continued Procedures game), since it was made by Yni Viar,
+This model is original (for the SCP: Continued Path game), since it was made by Yni Viar,
 but the texture is not public domain, so we're putting this into ExternalModels folder.
 
 Filename: scp-522.png

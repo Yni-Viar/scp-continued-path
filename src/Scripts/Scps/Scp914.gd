@@ -4,7 +4,7 @@ extends StaticBody3D
 ## Before SCP: Site Online, and any map generator ports for Godot existed...
 ## I converted Virtual's map generator for Godot in January 2023.
 ## This code was used in Site Online, but eventually, in 2025 it met a new home - 
-## SCP: Continued Procedures.
+## SCP: Continued Path.
 ##
 ## Created by Yni, licensed under dual license: for SCP content - GPL 3, for non-SCP - MIT License
 class_name Scp914
