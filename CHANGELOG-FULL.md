@@ -2,6 +2,10 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
+## v10.2.7
+
+- [x] \[Thirdparty\] Remove beetle bot easter egg, due to change of license.
+
 ## v10.2.6 (2026.09.21)
 
 - Tried to fix missing torso bug and optimized shaders.

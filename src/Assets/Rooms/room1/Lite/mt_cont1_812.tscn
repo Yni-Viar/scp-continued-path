@@ -17,7 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://0hcy8vda587t" path="res://Assets/ExternalModels/pumpkin.tscn" id="18_x37se"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="19_agof4"]
 [ext_resource type="AudioStream" uid="uid://clpkm2wuemv4j" path="res://Sounds/Environment/Scp812/ivolipa__small_waterfall_on_river_mirna.ogg" id="19_p6e27"]
-[ext_resource type="PackedScene" uid="uid://3htvhayjbon0" path="res://Assets/ExternalModels/beetle_bot_fused.tscn" id="20_2ufro"]
 [ext_resource type="PackedScene" uid="uid://c88xvl7f3pq8b" path="res://Assets/OriginalModels/FireExtinguisher.tscn" id="23_3j8ej"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_6571d"]
@@ -303,9 +302,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.471367, 6.722679, -9.427788
 
 [node name="Light2" parent="NavigationRegion3D/Props" unique_id=303028822 instance=ExtResource("13_lfmvw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.471367, 6.722679, -18.003769)
-
-[node name="beetle_bot_fused" parent="NavigationRegion3D/Props" unique_id=914105208 instance=ExtResource("20_2ufro")]
-transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 10.997881, -1.2436188, -21.845125)
 
 [node name="FireExtinguisher" parent="NavigationRegion3D/Props" unique_id=1724110773 instance=ExtResource("23_3j8ej")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -13.853614, -0.64040357, 9.9475)
