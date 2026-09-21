@@ -4,7 +4,7 @@
 // License: CC0
 
 shader_type spatial;
-render_mode blend_mix, depth_draw_opaque, diffuse_burley, specular_schlick_ggx;
+render_mode blend_mix, diffuse_burley, specular_schlick_ggx;
 
 uniform vec3 emission : source_color;
 

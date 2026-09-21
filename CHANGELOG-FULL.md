@@ -2,6 +2,10 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
+## v10.2.6
+
+- Fixed missing torso bug and optimized shaders.
+
 ## v10.2.5 (2026.09.16)
 
 - \[Feedback\] - Re-branded to SCP: Continued Path

@@ -18,7 +18,7 @@ config/name="SCP: Continued Path"
 config/description="Play the game about Janusz Krzystofski...
 Choose your story path!
 Or do your daily job at Site-19."
-config/version="10.2.5"
+config/version="10.2.6"
 config/tags=PackedStringArray("game", "scp_foundation", "singleplayer", "story")
 run/main_scene="uid://b25hrjnoos5me"
 config/use_custom_user_dir=true
