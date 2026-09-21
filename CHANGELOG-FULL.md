@@ -2,9 +2,9 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
-## v10.2.6
+## v10.2.6 (2026.09.21)
 
-- Fixed missing torso bug and optimized shaders.
+- Tried to fix missing torso bug and optimized shaders.
 
 ## v10.2.5 (2026.09.16)
 
