@@ -13,6 +13,36 @@ var trigger: NodePath = ""
 
 # Called when the node enters the scene tree for the first time.
 func on_spawned() -> void:
+	gompl.register_func("spawn_trigger", spawn_trigger)
+	
+	gompl.register_func("get_distance_to_player", get_distance_to_player)
+	gompl.register_func("get_follow", get_follow)
+	gompl.register_func("set_follow", set_follow)
+	gompl.register_func("get_front_facing", get_front_facing)
+	gompl.register_func("get_global_pos", get_global_pos)
+	gompl.register_func("set_global_pos", set_global_pos)
+	gompl.register_func("set_global_posv", set_global_posv)
+	gompl.register_func("get_global_rot", get_global_rot)
+	gompl.register_func("set_global_rot", set_global_rot)
+	gompl.register_func("set_global_rotv", set_global_rotv)
+	gompl.register_func("get_immortal", get_immortal)
+	gompl.register_func("set_immortal", set_immortal)
+	gompl.register_func("get_movement_freeze", get_movement_freeze)
+	gompl.register_func("set_movement_freeze", set_movement_freeze)
+	gompl.register_func("get_player_front_facing", get_player_front_facing)
+	gompl.register_func("get_player_global_pos", get_player_global_position)
+	
+	gompl.register_func("add_item", add_item)
+	gompl.register_func("player_add_item", player_add_item)
+	gompl.register_func("interaction_sound", interaction_sound)
+	gompl.register_func("health_manage", health_manage)
+	gompl.register_func("player_health_manage", player_health_manage)
+	gompl.register_func("remove_item", remove_item)
+	gompl.register_func("player_remove_item", player_remove_item)
+	gompl.register_func("player_get_all_items", player_get_all_items)
+	gompl.register_func("go_to_target", go_to_target)
+	gompl.register_func("player_set_status_effect", player_set_status_effect)
+	gompl.register_func("despawn", despawn)
 	plugin_api_function("start", custom_global_vars)
 
 
@@ -106,24 +136,41 @@ func get_distance_to_player() -> void:
 
 func get_player_front_facing() -> void:
 	if get_tree().root.get_node("Game").protagonist != null:
-		var pos: Vector3 = get_tree().root.get_node("Game").protagonist.global_transform.basis.z
-		custom_global_vars["builtin_player_front_facing"] = [pos.x, pos.y, pos.z]
+		custom_global_vars["builtin_player_front_facing"] = get_tree().root.get_node("Game").protagonist.global_transform.basis.z
 
 func get_front_facing() -> void:
-	var pos: Vector3 = get_parent().get_parent().global_transform.basis.z
-	custom_global_vars["builtin_front_facing"] = [pos.x, pos.y, pos.z]
+	custom_global_vars["builtin_front_facing"] = get_parent().get_parent().global_transform.basis.z
 
 func get_player_global_position() -> void:
 	if get_tree().root.get_node("Game").protagonist != null:
-		var pos: Vector3 = get_tree().root.get_node("Game").protagonist.global_position
-		custom_global_vars["builtin_player_global_pos"] = [pos.x, pos.y, pos.z]
+		custom_global_vars["builtin_player_global_pos"] = get_tree().root.get_node("Game").protagonist.global_position
 
 func get_global_pos() -> void:
-	var pos: Vector3 = get_parent().get_parent().global_position
-	custom_global_vars["builtin_global_pos"] = [pos.x, pos.y, pos.z]
+	custom_global_vars["builtin_global_pos"] = get_parent().get_parent().global_position
 
 func set_global_pos(x: float, y: float, z: float) -> void:
 	get_parent().get_parent().global_position = Vector3(x, y, z)
+
+func set_global_posv(pos: Vector3) -> void:
+	get_parent().get_parent().global_position = pos
+
+func get_global_rot(in_degrees: bool) -> void:
+	if in_degrees:
+		custom_global_vars["builtin_global_rot"] = get_parent().get_parent().global_rotation_degrees
+	else:
+		custom_global_vars["builtin_global_rot"] = get_parent().get_parent().global_rotation
+
+func set_global_rot(in_degrees: bool, x: float, y: float, z: float) -> void:
+	if in_degrees:
+		get_parent().get_parent().global_rotation_degrees = Vector3(x, y, z)
+	else:
+		get_parent().get_parent().global_rotation = Vector3(x, y, z)
+
+func set_global_rotv(in_degrees: bool, rot: Vector3) -> void:
+	if in_degrees:
+		get_parent().get_parent().global_rotation_degrees = rot
+	else:
+		get_parent().get_parent().global_rotation = rot
 
 func get_follow() -> void:
 	custom_global_vars["builtin_follow"] = get_parent().get_parent().follow_target
@@ -197,3 +244,6 @@ func player_set_status_effect(effect: String, strength: float, duration: float):
 			write_line("You cannot set Frozen status effect directly. Please, use player_health_manage(health_to_add: float, 1) for setting this status effect")
 			return
 		get_tree().root.get_node("Game").protagonist.get_node("StatusEffects").apply_status_effect(effect, strength, duration)
+
+func despawn() -> void:
+	get_parent().get_parent().queue_free()

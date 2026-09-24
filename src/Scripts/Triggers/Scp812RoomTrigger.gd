@@ -70,6 +70,10 @@ func _on_scp_812_trigger_body_exited(body: Node3D) -> void:
 						Settings.save_resource(Settings.setting_res)
 				get_tree().root.get_node("Game/FoundationTask").do_task("task_812")
 				flowing = false
+				
+				for deer in get_tree().get_nodes_in_group("Scp2845"):
+					if deer is Scp2845PuppetScript:
+						deer.activate()
 
 func disable_waterfall_sound():
 	$WaterfallSound.stop()

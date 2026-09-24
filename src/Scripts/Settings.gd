@@ -231,7 +231,7 @@ func beta_mode_features():
 	Console.print_info("""Beta features:
 	
 	- RenderingDevice backends for PCs (experimental for Godot 4.7)
-	- NPC AI for Web (not available in vanilla game)
+	- NPC AI for Web (requires custom rebuild)
 	
 	To enable beta features, call in debug console this command:
 	[b]beta_mode_enable feature_beta[/b]
@@ -243,7 +243,7 @@ func replace_npc_models_feature():
 	Requirements
 	---
 	- Your filename should be .GLB file
-	- Only SCP-131, SCP-173, SCP-650 or SCP-1507 is supported.
+	- Only SCP-131, SCP-173, SCP-650, SCP-737 or SCP-1507 is supported.
 	- Your filename should be in this format:
 	   - For SCP-131: `Scp`*number*`_`*your_name*`_`*A or B*`.glb`
 	   - For other SCPs: `Scp`*number*`_`*your_name*`.glb`

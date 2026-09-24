@@ -1,19 +1,21 @@
 [gd_scene format=3 uid="uid://dj75gqru45j7p"]
 
-[ext_resource type="Texture2D" uid="uid://c7yat1lfp8emn" path="res://icon.png" id="1_yhsjk"]
-[ext_resource type="Script" uid="uid://umlvbfw71pqq" path="res://PluginSystem/mila/live.gd" id="2_o8brj"]
+[ext_resource type="Texture2D" uid="uid://b0q6eespf1ptd" path="res://PluginSystem/mila/mila_logo.png" id="1_84xh6"]
+[ext_resource type="Script" uid="uid://umlvbfw71pqq" path="res://PluginSystem/mila/live.gd" id="2_064ba"]
 
 [node name="Live" type="Node2D" unique_id=54324533]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=251321862 node_paths=PackedStringArray("code_editor", "code_compile", "code_error", "maxsteps_edit", "looping_toggle")]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=251321862 node_paths=PackedStringArray("code_editor", "code_compile", "code_error", "maxsteps_edit", "looping_toggle", "info_label")]
 position = Vector2(600, 320)
-texture = ExtResource("1_yhsjk")
-script = ExtResource("2_o8brj")
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_84xh6")
+script = ExtResource("2_064ba")
 code_editor = NodePath("../Code TextEdit")
 code_compile = NodePath("../Compile Button")
 code_error = NodePath("../Error Label")
 maxsteps_edit = NodePath("../MaxSteps TextEdit")
 looping_toggle = NodePath("../Looping Toggle")
+info_label = NodePath("../Info Label")
 
 [node name="Looping Toggle" type="CheckButton" parent="." unique_id=787084891]
 offset_left = 12.0
@@ -27,7 +29,7 @@ text = "Looping"
 offset_left = 12.0
 offset_top = 44.0
 offset_right = 357.0
-offset_bottom = 345.0
+offset_bottom = 344.0
 
 [node name="Compile Button" type="Button" parent="." unique_id=870689426]
 offset_left = 12.0
@@ -41,6 +43,14 @@ offset_left = 15.0
 offset_top = 392.0
 offset_right = 356.0
 offset_bottom = 459.0
+text = "print"
+
+[node name="Info Label" type="Label" parent="." unique_id=1916326960]
+offset_left = 370.0
+offset_top = 45.0
+offset_right = 710.0
+offset_bottom = 236.0
+text = "info"
 
 [node name="MaxSteps TextEdit" type="TextEdit" parent="." unique_id=1690844731]
 anchors_preset = 1

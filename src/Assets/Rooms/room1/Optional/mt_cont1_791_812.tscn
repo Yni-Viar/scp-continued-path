@@ -475,7 +475,7 @@ collision_mask = 3
 transform = Transform3D(1, 0, 2.682209e-07, 0, 1, 0, -2.682209e-07, 0, 1, 0.74224806, 0.641235, 0.88604736)
 shape = SubResource("BoxShape3D_cpv4u")
 
-[node name="Entityspawn3" type="Marker3D" parent="." unique_id=2022422344]
+[node name="Entityspawn3" type="Marker3D" parent="." unique_id=2022422344 groups=["Scp2845Spawn"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.375173, -0.78577095, -16.205708)
 
 [connection signal="body_entered" from="Scp812Trigger" to="." method="_on_scp_812_trigger_body_entered"]

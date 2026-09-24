@@ -17,7 +17,7 @@ Structure of a plugin:
 ## mila.gd
 SCP: Continued Path uses [mila.gd](https://codeberg.org/ratrogue/mila.gd) (previously GOMPL or SLang.GD) as scripting language.
 
-SLang.GD syntax
+mila.gd syntax
 ```
 a = 0 //variable
 
@@ -177,7 +177,9 @@ All files must have extension `.gompl`
 ### Getters-setters
 
 > ⚠️ Due to GOMPL limitation, getters are implemented as global variables, started with `builtin_`,
-> such as `builtin_follow`, `builtin_player_global_pos_x`, etc...
+> such as `builtin_follow`, `builtin_player_global_pos`, etc...
+
+> ℹ️ Since API v10.3.0, Plugin API cannot call native functions for security reasons.
 
 `get_distance_to_player()` Gets distance to player (`builtin_distance_to_player`)
 
@@ -185,11 +187,17 @@ All files must have extension `.gompl`
 
 `set_follow(path: String)` - Sets follow path, which this custom puppet will follow. (For advanced scenarios, use `go_to_target(target_path)`)
 
-`get_front_facing()` - Gets global_transform.basis.z of self (`builtin_front_facing_x/y/z`)
+`get_front_facing()` - Gets global_transform.basis.z of self (`builtin_front_facing`)
 
-`get_global_position()` - Gets position of self as 3 floats (`builtin_global_pos_x/y/z`)
+> In API v10.0.0 3 floats were used for front facing, located as builtin_front_facing_x/y/z
 
-`set_global_position(x: float, y: float, z: float)` - Sets position of self
+`get_global_pos()` - Gets position of self as 3 floats (`builtin_global_pos`)
+
+> In API v10.0.0 3 floats were used for position, located as builtin_global_pos_x/y/z
+
+`set_global_pos(x: float, y: float, z: float)` - Sets position of self
+
+`set_global_pos(pos: Vector3)` - Sets position of self
 
 `get_immortal()` - Gets godmode status (`builtin_immortal`)
 
@@ -199,9 +207,29 @@ All files must have extension `.gompl`
 
 `set_movement_freeze(value: bool)` - Sets movement freeze on self
 
-`get_player_front_facing` - Gets global_transform.basis.z of self (`builtin_player_front_facing_x/y/z`)
+`get_player_front_facing()` - Gets global_transform.basis.z of self (`builtin_player_front_facing`)
+
+> In API v10.0.0 3 floats were used for front facing, located as builtin_player_front_facing_x/y/z
 
 `get_player_global_position()` - Gets protagonists' global position as 3 floats (`builtin_player_global_pos_x/y/z`)
+
+> In API v10.0.0 3 floats were used for position, located as builtin_player_global_pos_x/y/z
+
+`set_global_posv(pos: Vector3)` - Sets global position as Vector3.
+
+> Available only in API v10.3.0 and higher
+
+`get_global_rot(in_degrees: bool)` - Gets rotation of self. Use `get_global_rot(true)` if you want in degrees, or `get_global_rot(true)` - for radians.
+
+> Available only in API v10.3.0 and higher
+
+`set_global_rot(in_degrees: bool, x: float, y: float, z: float)` - Sets rotation (`true` for degrees, `false` for radians) of self by `x`, `y`, and `z`.
+
+> Available only in API v10.3.0 and higher
+
+`set_global_rotv(in_degrees: bool, rot: Vector3)` - Sets rotation (`true` for degrees, `false` for radians) of self by `rot` as Vector3.
+
+> Available only in API v10.3.0 and higher
 
 ### Functions
 
@@ -227,3 +255,6 @@ All files must have extension `.gompl`
 
 `player_set_status_effect(effect: String, strength: float, duration: float)` - Set specific status effect for puppet
 > Available only in API v10.1.0 and higher
+
+`despawn()` - a.k.a queue_free() in Godot - despawns character
+> Available only in API v10.3.0 and higher

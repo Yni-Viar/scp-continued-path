@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ddgqnvvovv5m"]
+
+[ext_resource type="Script" uid="uid://bpv2ww3bohm0p" path="res://PlayerScript/PlayerClassScript/Scp2845PuppetScript.gd" id="1_5jdip"]
+
+[node name="Puppet" type="Node3D" unique_id=1674538391 groups=["Scp2845", "SinglePuppet"]]
+script = ExtResource("1_5jdip")
+single_type_per_group = true
+single_type_group_name = "Scp2845"
+available_puppets = Dictionary[String, int]({
+"res://PlayerScript/PlayerClassPrefab/Variations/Scp2845/Scp2845_OWN.tscn": 0
+})
+armature_name = "Skinned Mesh 4"
+enable_vision_scan = true
+
+[node name="Timer" type="Timer" parent="." unique_id=1990684599]
+wait_time = 90.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

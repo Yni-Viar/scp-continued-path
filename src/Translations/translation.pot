@@ -509,3 +509,6 @@ msgstr ""
 
 msgid "ADVANCED_SKY_INFO"
 msgstr ""
+
+msgid "GAME_END_XK_SCP_2845"
+msgstr ""

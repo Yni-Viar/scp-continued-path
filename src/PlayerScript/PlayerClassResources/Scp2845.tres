@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="PuppetClass" format=3 uid="uid://cl01eax4rhfw1"]
+
+[ext_resource type="PackedScene" uid="uid://ddgqnvvovv5m" path="res://PlayerScript/PlayerClassPrefab/Scp2845.tscn" id="1_bfhqp"]
+[ext_resource type="PackedScene" uid="uid://khgaevi8d33y" path="res://PlayerScript/PlayerClassRagdoll/Scp.tscn" id="2_crh17"]
+[ext_resource type="Script" uid="uid://d08svv1nclb1r" path="res://PlayerScript/PlayerClassResources/PuppetResource.gd" id="3_beav4"]
+
+[resource]
+script = ExtResource("3_beav4")
+puppet_class_name = "SCP-2045"
+speed = 11.0
+prefab = ExtResource("1_bfhqp")
+spawn_point_group = "Scp2845Spawn"
+initial_amount = 1
+interacting_action = 2
+footstep_sounds = {
+"run": PackedStringArray(),
+"walk": PackedStringArray()
+}
+fraction = 4
+apply_height_bugfix = false
+wandering_system = 1
+health = Array[float]([16777216.0])
+enable_avoidance = false
+puppet_navigation_layers = 17
+ragdoll_prefab = ExtResource("2_crh17")
+can_ride = false
+immortal = true

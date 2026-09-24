@@ -59,6 +59,7 @@ More gestures you can see in the in-game settings.
 #### Included SCPs
 | SCP# | Full | Lite/Web version | Functionality |
 |------|------|------------------|---------------|
+|🟢SCP-005|❓, > 6.0.0/7.0.4|✅, > 6.0.0/7.0.4|📃 Task/specific usage only, since there is no locked doors. **Available only in Casual mode!**|
 |🟡SCP-018|✅, > 7.0.0|✅, > 7.0.0|✅ Full|
 |🟡SCP-023|✅, > 3.0.0|✅, > 5.7.0|✅ Full|
 |🟢SCP-067|✅, > 5.2.0|✅, > 5.7.0|✅ Full|
@@ -69,6 +70,7 @@ More gestures you can see in the in-game settings.
 |🟡SCP-162|✅, > 1.0.0|✅, > 5.8.0|✅ Full|
 |🟡SCP-173|✅, > 1.0.0|❓, > 5.7.0|✅ Full, supports custom models|
 |🟡SCP-178|✅, > 5.2.0|❌|✅ Full|
+|🟢SCP-181|✅, > 10.0.0|❌|📃 **Available only in Main Story!!!**|
 |🟡SCP-249|✅, > 6.0.0|✅, > 6.0.0|✅ Full|
 |🟢SCP-261|✅, > 8.0.0|✅, > 8.0.0|✅ Full|
 |🟡SCP-347|✅, > 1.0.0|✅, 5.7.x-5.8.x only, > 9.0.0|❓ Partial|
@@ -88,21 +90,8 @@ More gestures you can see in the in-game settings.
 |🟢SCP-2028|✅, > 8.0.0|✅, > 8.0.0|✅ Full|
 |🟢SCP-2306|✅, > 8.1.0|✅, > 8.1.0|📃 Task only/repairs SCP-5270|
 |🟢SCP-2471\*|✅, > 8.0.0|✅, > 8.0.0|✅ Full|
+|🔵SCP-2845|❓, > 10.3.0|❓, > 10.3.0|❓ Their containment procedures are too bad written - using own fantasy. **Available only in Casual mode!**|
 |🟢SCP-5270|✅, > 8.1.0|✅, > 8.1.0|❓ Implemented only one event out of three|
-
-##### Story mode exclusive SCPs
-> All Stories are not included in Lite/Web versions
-> All of these SCPs will not give an achievement
-
-| SCP# | Supported versions | Story |
-|------|--------------------|-------|
-|🟢SCP-181|✅, > 10.0.0|Main story|
-
-##### Casual mode exclusive SCPs
-
-| SCP# | Full | Lite/Web version | Functionality |
-|------|------|------------------|---------------|
-|🟢SCP-005|❓, > 6.0.0/7.0.4|✅, > 6.0.0/7.0.4|📃 Task/specific usage only, since there is no locked doors|
 
 ##### SCP-261-only SCPs
 > All mentioned SCPs exist in both Lite and Full versions, as SCP-261
@@ -127,10 +116,10 @@ More gestures you can see in the in-game settings.
 🟠 - Euclid/Potentially Keter
 🔴 - Keter
 <!-- 🟣 - Thaumiel -->
-<!-- 🔵 - Esoteric -->
+🔵 - Esoteric
 
 ##### Availability
-✅ - Available in all modes.
+✅ - Available.
 🫙 - Testing needed.
 ❓ - Partial availability.
 ❎ - Available in files, unavailable in gameplay.

@@ -241,6 +241,7 @@ func _initiate_puppet_gltf(gltf_file: String):
 		#prefab = gltf_cache[gltf_file_prefix + ".glb"].instantiate()
 	add_child(prefab)
 	puppet_node = prefab
+	gompl.register_func("write_line", write_line)
 	on_spawned()
 
 func _exit_tree() -> void:

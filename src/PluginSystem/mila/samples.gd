@@ -1,18 +1,19 @@
 extends Node
 
-###
+### methods used by mila.gd - prefixed with "_mila_"
 
-func func_1():
+func _mila_func_1():
 	print("Function call test 1 - called a function without parameters")
 
-func func_2(a, b, c := "optional param"):
+func _mila_func_2(a, b, c := "optional param"):
 	prints("Function call test 2 -", a, b, c)
 	return "return value from func_2"
 
-func func_3() -> Array:
+func _mila_func_3() -> Array:
 	return [ 1, 2, 3 ]
 
-func print(p) -> String:
+func _mila_print(...args) -> String: # variadic functions are allowed too
+	var p := " ".join(args)
 	print("Script prints '", p, "'")
 	return str(p)
 
@@ -26,9 +27,10 @@ func _ready() -> void:
 	
 	# test calling GDScript functions
 	res = m.eval('
-		ifif = 2 + 2 * 3 // keywords can be part of the identifier names
+		print("Variadic functions", "are allowed!", 123)
 		func_1()
 		func_2("foo", ifif)
+		// not allowed due to whitespace: func_1 ()
 	')
 	print("RESULT 1 (external func call): ", res, "\n") # "return value from func_2"
 	assert(res is String and res == "return value from func_2", "Result 1 wrong")
@@ -126,13 +128,13 @@ func _ready() -> void:
 		print("value of X on frame ", i, ": ", state.env["x"], " after ", state["step"], " steps")
 		await get_tree().process_frame
 	print("RESULT 8 (endless loop and interrupt): ", res, "\n")
-	assert((res is int or res is float) and res == 104, "Result 8 wrong")
+	assert((res is int or res is float) and res == 103, "Result 8 wrong")
 	
 	# test calling mila.gd functions
 	res = m.eval('
 		function test()
 			print("inside function test()")
-			if x == 0 then stop // use stop like "return"
+			if x == 0 then exit // use exit like "return" in other langs
 			elif x == 1 then 5
 			else 7 end
 		end
@@ -174,11 +176,12 @@ func _ready() -> void:
 	res = m.eval('
 		d = dictionary("c": 3, "b": 2, "a": 1).set("d": 4).sort()
 		d["e"] = 5
+		d.f = 6 // the same as d["f"] = 6
 		print(d)
-		d.get_or_add("f", 6)
+		d.get_or_add("g", 7)
 	')
 	print("RESULT 12 (dictionary): ", res, "\n")
-	assert((res is int or res is float) and res == 6, "Result 12 wrong")
+	assert((res is int or res is float) and res == 7, "Result 12 wrong")
 	
 	# test iterating
 	res = m.eval('
@@ -197,6 +200,30 @@ func _ready() -> void:
 	')
 	print("RESULT 13 (iterating): ", res, "\n")
 	assert((res is int or res is float) and res == 7, "Result 13 wrong")
+	
+	# test internal variadic functions
+	res = m.eval('
+		function f(x, args...)
+			print(args)
+		end
+		f() // x is undefined and args is an empty array
+		f(1) // x is 1 and args is an empty array
+		f(1, 2) // x is 1 and args is [2] (array with one entry)
+		f(1, 2, 3) // x is 1 and args is [2, 3]
+	')
+	print("RESULT 14 (internal variadic func): ", res, "\n")
+	assert((res is String) and res == "[2, 3]", "Result 14 wrong")
+	
+	# test vector types
+	res = m.eval('
+		v = vector2(2.0)
+		v.y = 5.0
+		print(v)
+		pos = vector3(1, 2, 3)
+		pos * 3.0
+	')
+	print("RESULT 15 (vector types): ", res, "\n")
+	assert(res and res is Vector3 and res == Vector3(3.0, 6.0, 9.0), "Result 15 wrong")
 	
 	# done, results in Output
 	print("done.")

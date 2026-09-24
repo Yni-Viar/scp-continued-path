@@ -22,7 +22,7 @@ enum WanderingSystem {NONE, GENERIC_WANDER, LIMITED_WANDER}
 ## What the second player should do when interacted?
 @export var interacting_action: InteractAction = InteractAction.NONE
 @export var footstep_sounds: Dictionary
-## 0 is human, 1 is hostile SCP, 2 is vision SCP (like 650 and 173), 3 is must-not-look SCP (like 023)
+## 0 is human, 1 is hostile SCP, 2 is vision SCP (like 650 and 173), 3 is must-not-look SCP (like 023), 4 is other classes, such as 2845
 @export var fraction: int
 @export var apply_height_bugfix: bool = true
 @export var wandering_system: WanderingSystem = WanderingSystem.NONE
@@ -56,7 +56,7 @@ enum WanderingSystem {NONE, GENERIC_WANDER, LIMITED_WANDER}
 @export var start_money: Dictionary[String, int]
 ## Enables AI (if it is available and enabled)
 @export var enable_advanced_ai: bool = false
-## Is character immortal or not (currently applies on SCP-181 and SCP-080
+## Is character immortal or not (currently applies on SCP-080, SCP-181 and SCP-2845)
 @export var immortal: bool = false
 ## Applied keycards
 ## Keycard examples:

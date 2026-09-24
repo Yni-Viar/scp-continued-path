@@ -2,9 +2,14 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
-## v10.2.7
-
-- [x] \[Thirdparty\] Remove beetle bot easter egg, due to change of license.
+## v10.3.0 (Day of the Deer God update)
+### New SCP
+- [x] SCP-2845
+### Plugin API
+- [x] Updated Mila to 2026.09.24 revision
+  - [x] Mila now cannot use native functions for security reasons, so alternative functions implemented in the API.
+### Other things
+- [x] \[Thirdparty\] Remove beetle bot easter egg, due to change of that asset license.
 
 ## v10.2.6 (2026.09.21)
 

@@ -438,7 +438,7 @@ stream = ExtResource("19_p6e27")
 volume_db = -20.0
 max_distance = 64.0
 
-[node name="Entityspawn3" type="Marker3D" parent="." unique_id=985707131]
+[node name="Entityspawn3" type="Marker3D" parent="." unique_id=985707131 groups=["Scp2845Spawn"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.556101, -0.78577095, -20.362867)
 
 [connection signal="body_entered" from="Scp812Trigger" to="." method="_on_scp_812_trigger_body_entered"]
