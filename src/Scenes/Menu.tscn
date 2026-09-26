@@ -392,6 +392,13 @@ text = "HELP_TITLE"
 layout_mode = 2
 text = "HELP_TASKS"
 
+[node name="HSeparator" type="HSeparator" parent="Tutorial/ScrollContainer/VBoxContainer" unique_id=1373831140]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="Tutorial/ScrollContainer/VBoxContainer" unique_id=392551997]
+layout_mode = 2
+text = "HELP_EVENTS"
+
 [connection signal="pressed" from="HBoxContainer/StoryMode" to="." method="_on_story_mode_pressed"]
 [connection signal="pressed" from="HBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="HBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]

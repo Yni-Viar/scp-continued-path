@@ -2,14 +2,17 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
-## v10.3.0 (Day of the Deer God update)
+## v10.3.0 (Day of the Deer God update, 2026.09.26)
 ### New SCP
-- [x] SCP-2845
+- SCP-2845
+  - Casual mode only!!!
+  - Appears in 3/32 chance (~9 %) on regular seeds and always, if seed name contains `deergod`.
+  - Can cause Secret ending.
 ### Plugin API
-- [x] Updated Mila to 2026.09.24 revision
-  - [x] Mila now cannot use native functions for security reasons, so alternative functions implemented in the API.
+-  Updated Mila to 2026.09.24 revision
+  - Mila now cannot use native functions for security reasons, so alternative functions implemented in the API.
 ### Other things
-- [x] \[Thirdparty\] Remove beetle bot easter egg, due to change of that asset license.
+- \[Thirdparty\] Remove beetle bot easter egg, due to change of that asset license.
 
 ## v10.2.6 (2026.09.21)
 

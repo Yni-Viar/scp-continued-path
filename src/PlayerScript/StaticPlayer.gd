@@ -316,6 +316,8 @@ func apply_overlay(effect: String, strength: float):
 				$Head/Camera3D/Overlays/TintCompositor.apply_strength("Fatigue", strength)
 			else:
 				$Head/Camera3D/Overlays/TintCompositor.apply_shader("Fatigue", true)
+		"FeyWorld":
+			$Head/Camera3D/Overlays/OverlayCompositor.apply_shader(5)
 		_:
 			printerr("Since v8.0.0, GDShader and Tint compositors replaced legacy shader system.")
 

@@ -12,9 +12,10 @@ var counter: float = 72.0
 
 # Called when the node enters the scene tree for the first time.
 func on_spawned() -> void:
-	if rng.randi_range(0, 32) < 30:
+	if rng.randi_range(0, 32) < 30 && !get_tree().root.get_node("Game").map_seed_name.containsn("deergod"):
 		get_parent().get_parent().queue_free()
 		return
+	get_tree().root.get_node("Game/StaticPlayer").apply_overlay("FeyWorld", 1.0)
 	Console.print_info("THE DEER GOD CAME TO THIS FACILITY!", true)
 	plugin_api_function("start")
 

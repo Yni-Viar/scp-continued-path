@@ -8,7 +8,7 @@ func _init() -> void:
 		prints("Autoload disabled! - Skipping PCK initial loading")
 		return
 	
-	if OS.has_feature("editor") and false:
+	if OS.has_feature("editor"):
 		prints("Running from editor! - Skipping PCK initial loading")
 	else:
 		load_pck_files()

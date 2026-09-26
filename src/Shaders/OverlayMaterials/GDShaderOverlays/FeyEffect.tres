@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="GDShaderCompositorResource" format=3 uid="uid://cv333nm7mhrvm"]
+
+[ext_resource type="Script" uid="uid://cehby8ygncffm" path="res://Scripts/GDShaderCompositor/GDShaderCompositorResource.gd" id="1_4nnu0"]
+
+[resource]
+script = ExtResource("1_4nnu0")
+shader_path = "res://Shaders/OverlayShaders/FeyNoiseShader/feynoise.gdshaderinc"
+shader_callable = "fey_noise(FRAGCOORD)"
+metadata/_custom_type_script = "uid://cehby8ygncffm"

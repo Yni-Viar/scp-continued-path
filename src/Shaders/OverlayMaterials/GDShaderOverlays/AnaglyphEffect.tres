@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="GDShaderCompositorResource" load_steps=2 format=3 uid="uid://bv1sxkdqixblj"]
+[gd_resource type="Resource" script_class="GDShaderCompositorResource" format=3 uid="uid://bv1sxkdqixblj"]
 
 [ext_resource type="Script" uid="uid://cehby8ygncffm" path="res://Scripts/GDShaderCompositor/GDShaderCompositorResource.gd" id="1_dv3ce"]
 

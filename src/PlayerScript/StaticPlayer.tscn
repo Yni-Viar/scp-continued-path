@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://bynn400brwg3m" path="res://PlayerScript/LightDetector.gd" id="7_831vx"]
 [ext_resource type="Resource" uid="uid://bn56ov77o8bk" path="res://Shaders/OverlayMaterials/GDShaderOverlays/NightmareEffect.tres" id="7_qjmps"]
 [ext_resource type="Resource" uid="uid://bv1sxkdqixblj" path="res://Shaders/OverlayMaterials/GDShaderOverlays/AnaglyphEffect.tres" id="8_djicr"]
+[ext_resource type="Resource" uid="uid://cv333nm7mhrvm" path="res://Shaders/OverlayMaterials/GDShaderOverlays/FeyEffect.tres" id="9_6ukt2"]
 [ext_resource type="Script" uid="uid://dbsadkfwhiavt" path="res://Scripts/GDShaderCompositor/TintCompositor.gd" id="9_78fyt"]
 [ext_resource type="Material" uid="uid://cjngsev1fqdgw" path="res://Shaders/OverlayMaterials/TintOverlays/Cold.tres" id="10_ckqrc"]
 [ext_resource type="Material" uid="uid://lg83pkwn3bcv" path="res://Shaders/OverlayMaterials/TintOverlays/Electrocute.tres" id="11_vgbhc"]
@@ -58,7 +59,7 @@ visible = false
 mesh = SubResource("QuadMesh_roo0c")
 skeleton = NodePath("../..")
 script = ExtResource("3_tenen")
-shaders = Array[ExtResource("3_ejqts")]([ExtResource("4_jpt06"), ExtResource("5_6ukt2"), ExtResource("6_n5xyg"), ExtResource("7_qjmps"), ExtResource("8_djicr")])
+shaders = Array[ExtResource("3_ejqts")]([ExtResource("4_jpt06"), ExtResource("5_6ukt2"), ExtResource("6_n5xyg"), ExtResource("7_qjmps"), ExtResource("8_djicr"), ExtResource("9_6ukt2")])
 
 [node name="TintCompositor" type="MeshInstance3D" parent="Head/Camera3D/Overlays" unique_id=137808533]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.035)

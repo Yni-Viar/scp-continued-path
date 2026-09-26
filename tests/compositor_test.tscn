@@ -1,6 +1,6 @@
-[gd_scene load_steps=31 format=3 uid="uid://dhsvdchu20u6c"]
+[gd_scene format=3 uid="uid://dhsvdchu20u6c"]
 
-[ext_resource type="Script" uid="uid://dhle3lg2ao8ho" path="res://tests/compositor_test.gd" id="1_q24ff"]
+[ext_resource type="Script" uid="uid://dhle3lg2ao8ho" path="res://test/compositor_test.gd" id="1_q24ff"]
 [ext_resource type="Shader" uid="uid://nsnd80b70glh" path="res://Shaders/OverlayShader.gdshader" id="2_jvbd8"]
 [ext_resource type="Resource" uid="uid://dt2s3mhkfqu0v" path="res://Shaders/OverlayMaterials/GDShaderOverlays/EdgeDetectEffect.tres" id="3_b6yrj"]
 [ext_resource type="Script" uid="uid://de0g43gpvnypn" path="res://Scripts/GDShaderCompositor/GDShaderCompositor.gd" id="3_copo2"]
@@ -14,6 +14,7 @@
 [ext_resource type="Material" uid="uid://c2768cnm2bxyr" path="res://Shaders/OverlayMaterials/TintOverlays/Scp261Orange.tres" id="6_2gcxs"]
 [ext_resource type="Resource" uid="uid://bn56ov77o8bk" path="res://Shaders/OverlayMaterials/GDShaderOverlays/NightmareEffect.tres" id="6_jf4pq"]
 [ext_resource type="Resource" uid="uid://bv1sxkdqixblj" path="res://Shaders/OverlayMaterials/GDShaderOverlays/AnaglyphEffect.tres" id="7_2y21j"]
+[ext_resource type="Resource" uid="uid://cv333nm7mhrvm" path="res://Shaders/OverlayMaterials/GDShaderOverlays/FeyEffect.tres" id="9_jo2jm"]
 [ext_resource type="Environment" uid="uid://bq77iihnojanc" path="res://Assets/Environment/Outside_LQ.tres" id="16_3ds2n"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_j77eh"]
@@ -62,46 +63,46 @@ size = Vector2(2, 2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_lasx5"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D" type="Node3D" unique_id=85704917]
 script = ExtResource("1_q24ff")
 
-[node name="StaticPlayer" type="Node3D" parent="."]
+[node name="StaticPlayer" type="Node3D" parent="." unique_id=347806676]
 
-[node name="Head" type="Node3D" parent="StaticPlayer"]
+[node name="Head" type="Node3D" parent="StaticPlayer" unique_id=433278485]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0)
 
-[node name="UpperLook" type="Marker3D" parent="StaticPlayer/Head"]
+[node name="UpperLook" type="Marker3D" parent="StaticPlayer/Head" unique_id=760696476]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
 
-[node name="ThirdPerson" type="Marker3D" parent="StaticPlayer/Head"]
+[node name="ThirdPerson" type="Marker3D" parent="StaticPlayer/Head" unique_id=103008457]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.875)
 
-[node name="Camera3D" type="Camera3D" parent="StaticPlayer/Head"]
+[node name="Camera3D" type="Camera3D" parent="StaticPlayer/Head" unique_id=1401244958]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
 cull_mask = 524287
 near = 0.031
 far = 60.0
 
-[node name="Optimizator" type="Area3D" parent="StaticPlayer/Head/Camera3D"]
+[node name="Optimizator" type="Area3D" parent="StaticPlayer/Head/Camera3D" unique_id=1521513608]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -16)
 collision_layer = 11
 collision_mask = 11
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticPlayer/Head/Camera3D/Optimizator"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticPlayer/Head/Camera3D/Optimizator" unique_id=1626795443]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -30, 0)
 shape = SubResource("CapsuleShape3D_j77eh")
 
-[node name="Overlays" type="Node3D" parent="StaticPlayer/Head/Camera3D"]
+[node name="Overlays" type="Node3D" parent="StaticPlayer/Head/Camera3D" unique_id=533589998]
 
-[node name="OverlayCompositor" type="MeshInstance3D" parent="StaticPlayer/Head/Camera3D/Overlays"]
+[node name="OverlayCompositor" type="MeshInstance3D" parent="StaticPlayer/Head/Camera3D/Overlays" unique_id=1863589742]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.04)
 visible = false
 mesh = SubResource("QuadMesh_jpt06")
 skeleton = NodePath("../..")
 script = ExtResource("3_copo2")
-shaders = Array[ExtResource("3_lp1yp")]([ExtResource("3_b6yrj"), ExtResource("4_q24ff"), ExtResource("5_rix3h"), ExtResource("6_jf4pq"), ExtResource("7_2y21j")])
+shaders = Array[ExtResource("3_lp1yp")]([ExtResource("3_b6yrj"), ExtResource("4_q24ff"), ExtResource("5_rix3h"), ExtResource("6_jf4pq"), ExtResource("7_2y21j"), ExtResource("9_jo2jm")])
 
-[node name="TintCompositor2" type="MeshInstance3D" parent="StaticPlayer/Head/Camera3D/Overlays"]
+[node name="TintCompositor2" type="MeshInstance3D" parent="StaticPlayer/Head/Camera3D/Overlays" unique_id=1322805625]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.035)
 visible = false
 mesh = SubResource("QuadMesh_jpt06")
@@ -114,69 +115,69 @@ shaders = Dictionary[String, ShaderMaterial]({
 "Scp261Orange": ExtResource("6_2gcxs")
 })
 
-[node name="SSAOFallbackOverlay2" type="MeshInstance3D" parent="StaticPlayer/Head/Camera3D/Overlays"]
+[node name="SSAOFallbackOverlay2" type="MeshInstance3D" parent="StaticPlayer/Head/Camera3D/Overlays" unique_id=1381530862]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.035)
 visible = false
 mesh = SubResource("QuadMesh_jpt06")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("ShaderMaterial_jf4pq")
 
-[node name="ColdOverlay" type="MeshInstance3D" parent="StaticPlayer/Head/Camera3D/Overlays"]
+[node name="ColdOverlay" type="MeshInstance3D" parent="StaticPlayer/Head/Camera3D/Overlays" unique_id=1528644052]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.04)
 visible = false
 mesh = SubResource("QuadMesh_cfg1l")
 skeleton = NodePath("../..")
 
-[node name="ElectrocuteOverlay" type="MeshInstance3D" parent="StaticPlayer/Head/Camera3D/Overlays"]
+[node name="ElectrocuteOverlay" type="MeshInstance3D" parent="StaticPlayer/Head/Camera3D/Overlays" unique_id=849393924]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.045)
 visible = false
 mesh = SubResource("QuadMesh_otkm4")
 skeleton = NodePath("../..")
 
-[node name="Scp261OrangeOverlay" type="MeshInstance3D" parent="StaticPlayer/Head/Camera3D/Overlays"]
+[node name="Scp261OrangeOverlay" type="MeshInstance3D" parent="StaticPlayer/Head/Camera3D/Overlays" unique_id=1066074616]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.05)
 visible = false
 mesh = SubResource("QuadMesh_6ukt2")
 skeleton = NodePath("../..")
 
-[node name="Scp261KleinBottleOverlay" type="MeshInstance3D" parent="StaticPlayer/Head/Camera3D/Overlays"]
+[node name="Scp261KleinBottleOverlay" type="MeshInstance3D" parent="StaticPlayer/Head/Camera3D/Overlays" unique_id=2096336457]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.055)
 visible = false
 mesh = SubResource("QuadMesh_n5xyg")
 skeleton = NodePath("../..")
 
-[node name="StereoGlassesOverlay" type="MeshInstance3D" parent="StaticPlayer/Head/Camera3D/Overlays"]
+[node name="StereoGlassesOverlay" type="MeshInstance3D" parent="StaticPlayer/Head/Camera3D/Overlays" unique_id=1411228837]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.06)
 visible = false
 mesh = SubResource("QuadMesh_e2rmt")
 skeleton = NodePath("../..")
 
-[node name="NightmareContainedOverlay" type="MeshInstance3D" parent="StaticPlayer/Head/Camera3D/Overlays"]
+[node name="NightmareContainedOverlay" type="MeshInstance3D" parent="StaticPlayer/Head/Camera3D/Overlays" unique_id=1163176362]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.065)
 visible = false
 mesh = SubResource("QuadMesh_ejqts")
 skeleton = NodePath("../ColdOverlay")
 
-[node name="AmnesiaVisionOverlay" type="MeshInstance3D" parent="StaticPlayer/Head/Camera3D/Overlays"]
+[node name="AmnesiaVisionOverlay" type="MeshInstance3D" parent="StaticPlayer/Head/Camera3D/Overlays" unique_id=1060724096]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.07)
 visible = false
 mesh = SubResource("QuadMesh_vgv1g")
 
-[node name="EgdeDetectOverlay" type="MeshInstance3D" parent="StaticPlayer/Head/Camera3D/Overlays"]
+[node name="EgdeDetectOverlay" type="MeshInstance3D" parent="StaticPlayer/Head/Camera3D/Overlays" unique_id=1628006407]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.075)
 visible = false
 mesh = SubResource("QuadMesh_og4yi")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticPlayer"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticPlayer" unique_id=525652968]
 transform = Transform3D(1.3410183, -1.6560822, 0.9330128, 0.3593248, 6.1805825, 0.25000003, -5.1812963, 0, 0.25881907, 0, 7.9356337, 7.7686405)
 mesh = SubResource("BoxMesh_lasx5")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticPlayer"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticPlayer" unique_id=823989466]
 transform = Transform3D(1.3410186, 4.3421173, 0.6906501, 0.3593248, 4.4756308, -0.7115164, -5.181297, 1.4342092, 0.12940957, 0, 7.9356337, 7.7686405)
 mesh = SubResource("BoxMesh_lasx5")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=1192508768]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -184,13 +185,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="Control"]
+[node name="Button" type="Button" parent="Control" unique_id=1157739276]
 layout_mode = 0
 offset_right = 267.0
 offset_bottom = 72.0
 text = "Add random GDShader to compositor"
 
-[node name="Button2" type="Button" parent="Control"]
+[node name="Button2" type="Button" parent="Control" unique_id=1601151581]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -200,7 +201,7 @@ offset_bottom = 72.0
 grow_horizontal = 0
 text = "Remove random GDShader from compositor"
 
-[node name="Button3" type="Button" parent="Control"]
+[node name="Button3" type="Button" parent="Control" unique_id=218618490]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -210,7 +211,7 @@ offset_right = 295.0
 grow_vertical = 0
 text = "Add random tint shader"
 
-[node name="Button4" type="Button" parent="Control"]
+[node name="Button4" type="Button" parent="Control" unique_id=1299124172]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -223,7 +224,7 @@ grow_horizontal = 0
 grow_vertical = 0
 text = "Remove random tint shader"
 
-[node name="Button5" type="Button" parent="Control"]
+[node name="Button5" type="Button" parent="Control" unique_id=1516997647]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -237,10 +238,10 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Random cold tint"
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=722295792]
 environment = ExtResource("16_3ds2n")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1827311544]
 transform = Transform3D(1, 0, 0, 0, 0.46139252, 0.8871961, 0, -0.8871961, 0.46139252, 0, 0, 0)
 
 [connection signal="body_entered" from="StaticPlayer/Head/Camera3D/Optimizator" to="StaticPlayer" method="_on_optimizator_body_entered"]
