@@ -64,7 +64,7 @@ msgid "STORY_MODE"
 msgstr "История"
 
 msgid "HELP_BUTTON"
-msgstr "Подсказки для свободной игры."
+msgstr "Подсказки для свободной игры"
 
 msgid "GAME_SETTINGS_INFO"
 msgstr "Эти настройки работают только в \"свободной игре\"."

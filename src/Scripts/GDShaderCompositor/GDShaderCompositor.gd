@@ -15,8 +15,8 @@ func _ready() -> void:
 ## Constructs full shader from `shaders` variable
 ## index is which shader snippets will be used, and remove - removes if true
 func apply_shader(index: int, remove: bool = false) -> bool:
-	if OS.get_name() == "Web":
-		return false
+	#if OS.get_name() == "Web":
+		#return false
 	if index < 0 || index >= shaders.size() || (used_shaders.has(index) && !remove) || \
 	 (!used_shaders.has(index) && remove):
 		return false

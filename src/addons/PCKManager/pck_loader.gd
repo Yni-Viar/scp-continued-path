@@ -10,6 +10,8 @@ func _init() -> void:
 	
 	if OS.has_feature("editor"):
 		prints("Running from editor! - Skipping PCK initial loading")
+	elif OS.get_name() == "Web":
+		prints("Running from Web! - Skipping PCK initial loading")
 	else:
 		load_pck_files()
 

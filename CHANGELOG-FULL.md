@@ -12,6 +12,8 @@ This list contains all features, added in the game, or will be added in upcoming
 -  Updated Mila to 2026.09.24 revision
   - Mila now cannot use native functions for security reasons, so alternative functions implemented in the API.
 ### Other things
+- Disabled PCKLoader on the Web due to security reasons.
+- Enabled GDShaderCompositor for Web version.
 - \[Thirdparty\] Remove beetle bot easter egg, due to change of that asset license.
 
 ## v10.2.6 (2026.09.21)

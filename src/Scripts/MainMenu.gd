@@ -64,6 +64,7 @@ func _enter_tree() -> void:
 	if completed_amount == total_amount:
 		$AchievementContainer/Achievements/Info2.text = "PROGRESS_SCP_STUDY_2"
 		$AchievementContainer/Achievements/ScrollContainer.hide()
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -88,26 +89,6 @@ func play():
 
 func _on_help_button_pressed() -> void:
 	$Tutorial.show()
-
-
-func _on_zen_mode_toggled(toggled_on: bool) -> void:
-	$GameSettingsContainer/GameSettings/TimeLimited.disabled = toggled_on
-	if toggled_on:
-		$GameSettingsContainer/GameSettings/TimeLimited.button_pressed = false
-	Settings.setting_res.zen_mode = toggled_on
-	Settings.save_resource(Settings.setting_res)
-
-
-func _on_enable_sound_toggled(toggled_on: bool) -> void:
-	if toggled_on:
-		Settings.setting_res.music_volume = 1.0
-		$EnableSound.texture_normal = load("res://UI/MainMenu/MusicEnabled.png")
-		
-	else:
-		Settings.setting_res.music_volume = 0.0
-		$EnableSound.texture_normal = load("res://UI/MainMenu/MusicDisabled.png")
-	Settings.audio_settings(1, Settings.setting_res.music_volume)
-	Settings.save_resource(Settings.setting_res)
 
 
 func _on_story_mode_pressed() -> void:

@@ -100,12 +100,13 @@ func add_command_autocomplete_list(command_name : String, param_list : PackedStr
 
 
 func _enter_tree() -> void:
-	var console_history_file := FileAccess.open("user://console_history.txt", FileAccess.READ)
-	if (console_history_file):
-		while (!console_history_file.eof_reached()):
-			var line := console_history_file.get_line()
-			if (line.length()):
-				add_input_history(line)
+	if OS.get_name() != "Web":
+		var console_history_file := FileAccess.open("user://console_history.txt", FileAccess.READ)
+		if (console_history_file):
+			while (!console_history_file.eof_reached()):
+				var line := console_history_file.get_line()
+				if (line.length()):
+					add_input_history(line)
 
 	if ProjectSettings.has_setting(CONSOLE_THEME):
 		theme = load(ProjectSettings.get_setting(CONSOLE_THEME))
@@ -196,14 +197,15 @@ func _set_font_size(value: int) -> void:
 
 
 func _exit_tree() -> void:
-	var console_history_file := FileAccess.open("user://console_history.txt", FileAccess.WRITE)
-	if (console_history_file):
-		var write_index := 0
-		var start_write_index := console_history.size() - 100 # Max lines to write
-		for line in console_history:
-			if (write_index >= start_write_index):
-				console_history_file.store_line(line)
-			write_index += 1
+	if OS.get_name() != "Web":
+		var console_history_file := FileAccess.open("user://console_history.txt", FileAccess.WRITE)
+		if (console_history_file):
+			var write_index := 0
+			var start_write_index := console_history.size() - 100 # Max lines to write
+			for line in console_history:
+				if (write_index >= start_write_index):
+					console_history_file.store_line(line)
+				write_index += 1
 
 
 func _ready() -> void:
@@ -516,7 +518,8 @@ func clear() -> void:
 func delete_history() -> void:
 	console_history.clear()
 	console_history_index = 0
-	DirAccess.remove_absolute("user://console_history.txt")
+	if OS.get_name() != "Web":
+		DirAccess.remove_absolute("user://console_history.txt")
 
 
 func help() -> void:

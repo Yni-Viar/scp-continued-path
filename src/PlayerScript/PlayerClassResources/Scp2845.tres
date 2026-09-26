@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("3_beav4")
-puppet_class_name = "SCP-2045"
+puppet_class_name = "SCP-2845"
 speed = 11.0
 prefab = ExtResource("1_bfhqp")
 spawn_point_group = "Scp2845Spawn"

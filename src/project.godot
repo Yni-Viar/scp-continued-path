@@ -34,10 +34,10 @@ buses/default_bus_layout="uid://b5q6nyv2tmgde"
 
 [autoload]
 
+PCKLoader="*uid://bj5aexif6bhwh"
 ResourceStorage="*res://Scripts/ResourceStorage.gd"
 Console="*res://addons/console/console.gd"
 Settings="*res://Scripts/Settings.gd"
-PCKLoader="*uid://bj5aexif6bhwh"
 
 [dialogic]
 
