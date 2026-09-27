@@ -64,7 +64,6 @@ enum Renderer {OPENGL, RD_MOBILE, RD_FORWARD_PLUS}
 	"SCP-1507": false,
 	"SCP-2028": false,
 	"SCP-2306": false,
-	"SCP-2845": false,
 	"SCP-5270": false
 }
 

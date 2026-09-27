@@ -40,7 +40,7 @@ More gestures you can see in the in-game settings.
 
    > Web version is **experimental**!!!
 
-   > Instance, hosted on GameJolt, supports only PCs, due to the game size.
+   > Instance, hosted on GameJolt or itch.io, supports only PCs, due to the game size.
 
 - 🖥️ Hardware requirements
    - OpenGL 3.3/ES 3.0 minimum, Vulkan support recommended
@@ -90,7 +90,7 @@ More gestures you can see in the in-game settings.
 |🟢SCP-2028|✅, > 8.0.0|✅, > 8.0.0|✅ Full|
 |🟢SCP-2306|✅, > 8.1.0|✅, > 8.1.0|📃 Task only/repairs SCP-5270|
 |🟢SCP-2471\*|✅, > 8.0.0|✅, > 8.0.0|✅ Full|
-|🔵SCP-2845|❓, > 10.3.0|❓, > 10.3.0|❓ Their containment procedures are too bad written - using own fantasy. **Available only in Casual mode!**|
+|🔵SCP-2845\*|❓, > 10.3.0|❓, > 10.3.0|❓ Their containment procedures are too bad written - using own fantasy. **Available only in Casual mode!**|
 |🟢SCP-5270|✅, > 8.1.0|✅, > 8.1.0|❓ Implemented only one event out of three|
 
 ##### SCP-261-only SCPs

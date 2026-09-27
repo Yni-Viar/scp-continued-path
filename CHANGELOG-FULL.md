@@ -2,6 +2,10 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
+## v10.3.1 (2026.09.27)
+
+- Removed leftover from SCP-2845 achievement.
+
 ## v10.3.0 (Day of the Deer God update, 2026.09.26)
 ### New SCP
 - SCP-2845
