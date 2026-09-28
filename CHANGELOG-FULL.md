@@ -2,6 +2,10 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
+## v10.3.2 (2026.09.29)
+
+- Removed all remaining references to previous branding (I hope so).
+
 ## v10.3.1 (2026.09.27)
 
 - Removed leftover from SCP-2845 achievement.

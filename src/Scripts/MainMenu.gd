@@ -131,7 +131,7 @@ func _on_story_list_item_clicked(index: int, at_position: Vector2, mouse_button_
 
 
 func _on_contribute_pressed() -> void:
-	OS.shell_open("https://github.com/Yni-Viar/scp-continued-procedures")
+	OS.shell_open("https://github.com/Yni-Viar/scp-continued-path")
 
 
 func _on_exit_pressed() -> void:

@@ -35,7 +35,7 @@
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="32_41gyj"]
 [ext_resource type="Theme" uid="uid://wed0ey45xt0t" path="res://UITheme_Elevator.tres" id="33_knspt"]
 [ext_resource type="Script" uid="uid://d2p44uvd2dsa1" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="34_6pkpv"]
-[ext_resource type="Theme" uid="uid://cuupxvj8ennh0" path="res://addons/dialogue_nodes/themes/scp_continued_procedures.theme" id="34_dlr68"]
+[ext_resource type="Theme" uid="uid://cuupxvj8ennh0" path="res://addons/dialogue_nodes/themes/scp_continued_path.theme" id="34_dlr68"]
 [ext_resource type="Script" uid="uid://bl4lm22dt54uc" path="res://Stories/MainStory/Scripts/S_DialoguePanel.gd" id="34_u0ibu"]
 [ext_resource type="Script" uid="uid://b433w3r1hhutv" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="35_dlr68"]
 [ext_resource type="Script" uid="uid://dvil74f7w4m8p" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="36_u0ibu"]

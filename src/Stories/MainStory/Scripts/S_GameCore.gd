@@ -139,13 +139,13 @@ func spawn_player():
 	   ($StoryModeNode.save_data["quest_progress"] < 9 && $StoryModeNode.save_data["scp_347_sh"]):
 		Console.print_info("""If you found this message, you either modified save of the game,
 or you encountered a bug,
-that should be reported on https://github.com/Yni-Viar/scp-continued-procedures""", true)
+that should be reported on https://github.com/Yni-Viar/scp-continued-path""", true)
 		protagonist.global_position = $PD_basement/spawnpoint.global_position
 	elif $StoryModeNode.save_data["location"].is_equal_approx(Vector3.ZERO) && $StoryModeNode.save_data["quest_progress"] == 0:
 		var spawns = get_tree().get_nodes_in_group("StoryStart")
 		if spawns.size() == 0:
 			Console.print_error("""Encountered broken seed - scientist lounge was not spawned. Using workarounds...
-Please, report bug to the developer on https://github.com/Yni-Viar/scp-continued-procedures.
+Please, report bug to the developer on https://github.com/Yni-Viar/scp-continued-path .
 Seed name: """ + map_seed_name, true)
 			spawns = get_tree().get_nodes_in_group("PlayerSpawn")
 		var selected_spawn: Marker3D = spawns[rng.randi_range(0, spawns.size() - 1)]
