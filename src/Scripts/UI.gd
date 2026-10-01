@@ -23,15 +23,15 @@ func _ready():
 func _physics_process(delta):
 	$CurrentTime.text = str(get_parent().hours).lpad(2, "0") + ":" + str(get_parent().minutes).lpad(2, "0")
 	#$CurrentTime.modulate = Color(lerp(0.0, 1.0, get_parent().hours), lerp(1.0, 0.0, get_parent().hours), 0.0)
-	#for task_label in task_with_timer_labels:
-		#if task_with_timer_labels[task_label].time_left < 5.0:
-			#task_label.modulate = Color(1.0, 0.75, 0.0)
-		#elif task_with_timer_labels[task_label].time_left < 2.0:
-			#task_label.modulate = Color(1.0, 0.5, 0.0)
-		#elif task_with_timer_labels[task_label].time_left < 1.0:
-			#task_label.modulate = Color(1.0, 0.0, 0.0)
-		#else:
-			#task_label.modulate = Color(1.0, 1.0, 0.0)
+	for task_label in task_with_timer_labels:
+		if task_with_timer_labels[task_label].time_left < 10.0:
+			task_label.modulate = Color(1.0, 0.0, 0.0)
+		elif task_with_timer_labels[task_label].time_left < 30.0:
+			task_label.modulate = Color(1.0, 0.5, 0.0)
+		elif task_with_timer_labels[task_label].time_left < 60.0:
+			task_label.modulate = Color(1.0, 0.75, 0.0)
+		else:
+			task_label.modulate = Color(1.0, 1.0, 0.0)
 	pass
 
 func _input(event: InputEvent) -> void:
@@ -78,10 +78,10 @@ func _on_foundation_task_task_done() -> void:
 	for task in get_parent().get_node("FoundationTask").all_tasks.keys():
 		var label: Label = Label.new()
 		label.add_theme_font_size_override("font_size", 20)
-		label.text = task.public_name
+		label.text = get_parent().get_node("FoundationTask").all_tasks[task].game_task_resource.public_name
 		$Tasks.add_child(label)
-		if !get_parent().get_node("FoundationTask").all_tasks[task].is_empty():
-			var timer: Timer = get_node_or_null(get_parent().get_node("FoundationTask").all_tasks[task])
+		if !get_parent().get_node("FoundationTask").all_tasks[task].timer_path.is_empty():
+			var timer: Timer = get_node_or_null(get_parent().get_node("FoundationTask").all_tasks[task].timer_path)
 			if timer != null:
 				task_with_timer_labels[label] = timer
 		$Tasks.add_child(HSeparator.new())

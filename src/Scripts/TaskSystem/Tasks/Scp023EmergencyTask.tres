@@ -6,4 +6,6 @@
 script = ExtResource("1_brwyd")
 internal_name = "task_023_emergency"
 public_name = "TASK_023_EYES"
+time_to_complete = 120.0
+resulting_event = 2
 metadata/_custom_type_script = "uid://2412583x8gql"

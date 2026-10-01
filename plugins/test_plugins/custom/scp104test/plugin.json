@@ -3,7 +3,7 @@
 	"author": "Yni Viar",
 	"year": 2026,
 	"license": "CC-BY-SA 3.0 (assets), GPLv3 or MIT license (code)",
-	"api_version": [10, 2, 0],
+	"api_version": [10, 4, 0],
 	"plugin_type": "puppet",
 	"gltf": {
 		"gltf_file_prefix": "scp104",
@@ -36,5 +36,10 @@
 		"enable_advanced_ai": false,
 		"immortal": true,
 		"keycards": []
+	},
+	"animations": {
+		"enabled": false,
+		"animation_target_names": {
+		}
 	}
 }

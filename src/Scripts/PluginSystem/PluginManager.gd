@@ -39,7 +39,7 @@ const VALIDATION_PUPPET_PLUGIN_10_4: Dictionary = {
 	}
 }
 
-const MINIMUM_VALIDATED_VERSION: Array[int] = [10, 1, 0]
+const MINIMUM_VALIDATED_VERSION: Array[int] = [10, 3, 0]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -65,14 +65,25 @@ func _load_plugins():
 				var plugin_dict: Dictionary = JSON.parse_string(file_content)
 				#If plugin is valid plugin
 				if is_plugin_valid(plugin_dict):
-					# Compatibility - handle extension change in 10.2.0
+					# Compatibility - handle extension change in 10.2.0 + upgrade to 10.3.0 - the last API version without breaking changes
+					# After another compatibility change in later versions, upgrading code will be removed.
 					if int(plugin_dict["api_version"][0]) == 10 && int(plugin_dict["api_version"][1]) == 1 && sub_dir.dir_exists("scripts"):
-						Console.print_info("[Plugin system] Detected scripts, created for SCP: Continued Path 10.1.0. Upgrading them to 10.2.0", true)
+						Console.print_info("[Plugin system] Detected scripts, created for SCP: Continued Path 10.1.0. Upgrading them to 10.3.0", true)
+						Console.print_warning("[Plugin system] [Deprecation] Plugins, created in API 10.1-10.2 are not officially supported and may require manual update.")
+						Console.print_warning("[Plugin system] [Deprecation] This converter may be removed (as well, as support for older .gompl script files) in the future versions.")
 						var scripts_dir: DirAccess = DirAccess.open("user://mods/puppets/custom".path_join(sub_dir_name).path_join("scripts"))
 						for script_file in scripts_dir.get_files():
 							if script_file.ends_with(".gompl"):
 								scripts_dir.rename(script_file, script_file.get_basename() + ".script")
-						plugin_dict["api_version"] = [10, 2, 0]
+						plugin_dict["api_version"] = [10, 3, 0]
+						file.resize(0)
+						file.store_line(JSON.stringify(plugin_dict))
+					if int(plugin_dict["api_version"][0]) == 10 && int(plugin_dict["api_version"][1]) == 3 && sub_dir.dir_exists("scripts"):
+						Console.print_info("[Plugin system] Detected plugin, created for SCP: Continued Path 10.3.0. Upgrading it to 10.4.0", true)
+						plugin_dict["animations"] = {
+							"enabled": false,
+							"animation_target_names": {}
+						}
 						file.resize(0)
 						file.store_line(JSON.stringify(plugin_dict))
 					#Currently, the only option

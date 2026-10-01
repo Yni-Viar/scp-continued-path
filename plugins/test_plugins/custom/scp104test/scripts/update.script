@@ -4,6 +4,6 @@ if builtin_follow != "" then
     if builtin_distance_to_player > 9.0 then
         get_player_front_facing()
         get_player_global_pos()
-        set_global_pos(builtin_player_global_pos[0] + builtin_player_front_facing[0] * 2, builtin_player_global_pos[1] + builtin_player_front_facing[1] * 2, builtin_player_global_pos[2] + builtin_player_front_facing[2] * 2)
+        set_global_posv(builtin_player_global_pos + builtin_player_front_facing * 2)
     end
 end

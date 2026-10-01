@@ -160,6 +160,7 @@ Godot 4.4 is no longer supported anymore since 6.0 - Cleanlight update.
 1. Project->Export
 2. Choose your platform (e.g. Windows/Linux/Android)
 3. Navigate to Resource tab and type in "Filter to exclude files/folders": `*.glb, *.gltf, Assets/*.bin, */Lite/*`. You may also want to add `, *.ico` to that filter, if you are not building for Windows.
+4. (Optional) You can also navigate to Resource tab and type in "Filters to export non-resource files/folders": `*.zip` - used by Hikkan easter egg.
 
 
 ### Feature flags
@@ -170,9 +171,10 @@ There are no SCP-080, SCP-178 (item exists, but has no effect), *SCP: Unity* SCP
 2. Choose your platform (e.g. Web)
 3. Navigate to Resource tab and type in "Filter to exclude files/folders": `*.glb, *.gltf, Assets/*.bin, */Optional/*, res://Stories/*`. You may also want to add `, *.ico` to that filter, if you are not building for Windows.
 4. Navigate to Features tab and type in "Custom (comma separated)": `Lite`
+5. (Optional) You can also navigate to Resource tab and type in "Filters to export non-resource files/folders": `*.zip` - used by Hikkan easter egg.
 
 ## Why this name?
-- It is a recursive acronym - **S**CP: **C**ontinued **P**rocedures
+- It is a recursive acronym - **S**CP: **C**ontinued **P**ath
 
 ## License:
 The game is based on SCP Foundation community.

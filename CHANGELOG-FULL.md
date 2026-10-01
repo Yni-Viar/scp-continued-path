@@ -2,10 +2,16 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
-## v10.4.0
+## v10.4.0 (Day of the Deer God part 2)
 ### Plugin API
 - Custom plugins can be animated now! \(through a workaround\)
 - Reworked Hikkan easter egg, using Plugin API. Find it!
+- Bumped minimum supported plugin API version to 10.3.0
+- Created 10.3 -> 10.4 upgrade scripts
+
+### Refactors
+- Refactored SCP-023 and Task Manager scripts.
+
 ### Misc fixes
 - SCP-131, SCP-737, SCP-1507 and SCP-2845 get their own festive suits - to be prepared to Spooky (and later Festive) Month.
 - Fixed guard's brow.

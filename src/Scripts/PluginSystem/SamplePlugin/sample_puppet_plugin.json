@@ -3,7 +3,7 @@
 	"author": "Yni Viar",
 	"year": 2026,
 	"license": "CC-BY 4.0",
-	"api_version": [10, 1, 0],
+	"api_version": [10, 4, 0],
 	"plugin_type": "puppet",
 	"gltf": {
 		"gltf_file_prefix": "Sample",
@@ -36,5 +36,12 @@
 		"enable_advanced_ai": false,
 		"immortal": false,
 		"keycards": []
+	}, 
+	"animations": {
+		"enabled": false,
+		"animation_target_names": {
+			"idle": "Idle_Loop RT",
+			"walking": "Walk_Loop RT"
+		}
 	}
 }
