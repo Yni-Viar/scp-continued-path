@@ -7,9 +7,15 @@ class_name CustomPuppetScript
 enum TriggerShape {SPHERE = 0, BOX = 1, CAPSULE = 2, CYLINDER = 3}
 
 @export var custom_global_vars: Dictionary[String, Variant] = {}
+## Enables animations for this node
+@export var enable_animations: bool = true
+## Animation names
+@export var animation_target_names: Dictionary = {}
 
 ## Trigger path. If trigger does not exist, there is empty string
 var trigger: NodePath = ""
+
+var animation_player: AnimationPlayer
 
 # Called when the node enters the scene tree for the first time.
 func on_spawned() -> void:
@@ -17,37 +23,64 @@ func on_spawned() -> void:
 	
 	gompl.register_func("get_distance_to_player", get_distance_to_player)
 	gompl.register_func("get_follow", get_follow)
-	gompl.register_func("set_follow", set_follow)
+	gompl.register_func("set_follow", set_follow, [TYPE_STRING])
 	gompl.register_func("get_front_facing", get_front_facing)
 	gompl.register_func("get_global_pos", get_global_pos)
-	gompl.register_func("set_global_pos", set_global_pos)
-	gompl.register_func("set_global_posv", set_global_posv)
-	gompl.register_func("get_global_rot", get_global_rot)
-	gompl.register_func("set_global_rot", set_global_rot)
-	gompl.register_func("set_global_rotv", set_global_rotv)
+	gompl.register_func("set_global_pos", set_global_pos, [TYPE_FLOAT, TYPE_FLOAT, TYPE_FLOAT])
+	gompl.register_func("set_global_posv", set_global_posv, [TYPE_VECTOR3])
+	gompl.register_func("get_global_rot", get_global_rot, [TYPE_BOOL])
+	gompl.register_func("set_global_rot", set_global_rot, [TYPE_BOOL, TYPE_FLOAT, TYPE_FLOAT, TYPE_FLOAT])
+	gompl.register_func("set_global_rotv", set_global_rotv, [TYPE_BOOL, TYPE_VECTOR3])
 	gompl.register_func("get_immortal", get_immortal)
-	gompl.register_func("set_immortal", set_immortal)
+	gompl.register_func("set_immortal", set_immortal, [TYPE_BOOL])
 	gompl.register_func("get_movement_freeze", get_movement_freeze)
-	gompl.register_func("set_movement_freeze", set_movement_freeze)
+	gompl.register_func("set_movement_freeze", set_movement_freeze, [TYPE_BOOL])
 	gompl.register_func("get_player_front_facing", get_player_front_facing)
+	gompl.register_func("get_player_global_position", get_player_global_position)
 	gompl.register_func("get_player_global_pos", get_player_global_position)
+	gompl.register_func("player_get_path", player_get_path)
+	gompl.register_func("get_pth", get_pth)
 	
-	gompl.register_func("add_item", add_item)
-	gompl.register_func("player_add_item", player_add_item)
-	gompl.register_func("interaction_sound", interaction_sound)
-	gompl.register_func("health_manage", health_manage)
-	gompl.register_func("player_health_manage", player_health_manage)
-	gompl.register_func("remove_item", remove_item)
-	gompl.register_func("player_remove_item", player_remove_item)
+	gompl.register_func("add_item", add_item, [TYPE_INT])
+	gompl.register_func("player_add_item", player_add_item, [TYPE_INT])
+	gompl.register_func("interaction_sound", interaction_sound, [TYPE_STRING])
+	gompl.register_func("health_manage", health_manage, [TYPE_FLOAT, TYPE_INT, TYPE_STRING],)
+	gompl.register_func("player_health_manage", player_health_manage, [TYPE_FLOAT, TYPE_INT, TYPE_STRING])
+	gompl.register_func("remove_item", remove_item, [TYPE_INT, TYPE_BOOL])
+	gompl.register_func("player_remove_item", player_remove_item, [TYPE_INT, TYPE_BOOL])
 	gompl.register_func("player_get_all_items", player_get_all_items)
-	gompl.register_func("go_to_target", go_to_target)
-	gompl.register_func("player_set_status_effect", player_set_status_effect)
+	gompl.register_func("go_to_target", go_to_target, [TYPE_STRING])
+	gompl.register_func("player_set_status_effect", player_set_status_effect, [TYPE_STRING, TYPE_FLOAT, TYPE_FLOAT])
 	gompl.register_func("despawn", despawn)
+	
+	if enable_animations:
+		var anim_players: Array[Node] = find_children("", "AnimationPlayer", true, false)
+		if anim_players.size() > 0:
+			animation_player = anim_players[0]
+		else:
+			enable_animations = false
+	
 	plugin_api_function("start", custom_global_vars)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
+	if enable_animations:
+		if state == States.IDLE && animation_target_names.has("idle"):
+			set_state(animation_target_names["idle"], true)
+		elif state == States.WALKING && animation_target_names.has("walking"):
+			set_state(animation_target_names["walking"], 3.0, true)
+		elif state == States.RUNNING && animation_target_names.has("running"):
+			set_state(animation_target_names["running"], 3.0, true)
+		elif state == States.SPECIAL1 && animation_target_names.has("special1"):
+			set_state(animation_target_names["special1"])
+		elif state == States.SPECIAL2 && animation_target_names.has("special2"):
+			set_state(animation_target_names["special2"])
+		elif state == States.SPECIAL3 && animation_target_names.has("special3"):
+			set_state(animation_target_names["special3"])
+		elif state == States.SPECIAL4 && animation_target_names.has("special4"):
+			set_state(animation_target_names["special4"])
+	
 	plugin_api_function("update", custom_global_vars)
 
 func action_1() -> void:
@@ -61,6 +94,11 @@ func action_3() -> void:
 
 func action_4() -> void:
 	plugin_api_function("custom_action_4", custom_global_vars)
+
+func set_state(anim: String, speed: float = 1.0, loop: bool = false):
+	if enable_animations && animation_player != null:
+		if animation_player.current_animation != anim || (!animation_player.is_playing() && loop):
+			animation_player.play(anim, -1, speed)
 
 ## Creates trigger, if it does not exist
 func spawn_trigger(shape: TriggerShape, size: float, collider_rotation_x: float = 0, collider_rotation_y: float = 0, collider_rotation_z: float = 0, position_from_center_x: float = 0, position_from_center_y: float = 0, position_from_center_z: float = 0, height: float = 1.0) -> void:
@@ -247,3 +285,9 @@ func player_set_status_effect(effect: String, strength: float, duration: float):
 
 func despawn() -> void:
 	get_parent().get_parent().queue_free()
+
+func player_get_path() -> void:
+	custom_global_vars["builtin_player_path"] = str(get_tree().root.get_node("Game").protagonist.get_path())
+
+func get_pth() -> void:
+	custom_global_vars["builtin_path"] = str(get_path())

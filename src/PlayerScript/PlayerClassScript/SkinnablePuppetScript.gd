@@ -93,9 +93,11 @@ func on_start() -> void:
 				if suffix_exists && !file.get_slice(".", 0).ends_with(gltf_file_suffix):
 					continue
 				
+				var complete_file: String = file_search.path_join(file)
+				
 				# Load GLTF
-				gltf_cache[file] = Settings.load_gltf(file_search.path_join(file))
-				if gltf_cache[file] == null:
+				gltf_cache[complete_file] = Settings.load_gltf(complete_file)
+				if gltf_cache[complete_file] == null:
 					continue
 				# If has animation - check if all required animations exists,
 				# else - remove this GLTF from loading
@@ -108,7 +110,7 @@ func on_start() -> void:
 						#gltf_cache[file].queue_free()
 						#continue
 				# If GLTF exists - add it to available puppets list
-				available_puppets[file] = BaseSpawner.Availability.ALL
+				available_puppets[complete_file] = BaseSpawner.Availability.ALL
 	_set_up_puppet()
 
 func on_spawned() -> void:
@@ -137,7 +139,7 @@ func get_static_preset() -> int:
 		# If file name is GLTF - save gltf file name without
 		# prefix and suffix
 		if enable_gltf_loading && available_puppets.keys()[idx].get_extension() == "glb":
-			var keyword: String = available_puppets.keys()[idx].get_slice(".", 0).trim_suffix("_" + gltf_file_suffix).trim_prefix(gltf_file_prefix + "_")
+			var keyword: String = available_puppets.keys()[idx].get_file().get_slice(".", 0).trim_suffix("_" + gltf_file_suffix).trim_prefix(gltf_file_prefix + "_")
 			if !default_class_presets_gltf_extension.has(gltf_file_prefix):
 				default_class_presets_gltf_extension[gltf_file_prefix] = keyword
 	return default_class_presets[single_type_group_name]
@@ -200,11 +202,7 @@ func assign_puppet_gltf() -> void:
 
 ## if has chance AND is available in profile, then return true else false.
 func check_availability(idx: int) -> bool:
-	var path: String = available_puppets.keys()[idx]
 	var availability: BaseSpawner.Availability = available_puppets[available_puppets.keys()[idx]]
-	
-	if !ResourceLoader.exists(path):
-		return false
 	
 	if availability == 0 || (availability == 1 && !OS.has_feature("Lite")) || (availability == 2 && OS.has_feature("Lite")):
 		return true
@@ -223,10 +221,11 @@ func _initiate_puppet(idx: int):
 
 ## Technical function - spawns GLTF puppet
 func _initiate_puppet_gltf(gltf_file: String):
-	var prefab: Node3D
-	if !gltf_cache.has(gltf_file):
+	if !FileAccess.file_exists(gltf_file) || !gltf_cache.has(gltf_file):
 		get_parent().get_parent().health_manage(-16777216)
 		return
+	
+	var prefab: Node3D
 	prefab = gltf_cache[gltf_file].instantiate()
 	#if gltf_file_suffix != null && !gltf_file_suffix.is_empty():
 		#if !gltf_cache.has(gltf_file_prefix + "_" + gltf_file_suffix + ".glb"):

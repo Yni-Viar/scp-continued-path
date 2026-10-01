@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://52ha8ji1d1q3" path="res://Scripts/Interactables/Pickable.gd" id="1_38frd"]
 [ext_resource type="Texture2D" uid="uid://dysd1xalelm1y" path="res://Assets/OriginalModels/Scp2306/Scp2306_scp2306_hold_Albedo.png" id="1_k0ms1"]
 [ext_resource type="Texture2D" uid="uid://cles342bf4vfm" path="res://Assets/OriginalModels/Scp2306/Scp2306_scp2306_hold_Metallic-scp2306_hold_Roughness.png" id="2_38frd"]
-[ext_resource type="Texture2D" uid="uid://ocuw32qalbwd" path="res://Assets/OriginalModels/Scp2306/Scp2306_scp2306_hold_Normal.png" id="3_qyvfj"]
 [ext_resource type="Texture2D" uid="uid://dgxjpyav2e525" path="res://Assets/OriginalModels/Scp2306/Scp2306_scp2306_Albedo.png" id="4_j30nx"]
 [ext_resource type="Shader" uid="uid://cyawkqumpaf1e" path="res://Shaders/ItemShader/item.gdshader" id="4_qyvfj"]
 [ext_resource type="Texture2D" uid="uid://coepc2nuey7cv" path="res://Assets/OriginalModels/Scp2306/Scp2306_scp2306_Metallic-scp2306_Roughness.png" id="5_340v6"]
@@ -25,8 +24,6 @@ metallic_texture = ExtResource("2_38frd")
 metallic_texture_channel = 2
 roughness_texture = ExtResource("2_38frd")
 roughness_texture_channel = 1
-normal_enabled = true
-normal_texture = ExtResource("3_qyvfj")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ys8om"]
 _surfaces = [{

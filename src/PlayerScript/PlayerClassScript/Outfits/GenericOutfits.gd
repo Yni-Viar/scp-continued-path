@@ -13,12 +13,12 @@ func _ready() -> void:
 			for i in range(christmas_material.size()):
 				if christmas_material[i] == null:
 					continue
-				mesh.surface_set_material(i, christmas_material[i])
+				set_surface_override_material(i, christmas_material[i])
 		Settings.Season.HALLOWEEN:
 			for i in range(halloween_material.size()):
 				if halloween_material[i] == null:
 					continue
-				mesh.surface_set_material(i, halloween_material[i])
+				set_surface_override_material(i, halloween_material[i])
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

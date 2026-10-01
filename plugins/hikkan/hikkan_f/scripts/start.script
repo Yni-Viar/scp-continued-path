@@ -1,0 +1,5 @@
+get_player_front_facing()
+get_player_global_pos()
+set_global_posv(builtin_player_global_pos + builtin_player_front_facing * 2)
+player_get_path()
+set_follow(builtin_player_path)

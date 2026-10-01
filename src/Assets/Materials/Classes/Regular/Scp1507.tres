@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://eswpdcfvq8ub"]
+
+[ext_resource type="Texture2D" uid="uid://b51j831natb2v" path="res://Assets/ExternalModels/SCP/scp1507/textures/PinkFlamingo_m_baseColor.png" id="1_ro350"]
+[ext_resource type="Texture2D" uid="uid://fwoobjxy8s1k" path="res://Assets/ExternalModels/SCP/scp1507/textures/PinkFlamingo_m_metallicRoughness.png" id="2_laseb"]
+[ext_resource type="Texture2D" uid="uid://pfxuhlq14wtv" path="res://Assets/ExternalModels/SCP/scp1507/textures/PinkFlamingo_m_normal.png" id="3_b23ro"]
+
+[resource]
+resource_name = "PinkFlamingo_m"
+albedo_texture = ExtResource("1_ro350")
+metallic = 1.0
+metallic_texture = ExtResource("2_laseb")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_laseb")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_b23ro")
+ao_enabled = true
+ao_texture = ExtResource("2_laseb")
+texture_repeat = false

@@ -852,13 +852,13 @@ vertical_alignment = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.569
+anchor_top = 0.58000004
 anchor_right = 0.5
-anchor_bottom = 0.569
+anchor_bottom = 0.58000004
 offset_left = -320.0
-offset_top = -112.712
+offset_top = -119.84003
 offset_right = 320.0
-offset_bottom = 143.288
+offset_bottom = 120.15997
 grow_horizontal = 2
 grow_vertical = 2
 horizontal_alignment = 1
@@ -880,6 +880,17 @@ grow_vertical = 0
 localize_numeral_system = false
 theme = ExtResource("31_15gaw")
 text = "BACK_TO_MENU"
+
+[node name="DeleteSave" type="Button" parent="UI/Condition" unique_id=2090639734]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -256.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme = ExtResource("31_15gaw")
+text = "S_DELETE_SAVE"
 
 [node name="CreditsContainer" parent="UI" unique_id=2077770643 instance=ExtResource("41_u0ibu")]
 visible = false
@@ -980,3 +991,4 @@ value = 50.0
 [connection signal="dialogue_signal" from="UI/DialoguePanel/DialogueBox" to="UI/DialoguePanel" method="_on_dialogue_box_dialogue_signal"]
 [connection signal="variable_changed" from="UI/DialoguePanel/DialogueBox" to="UI/DialoguePanel" method="_on_dialogue_box_variable_changed"]
 [connection signal="pressed" from="UI/Condition/Back" to="UI" method="_on_back_pressed"]
+[connection signal="pressed" from="UI/Condition/DeleteSave" to="UI" method="_on_delete_save_pressed"]

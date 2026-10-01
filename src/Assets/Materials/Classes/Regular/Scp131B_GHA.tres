@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bhbxs70bykpxr"]
+
+[ext_resource type="Texture2D" uid="uid://dbl41ln03hj38" path="res://Assets/ExternalModels/SCP/Scp131_f/Scp131B_material_2_baseColor.png" id="1_g8ydn"]
+[ext_resource type="Texture2D" uid="uid://jvctsstl0tec" path="res://Assets/ExternalModels/SCP/Scp131_f/Scp131B_material_2_metallicRoughness.png" id="2_kg52j"]
+[ext_resource type="Texture2D" uid="uid://ddwfpogest8dw" path="res://Assets/ExternalModels/SCP/Scp131_f/Scp131B_material_2_normal.png" id="3_210ls"]
+
+[resource]
+resource_name = "material_2.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_g8ydn")
+metallic = 1.0
+metallic_texture = ExtResource("2_kg52j")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_kg52j")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_210ls")
+ao_enabled = true
+ao_texture = ExtResource("2_kg52j")

@@ -7,9 +7,9 @@
 script = ExtResource("1_jh4i3")
 torso_node_path = NodePath("HumanRig/Skeleton3D/Scientist_torso_LOD0")
 available_puppets = Dictionary[String, int]({
-"res://PlayerScript/PlayerClassPrefab/Variations/Scientist/Optional/scientist_1_SL_OOD.tscn": 1,
-"res://PlayerScript/PlayerClassPrefab/Variations/Scientist/scientist_2_SL_OOD.tscn": 0,
-"res://PlayerScript/PlayerClassPrefab/Variations/Scientist/scientist_3_SL_OOD.tscn": 0
+"res://PlayerScript/PlayerClassPrefab/Variations/ExtendedHumanPack/Scientist/Optional/scientist_1_SL_OOD.tscn": 1,
+"res://PlayerScript/PlayerClassPrefab/Variations/ExtendedHumanPack/Scientist/scientist_2_SL_OOD.tscn": 0,
+"res://PlayerScript/PlayerClassPrefab/Variations/ExtendedHumanPack/Scientist/scientist_3_SL_OOD.tscn": 0
 })
 enable_vision_scan = true
 vision_class_detect = Array[int]([2, 3])

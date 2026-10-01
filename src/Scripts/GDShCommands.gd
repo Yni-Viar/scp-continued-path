@@ -1,5 +1,5 @@
 extends Node3D
-
+## Made by Yni, licensed under MIT License.
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,14 +23,6 @@ func spawn_npc(index: String):
 			npc.puppet_class = get_parent().gamedata.puppet_classes[int(index)]
 			npc.position = get_parent().protagonist.global_position - get_parent().protagonist.global_transform.basis.z * 4
 			get_parent().get_node("NPCs").add_child(npc)
-		elif int(index) == -1:
-			if get_parent().map_seed_name.to_lower() == "hikkan":
-				# Hikkan / Hikkiko
-				# What I have written? - Yni
-				var npc: MovableNpc = load("res://PlayerScript/NPCBase.tscn").instantiate()
-				npc.puppet_class = load("res://PlayerScript/PlayerClassResources/EasterEgg/Hikkan.tres")
-				npc.position = get_parent().protagonist.global_position - get_parent().protagonist.global_transform.basis.z * 4
-				get_parent().get_node("NPCs").add_child(npc)
 
 ## GDSh command
 ## Adds task manually, if it is possible to complete.

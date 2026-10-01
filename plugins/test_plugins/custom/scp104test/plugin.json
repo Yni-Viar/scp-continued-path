@@ -7,7 +7,7 @@
 	"plugin_type": "puppet",
 	"gltf": {
 		"gltf_file_prefix": "scp104",
-		"gltf_file_suffix": "test",
+		"gltf_file_suffix": "",
 		"gltf_path_to_find": "scp104test"
 	},
 	"puppet_resource": {

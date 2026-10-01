@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=4 uid="uid://nmul4blissnx"]
+[gd_scene format=4 uid="uid://nmul4blissnx"]
 
-[ext_resource type="Texture2D" uid="uid://ddtvowq74yly3" path="res://PlayerScript/PlayerClassPrefab/EasterEgg/Amy.png" id="1_667uk"]
+[ext_resource type="Texture2D" uid="uid://ddtvowq74yly3" path="res://Assets/ExternalModels/ScientistOfficeProps/YniViar/HikkanHuman/Amy.png" id="1_667uk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_667uk"]
 albedo_texture = ExtResource("1_667uk")

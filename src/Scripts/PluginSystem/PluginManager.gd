@@ -32,6 +32,13 @@ const VALIDATION_PUPPET_PLUGIN: Dictionary = {
 	}
 }
 
+const VALIDATION_PUPPET_PLUGIN_10_4: Dictionary = {
+	"animations": {
+		"enabled": "bool",
+		"animation_target_names": "Dictionary"
+	}
+}
+
 const MINIMUM_VALIDATED_VERSION: Array[int] = [10, 1, 0]
 
 # Called when the node enters the scene tree for the first time.
@@ -74,6 +81,12 @@ func _load_plugins():
 						var custom_puppet: CustomPuppetScript = CustomPuppetScript.new()
 						custom_puppet.enable_gltf_loading = true
 						custom_puppet.custom = true
+						
+						# Compatibility - handle extension change in 10.4.0
+						if int(plugin_dict["api_version"][0]) == 10 && int(plugin_dict["api_version"][1]) >= 4:
+							custom_puppet.enable_animations = plugin_dict["animations"]["enabled"]
+							custom_puppet.animation_target_names = plugin_dict["animations"]["animation_target_names"]
+						
 						# Seeding with settings
 						for gltf_key in plugin_dict["gltf"]:
 							custom_puppet.set(gltf_key, plugin_dict["gltf"][gltf_key])
@@ -88,6 +101,7 @@ func _load_plugins():
 						# Seeding with settings
 						for puppet_key in plugin_dict["puppet_resource"]:
 							custom_puppet_res.set(puppet_key, plugin_dict["puppet_resource"][puppet_key])
+						
 						custom_puppet_res.puppet_class_name = "CUSTOM"
 						# Assigning custom prefab
 						custom_puppet_res.prefab = packed_scene
@@ -131,5 +145,13 @@ func is_plugin_valid(plugin_dict: Dictionary) -> bool:
 							
 							if type_string(typeof(plugin_dict["puppet_resource"][puppet_key])) != VALIDATION_PUPPET_PLUGIN["puppet_resource"][puppet_key]:
 								return false
+						
+						if int(plugin_dict["api_version"][0]) == 10 && int(plugin_dict["api_version"][1]) >= 4:
+							for puppet_key in VALIDATION_PUPPET_PLUGIN_10_4["animations"]:
+								if !plugin_dict["animations"].has(puppet_key):
+									return false
+								
+								if type_string(typeof(plugin_dict["animations"][puppet_key])) != VALIDATION_PUPPET_PLUGIN_10_4["animations"][puppet_key]:
+									return false
 						return true
 	return false

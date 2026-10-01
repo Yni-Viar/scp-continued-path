@@ -27,7 +27,7 @@ func _physics_process(delta: float) -> void:
 	# If eye glowing too strong, activate 023 event
 	if !timer.is_stopped():
 		eye_glow_strength = lerpf(0.25, 2.0, (timer.wait_time - timer.time_left) / timer.wait_time )
-		if eye_glow_strength > 1.75:
+		if eye_glow_strength > 0.5:
 			if !get_tree().root.get_node("Game/FoundationTask").has_task("task_023_emergency"):
 				get_tree().root.get_node("Game/FoundationTask").trigger_event(2, load("res://Scripts/TaskSystem/Tasks/Scp023EmergencyTask.tres"))
 

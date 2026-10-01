@@ -112,52 +112,64 @@ a = dictionary("name": "Klapauzius", "age": 10000, "weight": 123.4)
        "enable_advanced_ai": `Enables picking advanced AI (bool, has niche usage)`,
        "immortal": `Godmode (bool)`,
        "keycards": `[] keycards available (int array, has niche usage)`
-    }
+    },
+    "animations": { `since API 10.4.0, not present in previous API levels`
+		"enabled": `bool, check if you want animations included`,
+		"animation_target_names": { `leave empty dict, if you do NOT want animations, or fill it with animation names`
+			"idle": `Idle animation name (string)`,
+			"walking": `Walking animation name (string)`,
+            "running": `Running animation name (string)`,
+            "special1": `Your own action animation name (string)`,
+            "special2": `Your own action animation name (string)`,
+            "special3": `Your own action animation name (string)`,
+            "special4": `Your own action animation name (string)`
+		}
+	}
 }
 ```
 
 ## Script naming
-All files must have extension `.gompl`
+All files must have extension `.script`
 
 ### Common
 
-`start.gompl` - does the same, as `_ready` function (from Godot). Supported in all SkinnablePuppetScripts.
+`start.script` - does the same, as `_ready` function (from Godot). Supported in all SkinnablePuppetScripts.
 
-`update.gompl` - does the same, as `_physics_process` function (from Godot). Supported in all SkinnablePuppetScripts.
+`update.script` - does the same, as `_physics_process` function (from Godot). Supported in all SkinnablePuppetScripts.
 
-`special_action.gompl` - do something on interaction. Supported in custom classes, SCP-023 (since v10.1.0), SCP-737 (since v10.1.0) and SCP-1507 (since v10.1.0)
+`special_action.script` - do something on interaction. Supported in custom classes, SCP-023 (since v10.1.0), SCP-737 (since v10.1.0) and SCP-1507 (since v10.1.0)
 
 ### Built-in classes
 
-`attack.gompl` - do something, when attacking. Only supported with SCP-1507 and SCP-939.
+`attack.script` - do something, when attacking. Only supported with SCP-1507 and SCP-939.
 
-`blink_started.gompl` - do something, when blink started. Only supported with SCP-347.
+`blink_started.script` - do something, when blink started. Only supported with SCP-347.
 
-`blink_ended.gompl` - do something, when blink ended. Only supported with SCP-173 and SCP-347.
+`blink_ended.script` - do something, when blink ended. Only supported with SCP-173 and SCP-347.
 
-`crunch.gompl` - do something on neck snap. Only supported with SCP-173.
+`crunch.script` - do something on neck snap. Only supported with SCP-173.
 
-`near_trigger_changed.gompl` - do something, if player enters your vision trigger. Only supported with SCP-939.
+`near_trigger_changed.script` - do something, if player enters your vision trigger. Only supported with SCP-939.
 
-`teleport.gompl` - do something on teleport. Only supported with SCP-650.
+`teleport.script` - do something on teleport. Only supported with SCP-650.
 
 ### Custom classes
 #### Scripts
 
-`custom_action_1.gompl`, `custom_action_2.gompl`, `custom_action_3.gompl`, `custom_action_4.gompl` - do something in these 4 functions.
+`custom_action_1.script`, `custom_action_2.script`, `custom_action_3.script`, `custom_action_4.script` - do something in these 4 functions.
 
-`player_entered_vision_area.gompl` - do something, if puppet goes into vision trigger.
+`player_entered_vision_area.script` - do something, if puppet goes into vision trigger.
 
-`player_exited_vision_area.gompl` - do something, if puppet is leaving vision trigger.
+`player_exited_vision_area.script` - do something, if puppet is leaving vision trigger.
 
 
-`player_entered_trigger.gompl` - if protagonist entered user-defined trigger
+`player_entered_trigger.script` - if protagonist entered user-defined trigger
 
-`puppet_entered_trigger.gompl` - if NPC entered entered user-defined trigger
+`puppet_entered_trigger.script` - if NPC entered entered user-defined trigger
 
-`player_exited_trigger.gompl` - if protagonist exited user-defined trigger
+`player_exited_trigger.script` - if protagonist exited user-defined trigger
 
-`puppet_exited_trigger.gompl` - if NPC exited user-defined trigger
+`puppet_exited_trigger.script` - if NPC exited user-defined trigger
 
 ## Script Functions
 ### Special functions
@@ -176,7 +188,7 @@ All files must have extension `.gompl`
 
 ### Getters-setters
 
-> ⚠️ Due to GOMPL limitation, getters are implemented as global variables, started with `builtin_`,
+> ⚠️ Due to mila.gd limitation, getters are implemented as global variables, started with `builtin_`,
 > such as `builtin_follow`, `builtin_player_global_pos`, etc...
 
 > ℹ️ Since API v10.3.0, Plugin API cannot call native functions for security reasons.
@@ -211,7 +223,7 @@ All files must have extension `.gompl`
 
 > In API v10.0.0 3 floats were used for front facing, located as builtin_player_front_facing_x/y/z
 
-`get_player_global_position()` - Gets protagonists' global position as 3 floats (`builtin_player_global_pos_x/y/z`)
+`get_player_global_position()` - Gets protagonists' global position as vector3 (`builtin_player_global_pos`)
 
 > In API v10.0.0 3 floats were used for position, located as builtin_player_global_pos_x/y/z
 
@@ -219,7 +231,7 @@ All files must have extension `.gompl`
 
 > Available only in API v10.3.0 and higher
 
-`get_global_rot(in_degrees: bool)` - Gets rotation of self. Use `get_global_rot(true)` if you want in degrees, or `get_global_rot(true)` - for radians.
+`get_global_rot(in_degrees: bool)` - Gets rotation of self. Use `get_global_rot(true)` if you want in degrees, or `get_global_rot(true)` - for radians. (`builtin_global_rot`)
 
 > Available only in API v10.3.0 and higher
 
@@ -230,6 +242,14 @@ All files must have extension `.gompl`
 `set_global_rotv(in_degrees: bool, rot: Vector3)` - Sets rotation (`true` for degrees, `false` for radians) of self by `rot` as Vector3.
 
 > Available only in API v10.3.0 and higher
+
+`player_get_path()` - Gets protagonist's node path (`builtin_player_path`)
+
+> Available only in API v10.4.0 and higher
+
+`get_pth()` - Gets your own node path (`builtin_path`)
+
+> Available only in API v10.4.0 and higher
 
 ### Functions
 
@@ -250,7 +270,7 @@ All files must have extension `.gompl`
 `player_get_all_items()` - Gets all items in inventory as IDs
 > Available only in API v10.1.0 and higher
 
-`go_to_target(target_path)` - Sets follow path, which this custom puppet will follow. This puppet will use Surface Zone elevators to reach you.
+`go_to_target(target_path: String)` - Sets follow path, which this custom puppet will follow. This puppet will use Surface Zone elevators to reach you.
 > Available only in API v10.1.0 and higher
 
 `player_set_status_effect(effect: String, strength: float, duration: float)` - Set specific status effect for puppet

@@ -1,0 +1,24 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cnkh5rhf2ye75"]
+
+[ext_resource type="Texture2D" uid="uid://b4an4o731msi" path="res://Assets/ExternalModels/SCP/Scp131_f/Scp131A_material_baseColor.png" id="1_dv61m"]
+[ext_resource type="Texture2D" uid="uid://bnk2y3j8tiq32" path="res://Assets/ExternalModels/SCP/Scp131_f/Scp131A_material_metallicRoughness.png" id="2_g5ftb"]
+[ext_resource type="Texture2D" uid="uid://bw7ejvmo8uo4t" path="res://Assets/ExternalModels/SCP/Scp131_f/Scp131A_material_H_emission.png" id="3_g5ftb"]
+[ext_resource type="Texture2D" uid="uid://dy7qux6mth7pv" path="res://Assets/ExternalModels/SCP/Scp131_f/Scp131A_material_normal.png" id="3_w7o67"]
+
+[resource]
+resource_name = "material"
+cull_mode = 2
+albedo_texture = ExtResource("1_dv61m")
+metallic = 1.0
+metallic_texture = ExtResource("2_g5ftb")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_g5ftb")
+roughness_texture_channel = 1
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_operator = 1
+emission_texture = ExtResource("3_g5ftb")
+normal_enabled = true
+normal_texture = ExtResource("3_w7o67")
+ao_enabled = true
+ao_texture = ExtResource("2_g5ftb")

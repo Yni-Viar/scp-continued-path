@@ -1,0 +1,47 @@
+{
+	"name": "Hikkan Female",
+	"author": "Yni Viar, Clint Bellanger (Thirdparty)",
+	"year": 2026,
+	"license": "CC-BY 3.0 (assets), MIT license (code)",
+	"api_version": [10, 4, 0],
+	"plugin_type": "puppet",
+	"gltf": {
+		"gltf_file_prefix": "hikkan_f",
+		"gltf_file_suffix": "",
+		"gltf_path_to_find": "hikkan_f"
+	},
+	"puppet_resource": {
+		"speed": 5.0,
+		"spawn_point_group": "ScientistPoint",
+		"initial_amount": 1,
+		"interacting_action": 0,
+		"fraction": 0,
+		"team": 0,
+		"wandering_system": 0,
+		"special_wandering_group": "",
+		"health": [
+			100.0,
+			50.0,
+			50.0,
+			50.0
+		],
+		"enable_avoidance": true,
+		"spawn_on_start": true,
+		"puppet_navigation_layers": 3,
+		"enable_ik":false,
+		"disable_move_on_slide": false,
+		"can_ride": false,
+		"start_items": [],
+		"start_money": {},
+		"enable_advanced_ai": false,
+		"immortal": true,
+		"keycards": []
+	},
+	"animations": {
+		"enabled": true,
+		"animation_target_names": {
+			"idle": "Idle_Loop RT",
+			"walking": "Walk_Loop RT"
+		}
+	}
+}

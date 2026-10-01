@@ -2,6 +2,17 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
+## v10.4.0
+### Plugin API
+- Custom plugins can be animated now! \(through a workaround\)
+- Reworked Hikkan easter egg, using Plugin API. Find it!
+### Misc fixes
+- SCP-131, SCP-737, SCP-1507 and SCP-2845 get their own festive suits - to be prepared to Spooky (and later Festive) Month.
+- Fixed guard's brow.
+- \[Main story\] Added save reset button, in case of impassability
+- \[Main story\] Fixed Dr. White outdated model paths, which caused impossible-to-complete situations.
+
+
 ## v10.3.2 (2026.09.29)
 
 - Removed all remaining references to previous branding (I hope so).

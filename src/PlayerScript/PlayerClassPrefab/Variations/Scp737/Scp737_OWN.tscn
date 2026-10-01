@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://de7h64g8ppt37" path="res://Assets/Materials/TextureLibraries/AmbientCG_CC0/Wood094_2K-PNG_NormalGL.png" id="1_u7ady"]
 [ext_resource type="Texture2D" uid="uid://c62mafp7tc8pi" path="res://Assets/Materials/TextureLibraries/AmbientCG_CC0/Wood094_2K-PNG_Roughness.png" id="2_uc4dd"]
+[ext_resource type="Script" uid="uid://c7x8jm7kgh7ie" path="res://PlayerScript/PlayerClassScript/Outfits/GenericOutfits.gd" id="3_uc4dd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3odyy"]
 resource_name = "Blue"
@@ -52,6 +53,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("/////6nK/58AADnZ////nwAA//+pyv+f//852f///5///wAA////vwAAOdn///+///852f///78AAAAA////vwAA//9VNf/f//852QAA/9//////VTX/3wAAOdkAAP/fAAAAAAAA//8AADnZ/////wAAAAD/////AAD//1U1//8AADnZAAD//wAA//+pyv//AAAAAAAA/////znZAAD//wAAOdkAAP////8AAAAA////////VTX/vwAA//+pyv+/AAD//1U1/7//////qcr/v///AAD///////852QAA/////wAAAAD///////+pyv////852f//////////VTX//////3////9/////f/7//3//f/9//3//f/9//3//f/9/////f////3////9/////f/8//3//P/9//z//f/8//3//P/9//z//f/+//7//v/+//7//v/+//7////9/////f////3////9//7//f/+//3//v/9//7//f/+//3//v/9/")
 }]
 blend_shape_mode = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1i3cw"]
+albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sx0jl"]
 resource_name = "Red"
@@ -242,11 +246,15 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14, 0, 0)
 mesh = SubResource("ArrayMesh_rdomf")
 skeleton = NodePath("")
+script = ExtResource("3_uc4dd")
+halloween_material = Array[Material]([SubResource("StandardMaterial3D_1i3cw"), SubResource("StandardMaterial3D_1i3cw")])
 
 [node name="Cylinder" type="MeshInstance3D" parent="Mesh" unique_id=2114441438]
 transform = Transform3D(0, 1, 0, -1, 0, 0, 0, 0, 1, -0.0058447407, -0.011006142, 0)
 mesh = SubResource("ArrayMesh_6y0xi")
 skeleton = NodePath("")
+script = ExtResource("3_uc4dd")
+halloween_material = Array[Material]([SubResource("StandardMaterial3D_1i3cw")])
 
 [node name="Cylinder_001" type="MeshInstance3D" parent="Mesh" unique_id=1944653246]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06736285, 0.080590874, 0)
@@ -257,18 +265,26 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.04096694, -0.14, 0.10532753)
 mesh = SubResource("ArrayMesh_tjfh3")
 skeleton = NodePath("")
+script = ExtResource("3_uc4dd")
+halloween_material = Array[Material]([SubResource("StandardMaterial3D_1i3cw"), SubResource("StandardMaterial3D_1i3cw")])
 
 [node name="Cylinder_003" type="MeshInstance3D" parent="Mesh" unique_id=1724716958]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.15241365, -0.14, 0.10532753)
 mesh = SubResource("ArrayMesh_4vkjh")
 skeleton = NodePath("")
+script = ExtResource("3_uc4dd")
+halloween_material = Array[Material]([SubResource("StandardMaterial3D_1i3cw"), SubResource("StandardMaterial3D_1i3cw")])
 
 [node name="Cylinder_004" type="MeshInstance3D" parent="Mesh" unique_id=642607987]
 transform = Transform3D(-1, 4.3711392e-08, 4.3711392e-08, -4.3711392e-08, 0, -1, -4.3711392e-08, -1, 0, 0.04096694, -0.14, -0.10504023)
 mesh = SubResource("ArrayMesh_2hipx")
 skeleton = NodePath("")
+script = ExtResource("3_uc4dd")
+halloween_material = Array[Material]([SubResource("StandardMaterial3D_1i3cw"), SubResource("StandardMaterial3D_1i3cw")])
 
 [node name="Cylinder_005" type="MeshInstance3D" parent="Mesh" unique_id=720801550]
 transform = Transform3D(-1, 4.3711392e-08, 4.3711392e-08, -4.3711392e-08, 0, -1, -4.3711392e-08, -1, 0, -0.15241365, -0.14, -0.10504023)
 mesh = SubResource("ArrayMesh_1ho3n")
 skeleton = NodePath("")
+script = ExtResource("3_uc4dd")
+halloween_material = Array[Material]([SubResource("StandardMaterial3D_1i3cw"), SubResource("StandardMaterial3D_1i3cw")])
