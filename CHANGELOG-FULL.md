@@ -2,7 +2,7 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
-## v10.4.0 (Day of the Deer God part 2)
+## v10.4.0 (Day of the Deer God part 2, 2026.10.02)
 ### Plugin API
 - Custom plugins can be animated now! \(through a workaround\)
 - Reworked Hikkan easter egg, using Plugin API. Find it!
@@ -11,6 +11,9 @@ This list contains all features, added in the game, or will be added in upcoming
 
 ### Refactors
 - Refactored SCP-023 and Task Manager scripts.
+  - SCP-023 now moved to new Task Manager Timer subsystem.
+  - SCP-023 event is more clear for gamers.
+  - SCP-023 event can now occur in Casual Mode again, randomly.
 
 ### Misc fixes
 - SCP-131, SCP-737, SCP-1507 and SCP-2845 get their own festive suits - to be prepared to Spooky (and later Festive) Month.

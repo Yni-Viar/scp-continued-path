@@ -32,7 +32,6 @@ func _physics_process(delta):
 			task_label.modulate = Color(1.0, 0.75, 0.0)
 		else:
 			task_label.modulate = Color(1.0, 1.0, 0.0)
-	pass
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_released("inventory"):

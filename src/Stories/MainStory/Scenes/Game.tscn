@@ -976,6 +976,7 @@ theme_override_styles/background = SubResource("StyleBoxEmpty_dosvq")
 value = 50.0
 
 [connection signal="generated" from="FacilityGenerator" to="." method="_on_facility_generator_generated"]
+[connection signal="event_done" from="FoundationTask" to="UI" method="_on_foundation_task_event_done"]
 [connection signal="story_next_task" from="FoundationTask" to="UI" method="_on_foundation_task_task_done"]
 [connection signal="child_entered_tree" from="Items" to="Items" method="_on_child_entered_tree"]
 [connection signal="gui_input" from="UI/PlayingArea" to="UI" method="_on_playing_area_gui_input"]
