@@ -2,6 +2,10 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
+## v10.4.1 (2026.10.03)
+
+- Added splash sound in SCP-812 containment chamber.
+
 ## v10.4.0 (Day of the Deer God part 2, 2026.10.02)
 ### Plugin API
 - Custom plugins can be animated now! \(through a workaround\)

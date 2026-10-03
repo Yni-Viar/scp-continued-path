@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://div1sqhrlu8et" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance_2.tscn" id="11_0wrga"]
 [ext_resource type="Script" uid="uid://cht8u13ej0wfa" path="res://Scripts/RoomMesh.gd" id="12_b1yng"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="12_h406k"]
+[ext_resource type="AudioStream" uid="uid://mc1e2jgu4g34" path="res://Sounds/Generic/9508__petenice__splash.ogg" id="12_p6e27"]
 [ext_resource type="PackedScene" uid="uid://cqhhycwdvhaq6" path="res://Assets/ExternalModels/hanging_light.tscn" id="13_lfmvw"]
 [ext_resource type="Material" uid="uid://drmghtc6gtff8" path="res://Assets/Materials/WaterfallMaterial.tres" id="14_drm2v"]
 [ext_resource type="LightmapGIData" uid="uid://brgo6g7kslogv" path="res://Assets/Rooms/room1/Lite/Lm/mt_cont1_812.lmbake" id="15_se668"]
@@ -112,6 +113,9 @@ material = SubResource("ShaderMaterial_qxboj")
 size = Vector2(41, 18)
 subdivide_width = 8
 subdivide_depth = 8
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ntbkr"]
+size = Vector3(40.941135, 0.53466797, 17.941772)
 
 [sub_resource type="SphereMesh" id="SphereMesh_gijfy"]
 material = ExtResource("14_drm2v")
@@ -319,6 +323,18 @@ visible = false
 visibility_range_end = 64.0
 mesh = SubResource("PlaneMesh_e5yks")
 
+[node name="SplashTrigger" type="Area3D" parent="WaterFlow" unique_id=440827030]
+collision_layer = 11
+collision_mask = 11
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WaterFlow/SplashTrigger" unique_id=1011194886]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018289566, -0.23266602, -0.008605957)
+shape = SubResource("BoxShape3D_ntbkr")
+
+[node name="InteractSound" type="AudioStreamPlayer3D" parent="WaterFlow" unique_id=147603176]
+stream = ExtResource("12_p6e27")
+max_distance = 64.0
+
 [node name="Waterfall" type="CPUParticles3D" parent="." unique_id=2139452359]
 transform = Transform3D(0.70296, 0, -0.711229, 0, 1, 0, 0.711229, 0, 0.70296, 2.25855, -1.22485, -12.9092)
 emitting = false
@@ -441,5 +457,6 @@ max_distance = 64.0
 [node name="Entityspawn3" type="Marker3D" parent="." unique_id=985707131 groups=["Scp2845Spawn"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.023268, -0.78577, -16.478767)
 
+[connection signal="body_entered" from="WaterFlow/SplashTrigger" to="." method="_on_splash_trigger_body_entered"]
 [connection signal="body_entered" from="Scp812Trigger" to="." method="_on_scp_812_trigger_body_entered"]
 [connection signal="body_exited" from="Scp812Trigger" to="." method="_on_scp_812_trigger_body_exited"]

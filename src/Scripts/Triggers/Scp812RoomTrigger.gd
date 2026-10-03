@@ -77,3 +77,8 @@ func _on_scp_812_trigger_body_exited(body: Node3D) -> void:
 
 func disable_waterfall_sound():
 	$WaterfallSound.stop()
+
+
+func _on_splash_trigger_body_entered(body: Node3D) -> void:
+	if body is Pickable:
+		$WaterFlow/InteractSound.play()

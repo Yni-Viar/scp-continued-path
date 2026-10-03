@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="10_b8ssf"]
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="10_i5sfi"]
 [ext_resource type="PackedScene" uid="uid://b7bqrcgpr32l3" path="res://Assets/OriginalModels/scp_791.tscn" id="11_l8x3n"]
+[ext_resource type="AudioStream" uid="uid://mc1e2jgu4g34" path="res://Sounds/Generic/9508__petenice__splash.ogg" id="12_i5sfi"]
 [ext_resource type="PackedScene" uid="uid://cqhhycwdvhaq6" path="res://Assets/ExternalModels/hanging_light.tscn" id="12_pxsbx"]
 [ext_resource type="PackedScene" uid="uid://c88xvl7f3pq8b" path="res://Assets/OriginalModels/FireExtinguisher.tscn" id="13_vligh"]
 [ext_resource type="Script" uid="uid://cht8u13ej0wfa" path="res://Scripts/RoomMesh.gd" id="14_d2mx2"]
@@ -120,6 +121,9 @@ material = SubResource("ShaderMaterial_qxboj")
 size = Vector2(41, 18)
 subdivide_width = 8
 subdivide_depth = 8
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ck86r"]
+size = Vector3(40.941135, 0.53466797, 17.941772)
 
 [sub_resource type="SphereMesh" id="SphereMesh_gijfy"]
 material = ExtResource("17_hq1f8")
@@ -353,6 +357,18 @@ visible = false
 visibility_range_end = 64.0
 mesh = SubResource("PlaneMesh_e5yks")
 
+[node name="SplashTrigger" type="Area3D" parent="WaterFlow" unique_id=1003793413]
+collision_layer = 11
+collision_mask = 11
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WaterFlow/SplashTrigger" unique_id=636238634]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018289566, -0.23266602, -0.008605957)
+shape = SubResource("BoxShape3D_ck86r")
+
+[node name="InteractSound" type="AudioStreamPlayer3D" parent="WaterFlow" unique_id=710070678]
+stream = ExtResource("12_i5sfi")
+max_distance = 64.0
+
 [node name="Waterfall" type="CPUParticles3D" parent="." unique_id=1666812694]
 transform = Transform3D(0.8505814, 0, -0.5258429, 0, 1, 0, 0.5258429, 0, 0.8505814, 5.2702146, -1.22485, -10.950311)
 emitting = false
@@ -478,5 +494,6 @@ shape = SubResource("BoxShape3D_cpv4u")
 [node name="Entityspawn3" type="Marker3D" parent="." unique_id=2022422344 groups=["Scp2845Spawn"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.375173, -0.78577095, -16.205708)
 
+[connection signal="body_entered" from="WaterFlow/SplashTrigger" to="." method="_on_splash_trigger_body_entered"]
 [connection signal="body_entered" from="Scp812Trigger" to="." method="_on_scp_812_trigger_body_entered"]
 [connection signal="body_exited" from="Scp812Trigger" to="." method="_on_scp_812_trigger_body_exited"]
