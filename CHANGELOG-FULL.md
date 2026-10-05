@@ -2,6 +2,10 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
+## v10.4.2
+
+- [x] Make splash sound stereo.
+
 ## v10.4.1 (2026.10.03)
 
 - Added splash sound in SCP-812 containment chamber.
