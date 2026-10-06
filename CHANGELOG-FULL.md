@@ -4,7 +4,9 @@ This list contains all features, added in the game, or will be added in upcoming
 
 ## v10.4.2
 
-- [x] Make splash sound stereo.
+- New easter egg + SCP-1223 flashback.
+- Added SCP-988 prop + room.
+- Make splash sound stereo.
 
 ## v10.4.1 (2026.10.03)
 

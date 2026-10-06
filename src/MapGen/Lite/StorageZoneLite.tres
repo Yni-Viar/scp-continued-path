@@ -11,6 +11,7 @@
 [ext_resource type="Resource" uid="uid://dx6rsvsl05u0c" path="res://MapGen/Resources/StorageZone/cont1_079.tres" id="8_p0bw8"]
 [ext_resource type="Resource" uid="uid://chu88o6q8jjlq" path="res://MapGen/Resources/StorageZone/room2_large.tres" id="9_8wb5d"]
 [ext_resource type="Resource" uid="uid://cmcap7nf4h15i" path="res://MapGen/Resources/StorageZone/cont1_249.tres" id="9_aplot"]
+[ext_resource type="Resource" uid="uid://dbmfj48tlyx8p" path="res://MapGen/Resources/StorageZone/cont1_988.tres" id="10_0d7qn"]
 [ext_resource type="Resource" uid="uid://bprnbgimely5g" path="res://MapGen/Resources/StorageZone/cont2_2028.tres" id="10_w1sni"]
 [ext_resource type="Script" uid="uid://d0tlgr0c6w7gq" path="res://MapGen/MapGenZone.gd" id="11_xwmj8"]
 [ext_resource type="Resource" uid="uid://ccl1uuy1o3ct0" path="res://MapGen/Resources/StorageZone/room3.tres" id="12_lqvm2"]
@@ -20,7 +21,7 @@
 [resource]
 script = ExtResource("11_xwmj8")
 endrooms = Array[ExtResource("2_dtlmw")]([ExtResource("6_knjx6")])
-endrooms_single = Array[ExtResource("2_dtlmw")]([ExtResource("8_p0bw8"), ExtResource("9_aplot")])
+endrooms_single = Array[ExtResource("2_dtlmw")]([ExtResource("8_p0bw8"), ExtResource("9_aplot"), ExtResource("10_0d7qn")])
 hallways = Array[ExtResource("2_dtlmw")]([ExtResource("8_c0n0b"), ExtResource("9_8wb5d")])
 hallways_single = Array[ExtResource("2_dtlmw")]([ExtResource("10_w1sni"), ExtResource("13_4nsbb")])
 checkpoint_hallway = Array[ExtResource("2_dtlmw")]([ExtResource("3_u7nl0")])

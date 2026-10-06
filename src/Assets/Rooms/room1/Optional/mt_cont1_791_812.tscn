@@ -15,6 +15,7 @@
 [ext_resource type="Material" uid="uid://drmghtc6gtff8" path="res://Assets/Materials/WaterfallMaterial.tres" id="17_hq1f8"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="18_mvo7x"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="19_x2bed"]
+[ext_resource type="Texture2D" uid="uid://cxsu6u5817sx2" path="res://Assets/ExternalModels/Tex/bientot.png" id="20_ck86r"]
 [ext_resource type="LightmapGIData" uid="uid://cdl445vwtha8d" path="res://Assets/Rooms/room1/Optional/Lm/mt_cont1_791_812.lmbake" id="20_dgdjd"]
 [ext_resource type="PackedScene" uid="uid://0hcy8vda587t" path="res://Assets/ExternalModels/pumpkin.tscn" id="20_f63vr"]
 [ext_resource type="AudioStream" uid="uid://clpkm2wuemv4j" path="res://Sounds/Environment/Scp812/ivolipa__small_waterfall_on_river_mirna.ogg" id="21_cpv4u"]
@@ -192,6 +193,13 @@ _data = {
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cpv4u"]
 size = Vector3(5.97742, 3.82202, 2.7720947)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lfmvw"]
+shading_mode = 2
+albedo_texture = ExtResource("20_ck86r")
+
+[sub_resource type="QuadMesh" id="QuadMesh_cpv4u"]
+material = SubResource("StandardMaterial3D_lfmvw")
 
 [node name="cont1_812" type="StaticBody3D" unique_id=939665775 groups=["cont1_791", "cont1_812"]]
 script = ExtResource("1_d2mx2")
@@ -493,6 +501,11 @@ shape = SubResource("BoxShape3D_cpv4u")
 
 [node name="Entityspawn3" type="Marker3D" parent="." unique_id=2022422344 groups=["Scp2845Spawn"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.375173, -0.78577095, -16.205708)
+
+[node name="EasterEgg" type="MeshInstance3D" parent="." unique_id=1620732138]
+transform = Transform3D(0.9999999, 0, 1.03316026e-07, 0, 1, 0, -1.03316026e-07, 0, 0.9999999, 10.229248, -1.9273149, -13.675406)
+visible = false
+mesh = SubResource("QuadMesh_cpv4u")
 
 [connection signal="body_entered" from="WaterFlow/SplashTrigger" to="." method="_on_splash_trigger_body_entered"]
 [connection signal="body_entered" from="Scp812Trigger" to="." method="_on_scp_812_trigger_body_entered"]

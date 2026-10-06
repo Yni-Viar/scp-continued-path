@@ -74,6 +74,7 @@ func _on_scp_812_trigger_body_exited(body: Node3D) -> void:
 				for deer in get_tree().get_nodes_in_group("Scp2845"):
 					if deer is Scp2845PuppetScript:
 						deer.activate()
+						$EasterEgg.show()
 
 func disable_waterfall_sound():
 	$WaterfallSound.stop()

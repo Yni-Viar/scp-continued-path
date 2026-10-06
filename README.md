@@ -85,6 +85,7 @@ More gestures you can see in the in-game settings.
 |🟢SCP-914|✅, > 2.0.0|❌, 5.7.x only|❓ Process only items|
 |🔴SCP-939|✅, > 5.5.0|✅, > 5.8.0|✅ Full|
 |🟢SCP-983\*|✅, > 1.0.0/10.0.0|❎, 5.7.x-5.8.x only|✅ Full|
+|🟢SCP-988\*|✅, > 10.4.2|✅, > 10.4.2|✅ Full, as a prop. **Available only in Casual mode!**|
 |🟢SCP-1223\*|✅, > 6.1.0|✅, > 6.1.0|✅ Full|
 |🟡SCP-1507|✅, > 9.0.0|✅, > 9.0.0|✅ Full, supports custom models|
 |🟢SCP-2028|✅, > 8.0.0|✅, > 8.0.0|✅ Full|

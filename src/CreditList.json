@@ -287,6 +287,22 @@
 				"license": "CC-BY 2.0"
 			}
 		],
+		"SCP-988 texture origin (Box 1 -Wooden Chest)": [
+			{
+				"author": "Brenda Clarke",
+				"license": "CC-BY 2.0"
+			}
+		],
+		"1223_bientot.png, bientot.png (979_0631)": [
+			{
+				"author": "nik gaffney",
+				"license": "CC-BY-SA 2.0"
+			},
+			{
+				"author": "Yni Viar (only cropped image and put a label)",
+				"license": "CC-BY-SA 4.0"
+			}
+		],
 		"Couch model": [
 			{
 				"author": " J-Toastie (https://poly.pizza/m/obMPe0AheB)",
@@ -370,6 +386,7 @@
 		"SCP-914 by Dr Gears",
 		"SCP-939 by Adam Smascher",
 		"SCP-983 by NekoChris",
+		"SCP-988 by Seibai",
 		"SCP-1223 by Wildt",
 		"SCP-1507 by anonymous user, rewritten by Rex Atlas",
 		"SCP-2028 by GibberingEloquence",
