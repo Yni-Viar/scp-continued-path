@@ -2,7 +2,7 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
-## v10.4.2
+## v10.4.2 (2026.10.08)
 
 - New easter egg + SCP-1223 flashback.
 - Added SCP-988 prop + room.

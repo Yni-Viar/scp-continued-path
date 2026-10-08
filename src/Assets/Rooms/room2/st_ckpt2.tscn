@@ -276,6 +276,7 @@ waypoints_and_groups = Dictionary[String, String]({
 "SCP-2028": "Scp2028",
 "SCP-249": "Scp249",
 "SCP-5270": "st_testroom",
-"SCP-686": "st_testroom"
+"SCP-686": "st_testroom",
+"SCP-988": "Scp988"
 })
 delimiter_after = 1
