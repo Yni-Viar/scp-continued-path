@@ -69,9 +69,9 @@ func _physics_process(delta: float) -> void:
 		if state == States.IDLE && animation_target_names.has("idle"):
 			set_state(animation_target_names["idle"], true)
 		elif state == States.WALKING && animation_target_names.has("walking"):
-			set_state(animation_target_names["walking"], 3.0, true)
+			set_state(animation_target_names["walking"], 2.0, true)
 		elif state == States.RUNNING && animation_target_names.has("running"):
-			set_state(animation_target_names["running"], 3.0, true)
+			set_state(animation_target_names["running"], 2.0, true)
 		elif state == States.SPECIAL1 && animation_target_names.has("special1"):
 			set_state(animation_target_names["special1"])
 		elif state == States.SPECIAL2 && animation_target_names.has("special2"):
