@@ -19,6 +19,7 @@
 [ext_resource type="LightmapGIData" uid="uid://cdl445vwtha8d" path="res://Assets/Rooms/room1/Optional/Lm/mt_cont1_791_812.lmbake" id="20_dgdjd"]
 [ext_resource type="PackedScene" uid="uid://0hcy8vda587t" path="res://Assets/ExternalModels/pumpkin.tscn" id="20_f63vr"]
 [ext_resource type="AudioStream" uid="uid://clpkm2wuemv4j" path="res://Sounds/Environment/Scp812/ivolipa__small_waterfall_on_river_mirna.ogg" id="21_cpv4u"]
+[ext_resource type="PackedScene" uid="uid://dwqxbf6cfdrxb" path="res://Assets/OriginalModels/OmnidotPlushProp.tscn" id="21_d2mx2"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="21_xwchy"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_6571d"]
@@ -506,6 +507,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.375173, -0.78577095, -16.2
 transform = Transform3D(0.9999999, 0, 1.03316026e-07, 0, 1, 0, -1.03316026e-07, 0, 0.9999999, 10.229248, -1.9273149, -13.675406)
 visible = false
 mesh = SubResource("QuadMesh_cpv4u")
+
+[node name="OmnidotplushV2" parent="." unique_id=661467137 instance=ExtResource("21_d2mx2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.972584, -1.3186452, -22.408422)
 
 [connection signal="body_entered" from="WaterFlow/SplashTrigger" to="." method="_on_splash_trigger_body_entered"]
 [connection signal="body_entered" from="Scp812Trigger" to="." method="_on_scp_812_trigger_body_entered"]

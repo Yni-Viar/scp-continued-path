@@ -19,6 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://nccdmmocoap4" path="res://Assets/ExternalModels/laptop.tscn" id="15_j878u"]
 [ext_resource type="PackedScene" uid="uid://d0ot1af7632t" path="res://InventorySystem/Items/ItemDoc.tscn" id="15_pde0x"]
 [ext_resource type="PackedScene" uid="uid://cqhhycwdvhaq6" path="res://Assets/ExternalModels/hanging_light.tscn" id="16_u0mfn"]
+[ext_resource type="PackedScene" uid="uid://baytx1gft7sbp" path="res://Assets/OriginalModels/box_mini.tscn" id="17_rgjp5"]
+[ext_resource type="PackedScene" uid="uid://dwqxbf6cfdrxb" path="res://Assets/OriginalModels/OmnidotPlushProp.tscn" id="18_2d0tc"]
 [ext_resource type="Texture2D" uid="uid://dehueffswdiuk" path="res://Assets/ExternalModels/SCP/PopPopIcard/Light_VirtLargeLight_LargeHanhingCeilingLight_BaseMap.png" id="19_1jsuh"]
 [ext_resource type="Script" uid="uid://cht8u13ej0wfa" path="res://Scripts/RoomMesh.gd" id="20_pde0x"]
 [ext_resource type="Texture2D" uid="uid://blt4sp0nvls3t" path="res://Assets/ExternalModels/SCP/PopPopIcard/Light_VirtLargeLight_LargeHanhingCeilingLight_Emissive.png" id="20_yel77"]
@@ -1378,6 +1380,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.44526, 0, -1.0715957)
 [node name="box3" parent="NavigationRegion3D/Props" unique_id=969738173 instance=ExtResource("7_ie44p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.937153, 0, -3.725363)
 
+[node name="box8" parent="NavigationRegion3D/Props" unique_id=698592481 instance=ExtResource("17_rgjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.276892, -0.43467045, 3.5144713)
+
+[node name="box9" parent="NavigationRegion3D/Props" unique_id=951158699 instance=ExtResource("17_rgjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.351469, 0.82958007, 2.466484)
+
+[node name="box10" parent="NavigationRegion3D/Props" unique_id=647846046 instance=ExtResource("17_rgjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.476643, 2.0954792, 3.634284)
+
+[node name="box11" parent="NavigationRegion3D/Props" unique_id=550350168 instance=ExtResource("17_rgjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.314394, 3.3610544, 2.9715915)
+
+[node name="box12" parent="NavigationRegion3D/Props" unique_id=1708352315 instance=ExtResource("17_rgjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.304327, 2.095479, 2.385355)
+
+[node name="OmnidotplushV2" parent="NavigationRegion3D/Props" unique_id=661467137 instance=ExtResource("18_2d0tc")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 4.8218045, 0.7365444, 3.7320378)
+
 [node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D" unique_id=1838468565]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86066204, 0)
 mesh = SubResource("ArrayMesh_kob7d")
@@ -1723,6 +1743,33 @@ shape = SubResource("ConcavePolygonShape3D_rki7p")
 
 [node name="LczDoor" parent="." unique_id=1729538295 instance=ExtResource("35_kob7d")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10.697567, -1.2675412, -1.394937)
+
+[node name="box" parent="." unique_id=244868487 instance=ExtResource("17_rgjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.304951, -0.4346707, -5.8504744)
+
+[node name="box2" parent="." unique_id=306955922 instance=ExtResource("17_rgjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1959, 0.8295801, -4.7883277)
+
+[node name="box3" parent="." unique_id=17916317 instance=ExtResource("17_rgjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.393658, 2.0954795, -5.9360104)
+
+[node name="box4" parent="." unique_id=692047527 instance=ExtResource("17_rgjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.407946, 2.095479, -4.67286)
+
+[node name="box5" parent="." unique_id=1737659804 instance=ExtResource("17_rgjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.617717, 3.3610544, -4.8877583)
+
+[node name="OmnidotplushV2" parent="." unique_id=612420761 instance=ExtResource("18_2d0tc")]
+transform = Transform3D(-0.7071068, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.7071068, 11.100662, 4.064522, -6.1102424)
+
+[node name="box6" parent="." unique_id=1112747769 instance=ExtResource("17_rgjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.297459, -0.4346707, -1.4546721)
+
+[node name="box7" parent="." unique_id=1676918069 instance=ExtResource("17_rgjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.337476, 0.82957983, -0.28616983)
+
+[node name="box8" parent="." unique_id=1094536302 instance=ExtResource("17_rgjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.194067, 2.0954792, -1.4979525)
 
 [connection signal="body_entered" from="NavigationRegion3D/scp914/AddItemsArea" to="NavigationRegion3D/scp914" method="_on_add_items_area_body_entered"]
 [connection signal="body_exited" from="NavigationRegion3D/scp914/AddItemsArea" to="NavigationRegion3D/scp914" method="_on_add_items_area_body_exited"]

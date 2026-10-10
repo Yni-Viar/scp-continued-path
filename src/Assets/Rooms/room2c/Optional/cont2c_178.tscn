@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://p7fq70bvncja" path="res://Assets/ExternalModels/hanging_light_rz.tscn" id="9_bejmg"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="9_mrost"]
 [ext_resource type="LightmapGIData" uid="uid://bwb3mkncdtbhm" path="res://Assets/Rooms/room2c/Optional/Lm/cont2c_178.lmbake" id="12_m3lx6"]
+[ext_resource type="PackedScene" uid="uid://dwqxbf6cfdrxb" path="res://Assets/OriginalModels/OmnidotPlushProp.tscn" id="14_lb8j8"]
 [ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="15_r5gbw"]
 [ext_resource type="PackedScene" uid="uid://6qt3tlm0761o" path="res://InventorySystem/Items/ItemScp178.tscn" id="16_78hjk"]
 [ext_resource type="Script" uid="uid://cht8u13ej0wfa" path="res://Scripts/RoomMesh.gd" id="17_63prd"]
@@ -259,13 +260,16 @@ transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70
 transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 6.8684726, 4.038, 0.6147437)
 
 [node name="Table" parent="NavigationRegion3D/Props" unique_id=780582532 instance=ExtResource("15_r5gbw")]
-transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -6.772891, 0, 0.49040914)
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -6.772891, -0.23814082, 0.49040914)
 
 [node name="FireExtinguisher" parent="NavigationRegion3D/Props" unique_id=1838474153 instance=ExtResource("20_80h31")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2922475, -0.647533, -0.6731573)
 
 [node name="laptop" parent="NavigationRegion3D/Props" unique_id=1960464114 instance=ExtResource("22_10yi5")]
-transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -6.7948275, 0.46816874, 0.52277374)
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -6.7948275, 0.23002791, 0.52277374)
+
+[node name="OmnidotplushV2" parent="NavigationRegion3D/Props" unique_id=661467137 instance=ExtResource("14_lb8j8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.046754, -1.2607948, 1.7219197)
 
 [node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D" unique_id=1534005125]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86066204, 0)

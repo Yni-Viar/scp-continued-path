@@ -19,6 +19,7 @@
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="17_hojpo"]
 [ext_resource type="PackedScene" uid="uid://b60rflaalvyrk" path="res://Assets/Doors/hcz_door_openable.tscn" id="18_h5ai5"]
 [ext_resource type="PackedScene" uid="uid://cjmvqohuuhvtc" path="res://Assets/OriginalModels/chair.tscn" id="19_5q8h0"]
+[ext_resource type="PackedScene" uid="uid://dwqxbf6cfdrxb" path="res://Assets/OriginalModels/OmnidotPlushProp.tscn" id="20_hojpo"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_o7u4x"]
 vertices = PackedVector3Array(-1.7767229, -0.7636385, 3.4732788, 1.7232771, -0.7636385, 3.4732788, 1.7232771, -0.7636385, 2.7232788, 2.973277, -0.7636385, 1.7232788, 2.973277, -0.7636385, -1.7767212, -1.0267229, -0.7636385, -2.0267212, -2.026723, -0.7636385, -1.0267212, 9.723277, -0.7636385, 1.2232788, 9.723277, -0.7636385, -1.0267212, 8.973277, -0.7636385, -1.2767212, 8.723277, -0.7636385, 1.9732788, 8.723277, -0.7636385, -2.0267212, -1.2767229, -0.7636385, 8.973279, -1.0267229, -0.7636385, 9.723279, 1.2232771, -0.7636385, 9.723279, 1.9732771, -0.7636385, 8.723279, 2.223277, -0.7636385, 6.973279, -2.026723, -0.7636385, 8.723279, 3.973277, -0.7636385, 6.223279, 3.973277, -0.7636385, 6.973279, 4.223277, -0.7636385, 8.973279, 7.223277, -0.7636385, 8.973279, 7.223277, -0.7636385, 4.223279, 4.223277, -0.7636385, 4.223279, 2.223277, -0.7636385, 6.223279)
@@ -504,3 +505,6 @@ shape = SubResource("ConcavePolygonShape3D_n8x6h")
 
 [node name="ScientistPoint2" type="Marker3D" parent="." unique_id=295318388 groups=["ScientistPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.16458, -0.78577095, 7.5376196)
+
+[node name="OmnidotplushV2" parent="." unique_id=661467137 instance=ExtResource("20_hojpo")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 9.581203, -1.2499877, 8.6620245)

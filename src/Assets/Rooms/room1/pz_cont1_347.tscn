@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dwvjvm78gm8b" path="res://Assets/OriginalModels/closet.tscn" id="17_rgku4"]
 [ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="18_fypfh"]
 [ext_resource type="PackedScene" uid="uid://c0vop3lnknpgm" path="res://Assets/Doors/lcz_door_openable.tscn" id="22_fypfh"]
+[ext_resource type="PackedScene" uid="uid://dwqxbf6cfdrxb" path="res://Assets/OriginalModels/OmnidotPlushProp.tscn" id="22_rgku4"]
 [ext_resource type="PackedScene" uid="uid://drpl4u07st7oq" path="res://Assets/ExternalModels/armchair_15.tscn" id="24_nx1xh"]
 [ext_resource type="PackedScene" uid="uid://d4issmtwtpowq" path="res://Assets/ExternalModels/couch.tscn" id="25_b5rm0"]
 [ext_resource type="PackedScene" uid="uid://nccdmmocoap4" path="res://Assets/ExternalModels/laptop.tscn" id="26_lpoic"]
@@ -250,3 +251,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7892466, -1.24029, 1.255980
 
 [node name="LczDoor" parent="." unique_id=1729538295 instance=ExtResource("22_fypfh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.019338965, -1.2504709, 5.062395)
+
+[node name="OmnidotplushV2" parent="." unique_id=661467137 instance=ExtResource("22_rgku4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.907427, -1.2438294, -5.1329184)

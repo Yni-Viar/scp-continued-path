@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="12_42a8v"]
 [ext_resource type="PackedScene" uid="uid://g2a7novacc01" path="res://Assets/ExternalModels/shelf_2028.tscn" id="12_bqb6u"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="13_hrklx"]
+[ext_resource type="PackedScene" uid="uid://dwqxbf6cfdrxb" path="res://Assets/OriginalModels/OmnidotPlushProp.tscn" id="14_4orul"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_swyoh"]
 vertices = PackedVector3Array(4.7572403, -0.763, -3.489749, 7.0072403, -0.763, -3.739749, 4.5072403, -0.763, -3.989749, 4.5072403, -0.763, -1.989749, 1.5072403, -0.763, -8.989749, 1.2572403, -0.763, -9.739749, -1.2427597, -0.763, -9.739749, -1.4927597, -0.763, -8.989749, 4.5072403, -0.763, -8.989749, -6.9927597, -0.763, -8.739749, -6.9927597, -0.763, -7.739749, -4.2427597, -0.763, -7.489749, -4.2427597, -0.763, -2.239749, 7.5072403, -0.763, 2.260251, 7.5072403, -0.763, -2.489749, 7.0072403, -0.763, 2.260251, 4.7572403, -0.763, 2.510251, 4.5072403, -0.763, 2.010251, 4.5072403, -0.763, 4.260251, -4.2427597, -0.763, 4.260251, -4.4927597, -0.763, -0.48974895, -6.9927597, -0.763, -0.48974895, -6.9927597, -0.763, 2.260251, -4.4927597, -0.763, 2.260251, 5.7572403, -0.763, 9.010251, 5.7572403, -0.763, 8.260251, 4.5072403, -0.763, 8.010251, 1.5072403, -0.763, 9.010251, -1.4927597, -0.763, 9.010251, -1.2427597, -0.763, 9.760251, 1.2572403, -0.763, 9.760251, -4.2427597, -0.763, 9.010251)
@@ -320,3 +321,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.18546, -0.70169735, -0.531
 
 [node name="ChristmasLights2" parent="Seasonal/Christmas" unique_id=1411604530 instance=ExtResource("12_42a8v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3960235, -0.70169735, -0.53107786)
+
+[node name="OmnidotplushV2" parent="." unique_id=661467137 instance=ExtResource("14_4orul")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.203272, -1.2563584, -8.347123)
+
+[node name="OmnidotplushV3" parent="." unique_id=913238515 instance=ExtResource("14_4orul")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.203272, -1.2563584, 8.652877)

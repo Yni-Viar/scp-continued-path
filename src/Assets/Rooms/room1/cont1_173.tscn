@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dprcy2clttqnt" path="res://Assets/Doors/gate_openable.tscn" id="18_2ovmx"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="18_4ecej"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="19_4ecej"]
+[ext_resource type="PackedScene" uid="uid://dwqxbf6cfdrxb" path="res://Assets/OriginalModels/OmnidotPlushProp.tscn" id="19_sggw7"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_6571d"]
 vertices = PackedVector3Array(-6.93736, -2.830584, -6.2714696, -6.93736, -2.830584, 0.7285304, 2.0626402, -2.830584, 0.7285304, 2.0626402, -2.830584, -6.2714696, 6.56264, -0.83058405, 0.4785304, 4.06264, -0.83058405, 0.7285304, 3.8126402, -0.83058405, 2.7285304, 7.06264, -0.83058405, 3.7285304, 2.3126402, -0.83058405, 2.7285304, 2.0626402, -0.83058405, 1.7285304, -3.4373598, -0.83058405, 1.7285304, -4.18736, -0.83058405, 4.2285304, -6.93736, -0.83058405, 4.2285304, -6.93736, -0.83058405, 9.728531, 3.5626402, -0.83058405, 9.728531, 7.06264, -0.83058405, 9.478531, 8.56264, -0.83058405, 3.4785304, 8.56264, -0.83058405, -6.2714696, 6.56264, -0.83058405, -6.2714696)
@@ -220,6 +221,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.92514396, -1.2324625, 2.42
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=734250964]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86066204, 0)
 shape = SubResource("ConcavePolygonShape3D_2ovmx")
+
+[node name="OmnidotplushV2" parent="." unique_id=661467137 instance=ExtResource("19_sggw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7302635, -1.2490705, -6.593477)
 
 [connection signal="body_entered" from="Scp173Task" to="Scp173Task" method="_on_body_entered"]
 [connection signal="body_exited" from="Scp173Task" to="Scp173Task" method="_on_body_exited"]

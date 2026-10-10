@@ -2,6 +2,13 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
+## v10.4.3 (2026.10.11)
+
+- Aligned more props
+- Fixed navigation at Research Zone testroom.
+- Fixed and added easter egg.
+- \[Plugin API\] Decreased custom puppet walk and run animation speed to 2.0 (was 3.0)
+
 ## v10.4.2 (2026.10.08)
 
 - New easter egg + SCP-1223 flashback.

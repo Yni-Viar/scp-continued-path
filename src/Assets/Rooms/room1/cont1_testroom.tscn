@@ -21,11 +21,12 @@
 [ext_resource type="Script" uid="uid://cht8u13ej0wfa" path="res://Scripts/RoomMesh.gd" id="16_gt6np"]
 [ext_resource type="PackedScene" uid="uid://cjmvqohuuhvtc" path="res://Assets/OriginalModels/chair.tscn" id="19_53a8x"]
 [ext_resource type="PackedScene" uid="uid://c88xvl7f3pq8b" path="res://Assets/OriginalModels/FireExtinguisher.tscn" id="20_42cx5"]
+[ext_resource type="PackedScene" uid="uid://dwqxbf6cfdrxb" path="res://Assets/OriginalModels/OmnidotPlushProp.tscn" id="23_lbiiv"]
 [ext_resource type="PackedScene" uid="uid://dprcy2clttqnt" path="res://Assets/Doors/gate_openable.tscn" id="24_gt6np"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_2ywj7"]
-vertices = PackedVector3Array(-0.6880207, -0.77039003, -6.2962, -3.9380207, -0.77039003, -6.2962, -3.9380207, -0.77039003, -5.2962, -0.4380207, -0.77039003, -5.0462, -4.6880207, -0.77039003, -5.0462, -4.6880207, -0.77039003, 0.7038002, -3.6880207, -0.77039003, 0.7038002, -3.4380207, -0.77039003, 1.7038002, 2.0619793, -0.77039003, 1.7038002, 2.0619793, -0.77039003, -5.0462, 4.0619793, -0.77039003, 2.4538002, 3.5619793, -0.77039003, 2.7038002, 7.3119793, -0.77039003, 3.9538002, 7.5619793, -0.77039003, 3.4538002, 8.561979, -0.77039003, 3.4538002, 8.561979, -0.77039003, -6.2962, 4.0619793, -0.77039003, -6.2962, 2.0619793, -0.77039003, 2.4538002, 2.5619793, -0.77039003, 2.7038002, -4.1880207, -0.77039003, 4.2038, -6.9380207, -0.77039003, 4.2038, -6.9380207, -0.77039003, 9.7038, 2.5619793, -0.77039003, 9.7038, 6.0619793, -0.77039003, 9.7038, 6.3119793, -0.77039003, 8.9538, 7.3119793, -0.77039003, 8.9538)
-polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(0, 3, 2), PackedInt32Array(2, 3, 4), PackedInt32Array(4, 3, 6), PackedInt32Array(4, 6, 5), PackedInt32Array(7, 6, 8), PackedInt32Array(8, 6, 3), PackedInt32Array(8, 3, 9), PackedInt32Array(13, 12, 10), PackedInt32Array(10, 12, 11), PackedInt32Array(13, 10, 14), PackedInt32Array(14, 10, 16), PackedInt32Array(14, 16, 15), PackedInt32Array(7, 8, 17), PackedInt32Array(17, 18, 7), PackedInt32Array(7, 18, 19), PackedInt32Array(21, 20, 19), PackedInt32Array(18, 22, 19), PackedInt32Array(19, 22, 21), PackedInt32Array(23, 22, 24), PackedInt32Array(24, 22, 12), PackedInt32Array(12, 22, 11), PackedInt32Array(11, 22, 18), PackedInt32Array(12, 25, 24)]
+vertices = PackedVector3Array(-5.6634607, -0.7703905, -1.7942305, -5.6634607, -0.7703905, 0.70576954, -4.4134607, -0.7703905, 0.70576954, -0.41346073, -0.7703905, -5.0442305, -4.1634607, -0.7703905, -5.0442305, -0.66346073, -0.7703905, -6.2942305, -3.9134607, -0.7703905, -6.2942305, -6.9134607, -0.7703905, -5.2942305, -6.9134607, -0.7703905, -2.0442305, -3.9134607, -0.7703905, 2.2057695, 2.0865393, -0.7703905, 1.9557695, 2.0865393, -0.7703905, -5.2942305, 6.5865393, -0.7703905, 0.70576954, 4.0865393, -0.7703905, 0.95576954, 3.8365393, -0.7703905, 2.7057695, 7.0865393, -0.7703905, 3.7057695, 6.3365393, -0.7703905, 8.95577, 7.0865393, -0.7703905, 8.95577, 6.0865393, -0.7703905, 9.70577, 2.3365393, -0.7703905, 2.7057695, -4.1634607, -0.7703905, 4.2057695, -6.9134607, -0.7703905, 9.70577, -6.9134607, -0.7703905, 4.2057695, 8.586539, -0.7703905, 3.4557695, 8.586539, -0.7703905, -6.2942305, 6.3365393, -0.7703905, -6.2942305)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 4), PackedInt32Array(2, 4, 3), PackedInt32Array(5, 3, 6), PackedInt32Array(6, 3, 4), PackedInt32Array(8, 7, 0), PackedInt32Array(0, 7, 4), PackedInt32Array(9, 2, 10), PackedInt32Array(10, 2, 3), PackedInt32Array(10, 3, 11), PackedInt32Array(13, 12, 14), PackedInt32Array(14, 12, 15), PackedInt32Array(15, 17, 16), PackedInt32Array(16, 18, 15), PackedInt32Array(15, 18, 19), PackedInt32Array(19, 18, 20), PackedInt32Array(20, 18, 21), PackedInt32Array(21, 22, 20), PackedInt32Array(10, 19, 9), PackedInt32Array(9, 19, 20), PackedInt32Array(19, 14, 15), PackedInt32Array(15, 12, 23), PackedInt32Array(23, 12, 25), PackedInt32Array(23, 25, 24)]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3mnq1"]
 resource_name = "LargeHangingCeilingLight"
@@ -221,7 +222,7 @@ spot_angle = 67.042114
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.4345074, -0.64942557, 9.880915)
 
 [node name="Table" parent="NavigationRegion3D/Props" unique_id=2107050037 instance=ExtResource("9_42cx5")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.8443623, -0.23142517, -1.7658596)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.8443623, -0.23142517, -2.678751)
 
 [node name="Scp983Spawner" type="Marker3D" parent="NavigationRegion3D/Props" unique_id=505033779]
 script = ExtResource("8_42cx5")
@@ -306,7 +307,7 @@ transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.2588
 transform = Transform3D(-1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, -1, -0.5871053, -1.2627635, -1.9613489)
 
 [node name="Chair3" parent="." unique_id=476640851 instance=ExtResource("19_53a8x")]
-transform = Transform3D(7.351371e-08, 0, -1, 0, 1, 0, 1, 0, 7.351371e-08, 7.2144547, -1.2627635, -2.4715896)
+transform = Transform3D(7.351371e-08, 0, -1, 0, 1, 0, 1, 0, 7.351371e-08, 6.9467726, -1.2627635, -2.9240553)
 
 [node name="GateFrame" parent="." unique_id=590180755 instance=ExtResource("24_gt6np")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0230329, -1.2315425, 1.5738945)
@@ -314,3 +315,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0230329, -1.2315425, 1.573
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1317937378]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86066204, 0)
 shape = SubResource("ConcavePolygonShape3D_gt6np")
+
+[node name="OmnidotplushV2" parent="." unique_id=661467137 instance=ExtResource("23_lbiiv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8260212, -1.2492166, -6.602601)
+
+[node name="OmnidotplushV3" parent="." unique_id=1178076163 instance=ExtResource("23_lbiiv")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 4.4042325, -1.249905, -6.3663797)

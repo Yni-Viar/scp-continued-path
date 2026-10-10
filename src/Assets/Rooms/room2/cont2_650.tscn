@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://cht8u13ej0wfa" path="res://Scripts/RoomMesh.gd" id="7_jjkku"]
 [ext_resource type="PackedScene" uid="uid://p7fq70bvncja" path="res://Assets/ExternalModels/hanging_light_rz.tscn" id="8_ndh3u"]
 [ext_resource type="LightmapGIData" uid="uid://bfxk33pu40ede" path="res://Assets/Rooms/room2/Lm/cont2_650.lmbake" id="8_uv1va"]
+[ext_resource type="PackedScene" uid="uid://dwqxbf6cfdrxb" path="res://Assets/OriginalModels/OmnidotPlushProp.tscn" id="10_1fx83"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="10_43rjr"]
 [ext_resource type="PackedScene" uid="uid://cjmvqohuuhvtc" path="res://Assets/OriginalModels/chair.tscn" id="10_e32qf"]
 [ext_resource type="PackedScene" uid="uid://0hcy8vda587t" path="res://Assets/ExternalModels/pumpkin.tscn" id="10_rism5"]
@@ -401,6 +402,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.21
 
 [node name="laptop" parent="NavigationRegion3D/Props" unique_id=552938688 instance=ExtResource("11_jjkku")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.493564, 0.22101188, 4.0431247)
+
+[node name="OmnidotplushV2" parent="NavigationRegion3D/Props" unique_id=661467137 instance=ExtResource("10_1fx83")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 9.01822, -1.2624892, 4.2628)
 
 [node name="NavigationObstacle3D2" type="NavigationObstacle3D" parent="NavigationRegion3D" unique_id=2097419990]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.27374, 0)

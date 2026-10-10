@@ -34,7 +34,7 @@
 		"start_items": [],
 		"start_money": {},
 		"enable_advanced_ai": false,
-		"immortal": true,
+		"immortal": false,
 		"keycards": []
 	},
 	"animations": {
