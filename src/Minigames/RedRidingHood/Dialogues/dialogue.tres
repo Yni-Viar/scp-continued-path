@@ -1,0 +1,358 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://c3bqei8f4py0o"]
+
+[ext_resource type="Script" uid="uid://bnjsf7gdri5lq" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_vt3k3"]
+
+[resource]
+script = ExtResource("1_vt3k3")
+starts = {
+"dlg_canonend": &"0_3",
+"dlg_happy": &"0_5",
+"dlg_nwb": &"0_2",
+"dlg_outsmart": &"0_4",
+"dlg_outsmart_2": &"0_6",
+"dlg_wfe": &"0_1"
+}
+nodes = {
+&"0_1": {
+"link": &"1_1",
+"offset": Vector2(-480, -80),
+"start_id": "dlg_wfe"
+},
+&"0_2": {
+"link": &"1_7",
+"offset": Vector2(-480, -380),
+"start_id": "dlg_nwb"
+},
+&"0_3": {
+"link": &"1_8",
+"offset": Vector2(-480, 960),
+"start_id": "dlg_canonend"
+},
+&"0_4": {
+"link": &"1_12",
+"offset": Vector2(-480, 1240),
+"start_id": "dlg_outsmart"
+},
+&"0_5": {
+"link": &"1_17",
+"offset": Vector2(-480, 1540),
+"start_id": "dlg_happy"
+},
+&"0_6": {
+"link": &"1_14",
+"offset": Vector2(-460, 1840),
+"start_id": "dlg_outsmart_2"
+},
+&"1_1": {
+"dialogue": "Hello, young lady. Where are you going?",
+"offset": Vector2(-200, -140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_4",
+"text": "To the grandmother's house"
+},
+1: {
+"condition": {},
+"link": &"1_2",
+"text": "It should not matter you."
+}
+},
+"size": Vector2(300, 340),
+"speaker": 1
+},
+&"1_10": {
+"dialogue": "To better hear you with.",
+"offset": Vector2(440, 900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_11",
+"text": "Why do you have big teeth."
+}
+},
+"size": Vector2(300.00037, 271.00024),
+"speaker": 3
+},
+&"1_11": {
+"dialogue": "To eat you with, my child.",
+"offset": Vector2(760, 900),
+"options": {
+0: {
+"condition": {},
+"link": &"3_4",
+"text": ""
+}
+},
+"size": Vector2(300.00024, 240.00024),
+"speaker": 3
+},
+&"1_12": {
+"dialogue": "Hello, my dear granddaughter!",
+"offset": Vector2(-220, 1180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_13",
+"text": "I brought some pies to you"
+}
+},
+"size": Vector2(300, 270.99988),
+"speaker": 2
+},
+&"1_13": {
+"dialogue": "I'm glad that you care about...",
+"offset": Vector2(120, 1200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_5",
+"text": ""
+}
+},
+"size": Vector2(300.00043, 240),
+"speaker": 2
+},
+&"1_14": {
+"dialogue": "Get out of here, you filthy beast!",
+"offset": Vector2(-180, 1840),
+"options": {
+0: {
+"condition": {},
+"link": &"1_15",
+"text": ""
+}
+},
+"size": Vector2(300.00018, 240.00012),
+"speaker": 2
+},
+&"1_15": {
+"dialogue": "So you decided to outsmart me, little girl? I WILL EAT YOU AND YOUR GRANDMOTHER!",
+"offset": Vector2(160, 1840),
+"options": {
+0: {
+"condition": {},
+"link": &"1_16",
+"text": ""
+}
+},
+"size": Vector2(300.00012, 240.00012),
+"speaker": 1
+},
+&"1_16": {
+"dialogue": "The wolf jumped onto your dear granny. You have no options but run away...",
+"offset": Vector2(500, 1840),
+"options": {
+0: {
+"condition": {},
+"link": &"3_6",
+"text": ""
+}
+},
+"size": Vector2(300.0003, 240.00012),
+"speaker": ""
+},
+&"1_17": {
+"dialogue": "Hello, my dear granddaughter!",
+"offset": Vector2(-220, 1480),
+"options": {
+0: {
+"condition": {},
+"link": &"1_18",
+"text": "I brought some pies to you"
+}
+},
+"size": Vector2(300, 270.99988),
+"speaker": 2
+},
+&"1_18": {
+"dialogue": "I'm glad that you care about me. We'll have a good time together!",
+"offset": Vector2(120, 1480),
+"options": {
+0: {
+"condition": {},
+"link": &"3_7",
+"text": ""
+}
+},
+"size": Vector2(300.00043, 240.00024),
+"speaker": 2
+},
+&"1_2": {
+"dialogue": "Maybe I can help you to carry the basket?",
+"offset": Vector2(200, 180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_6",
+"text": "No, thank you."
+},
+1: {
+"condition": {},
+"link": &"1_3",
+"text": "Yes, please."
+}
+},
+"size": Vector2(300, 304),
+"speaker": 1
+},
+&"1_3": {
+"dialogue": "And... where are you going?
+I can carry your basket very quickly!",
+"offset": Vector2(700, -140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_4",
+"text": "To the grandmother's house."
+}
+},
+"size": Vector2(319.9994, 320),
+"speaker": 1
+},
+&"1_4": {
+"dialogue": "What road goes to your grandmother?",
+"offset": Vector2(1480, 240),
+"options": {
+0: {
+"condition": {},
+"link": &"3_3",
+"text": "(longer road)"
+},
+1: {
+"condition": {},
+"link": &"3_2",
+"text": "(shorter road)"
+},
+2: {
+"condition": {},
+"link": &"1_5",
+"text": "I want to carry the basket by own. Granny would be upset."
+}
+},
+"size": Vector2(319.99805, 359.99976),
+"speaker": 1
+},
+&"1_5": {
+"dialogue": "I can entertain your grandmother!",
+"offset": Vector2(1860, 600),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": "No thank you. I do not believe in strangers."
+},
+1: {
+"condition": {},
+"link": &"1_4",
+"text": "Okay."
+}
+},
+"size": Vector2(300, 304.00037),
+"speaker": 1
+},
+&"1_6": {
+"dialogue": "Why don't you want to take my help?",
+"offset": Vector2(640, 520),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": "I do not believe in strangers."
+},
+1: {
+"condition": {},
+"link": &"1_2",
+"text": "Maybe... you could halp me a bit."
+}
+},
+"size": Vector2(300, 304),
+"speaker": 1
+},
+&"1_7": {
+"dialogue": "I must carry the basket to my dear granny!",
+"offset": Vector2(-220, -460),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_8": {
+"dialogue": "Hello, my dear granddaughter!",
+"offset": Vector2(-220, 900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_9",
+"text": "I brought some pies to you"
+}
+},
+"size": Vector2(300, 271.00024),
+"speaker": 3
+},
+&"1_9": {
+"dialogue": "Thank you!",
+"offset": Vector2(120, 900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_10",
+"text": "Why do you have big ears?"
+}
+},
+"size": Vector2(300.00043, 271.00024),
+"speaker": 3
+},
+&"2_1": {
+"comment": "Wolf first encounter",
+"offset": Vector2(-480, -200),
+"size": Vector2(200, 100)
+},
+&"2_2": {
+"comment": "No way back",
+"offset": Vector2(-480, -500),
+"size": Vector2(200, 100)
+},
+&"3_1": {
+"link": "END",
+"offset": Vector2(2392.1348, 928.5484),
+"signalValue": "wolf_deny"
+},
+&"3_2": {
+"link": "END",
+"offset": Vector2(2160, 460),
+"signalValue": "wolf_faster_canon"
+},
+&"3_3": {
+"link": "END",
+"offset": Vector2(2158.049, 322.4799),
+"signalValue": "wolf_slower_outsmart"
+},
+&"3_4": {
+"link": "END",
+"offset": Vector2(1080, 900),
+"signalValue": "end"
+},
+&"3_5": {
+"link": "END",
+"offset": Vector2(460, 1280),
+"signalValue": "wolf_appear"
+},
+&"3_6": {
+"link": "END",
+"offset": Vector2(840, 1860),
+"signalValue": "end"
+},
+&"3_7": {
+"link": "END",
+"offset": Vector2(480.46024, 1529.8691),
+"signalValue": "end"
+}
+}
+strays = Array[String](["2_1", "2_2"])
+characters = "res://Minigames/RedRidingHood/Dialogues/characters.tres"

@@ -1,0 +1,216 @@
+[gd_scene format=3 uid="uid://ctaxtiwpvbhhf"]
+
+[ext_resource type="Script" uid="uid://b662txdydvt8a" path="res://Minigames/RedRidingHood/Scripts/Level2c.gd" id="1_frfwv"]
+[ext_resource type="Texture2D" uid="uid://b0o0ldij23oq7" path="res://Minigames/RedRidingHood/Assets/backgrounds/granny_house.svg" id="2_558hj"]
+[ext_resource type="PackedScene" uid="uid://nfog8h78pcfx" path="res://Minigames/RedRidingHood/PlayerController/Player.tscn" id="3_gwuaf"]
+[ext_resource type="Theme" uid="uid://b4f152moh4ayu" path="res://addons/dialogue_nodes/themes/bubblyClean.theme" id="4_sibv6"]
+[ext_resource type="Script" uid="uid://d2p44uvd2dsa1" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="5_7ri2h"]
+[ext_resource type="Resource" uid="uid://c3bqei8f4py0o" path="res://Minigames/RedRidingHood/Dialogues/dialogue.tres" id="6_et6bs"]
+[ext_resource type="Script" uid="uid://b433w3r1hhutv" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="7_1jmmk"]
+[ext_resource type="Script" uid="uid://dvil74f7w4m8p" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="8_wo063"]
+[ext_resource type="Script" uid="uid://dd42qh1cpvys1" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="9_f7qf7"]
+[ext_resource type="Texture2D" uid="uid://d3aieg1d4s2fm" path="res://Minigames/RedRidingHood/Assets/granny.svg" id="10_frfwv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m832m"]
+size = Vector2(65, 603)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3o8p3"]
+size = Vector2(1316.2031, 74)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ntbkr"]
+normal = Vector2(1, 0)
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_71axn"]
+script = ExtResource("7_1jmmk")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_dahhg"]
+script = ExtResource("8_wo063")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_3so38"]
+script = ExtResource("9_f7qf7")
+
+[sub_resource type="Animation" id="Animation_mn3aa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_x3p2s"]
+resource_name = "end_game"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"load_last_scene_outsmart"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yy72m"]
+_data = {
+&"RESET": SubResource("Animation_mn3aa"),
+&"end_game": SubResource("Animation_x3p2s")
+}
+
+[node name="Game" type="Node2D" unique_id=1637921429]
+script = ExtResource("1_frfwv")
+game_route = 2
+
+[node name="GrannyHouse" type="Sprite2D" parent="." unique_id=406929550]
+scale = Vector2(1.125, 1.08)
+texture = ExtResource("2_558hj")
+centered = false
+
+[node name="WorldCollider" type="StaticBody2D" parent="." unique_id=1951987194]
+position = Vector2(4, 38)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldCollider" unique_id=138358443]
+position = Vector2(-36, 258)
+shape = SubResource("RectangleShape2D_m832m")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="WorldCollider" unique_id=203599363]
+position = Vector2(1179.5, 260.5)
+shape = SubResource("RectangleShape2D_m832m")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="WorldCollider" unique_id=1653275467]
+position = Vector2(560.2031, -78)
+shape = SubResource("RectangleShape2D_3o8p3")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="WorldCollider" unique_id=1262039255]
+position = Vector2(556, 602)
+shape = SubResource("RectangleShape2D_3o8p3")
+
+[node name="Player" parent="." unique_id=693911775 instance=ExtResource("3_gwuaf")]
+position = Vector2(312, 496)
+
+[node name="Camera2D" parent="Player" index="3" unique_id=2080485453]
+limit_left = 0
+limit_top = 0
+limit_right = 1024
+limit_bottom = 600
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1358785686]
+position = Vector2(-514, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1499283371]
+shape = SubResource("WorldBoundaryShape2D_ntbkr")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1753340496]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=511974345]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="LeftBar" type="TextureButton" parent="CanvasLayer/Control" unique_id=867557297]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_vertical = 0
+toggle_mode = true
+
+[node name="RightBar" type="TextureButton" parent="CanvasLayer/Control" unique_id=1120488496]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+toggle_mode = true
+
+[node name="DialogueBox" type="Panel" parent="CanvasLayer/Control" unique_id=450406176]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 141.0
+grow_horizontal = 2
+theme = ExtResource("4_sibv6")
+script = ExtResource("5_7ri2h")
+data = ExtResource("6_et6bs")
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_71axn"), SubResource("RichTextEffect_dahhg"), SubResource("RichTextEffect_3so38")])
+metadata/_custom_type_script = "uid://d2p44uvd2dsa1"
+
+[node name="Fade" type="ColorRect" parent="CanvasLayer/Control" unique_id=837593308]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = 2.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=96572587]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -94.0
+offset_right = 194.0
+offset_bottom = 75.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "Canon Ending"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control" unique_id=2130543937]
+libraries/ = SubResource("AnimationLibrary_yy72m")
+
+[node name="Granny" type="Sprite2D" parent="." unique_id=1180475739]
+position = Vector2(648, 416)
+scale = Vector2(1, 0.68604654)
+texture = ExtResource("10_frfwv")
+
+[node name="WolfSpawn" type="Marker2D" parent="." unique_id=1849566825]
+position = Vector2(88, 496)
+
+[connection signal="toggled" from="CanvasLayer/Control/LeftBar" to="." method="_on_left_bar_toggled"]
+[connection signal="toggled" from="CanvasLayer/Control/RightBar" to="." method="_on_right_bar_toggled"]
+[connection signal="dialogue_ended" from="CanvasLayer/Control/DialogueBox" to="Player" method="_on_dialogue_box_dialogue_ended"]
+[connection signal="dialogue_signal" from="CanvasLayer/Control/DialogueBox" to="." method="_on_dialogue_box_dialogue_signal"]
+
+[editable path="Player"]

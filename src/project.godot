@@ -18,7 +18,7 @@ config/name="SCP: Continued Path"
 config/description="Play the game about Janusz Krzystofski...
 Choose your story path!
 Or do your daily job at Site-19."
-config/version="10.4.3"
+config/version="10.5.0"
 config/tags=PackedStringArray("game", "scp_foundation", "singleplayer", "story")
 run/main_scene="uid://b25hrjnoos5me"
 config/use_custom_user_dir=true
@@ -99,7 +99,7 @@ naming/script_name_casing=1
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/PCKManager/plugin.cfg", "res://addons/ai_algorithms/plugin.cfg", "res://addons/console/plugin.cfg", "res://addons/dialogue_nodes/plugin.cfg")
+enabled=PackedStringArray("res://addons/PCKManager/plugin.cfg", "res://addons/ai_algorithms/plugin.cfg", "res://addons/console/plugin.cfg", "res://addons/dialogue_nodes/plugin.cfg", "res://addons/godette_plush/plugin.cfg")
 
 [file_customization]
 
@@ -107,6 +107,7 @@ folder_colors={
 "res://Assets/": "orange",
 "res://InventorySystem/": "yellow",
 "res://MapGen/": "teal",
+"res://Minigames/": "pink",
 "res://PlayerScript/": "red",
 "res://PluginSystem/": "pink",
 "res://Scenes/": "orange",

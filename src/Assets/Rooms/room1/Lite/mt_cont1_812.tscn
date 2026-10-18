@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="19_agof4"]
 [ext_resource type="AudioStream" uid="uid://clpkm2wuemv4j" path="res://Sounds/Environment/Scp812/ivolipa__small_waterfall_on_river_mirna.ogg" id="19_p6e27"]
 [ext_resource type="Texture2D" uid="uid://cxsu6u5817sx2" path="res://Assets/ExternalModels/Tex/bientot.png" id="20_b1yng"]
-[ext_resource type="PackedScene" uid="uid://dwqxbf6cfdrxb" path="res://Assets/OriginalModels/OmnidotPlushProp.tscn" id="21_lfmvw"]
+[ext_resource type="PackedScene" uid="uid://ba5yqm14e80mx" path="res://addons/godette_plush/godette_plush.tscn" id="21_lfmvw"]
 [ext_resource type="PackedScene" uid="uid://c88xvl7f3pq8b" path="res://Assets/OriginalModels/FireExtinguisher.tscn" id="23_3j8ej"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_6571d"]
@@ -471,8 +471,8 @@ transform = Transform3D(0.9999999, 0, 1.03316026e-07, 0, 1, 0, -1.03316026e-07, 
 visible = false
 mesh = SubResource("QuadMesh_ntbkr")
 
-[node name="OmnidotplushV2" parent="." unique_id=661467137 instance=ExtResource("21_lfmvw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.128828, -1.3181456, -22.444008)
+[node name="GodettePlush" parent="." unique_id=1521205680 instance=ExtResource("21_lfmvw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.866111, -1.3187697, -13.855705)
 
 [connection signal="body_entered" from="WaterFlow/SplashTrigger" to="." method="_on_splash_trigger_body_entered"]
 [connection signal="body_entered" from="Scp812Trigger" to="." method="_on_scp_812_trigger_body_entered"]

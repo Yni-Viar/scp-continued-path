@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Character" format=3 uid="uid://dv0m75f6cfaeq"]
+
+[ext_resource type="Script" uid="uid://urh5p4atyoyi" path="res://addons/dialogue_nodes/objects/Character.gd" id="1_u1oh3"]
+
+[resource]
+script = ExtResource("1_u1oh3")
+name = "Red Riding Hood"
+color = Color(0.9074366, 0.85234684, 0.82884514, 1)
+metadata/_custom_type_script = "uid://urh5p4atyoyi"

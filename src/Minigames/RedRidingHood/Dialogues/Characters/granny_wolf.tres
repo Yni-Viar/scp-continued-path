@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Character" format=3 uid="uid://c2aq2d80bpgr0"]
+
+[ext_resource type="Script" uid="uid://urh5p4atyoyi" path="res://addons/dialogue_nodes/objects/Character.gd" id="1_d54q5"]
+
+[resource]
+script = ExtResource("1_d54q5")
+name = "Granny"
+color = Color(0.7047794, 0.5709828, 0.5319184, 1)
+metadata/_custom_type_script = "uid://urh5p4atyoyi"

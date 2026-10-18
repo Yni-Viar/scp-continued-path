@@ -1191,7 +1191,7 @@ class Parser:
 		if pos < tcount - 1 and tokens[pos + 1][0] == "(":
 			pos += 2
 			var group: Array[Expr] = []
-			if tokens[pos][0] != ")":
+			if pos < tcount and tokens[pos][0] != ")":
 				while pos < tcount:
 					var expr := expression()
 					if not expr: _set_err("Expect expression in " + name); break

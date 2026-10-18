@@ -1,0 +1,175 @@
+[gd_scene format=3 uid="uid://dxsnb6gju86e0"]
+
+[ext_resource type="Script" uid="uid://dtrj8ib3eywsq" path="res://Minigames/RedRidingHood/Scripts/Wolf.gd" id="1_ib02w"]
+[ext_resource type="Texture2D" uid="uid://dpxdf63exa5yn" path="res://Minigames/RedRidingHood/Assets/wolf.svg" id="2_ytwkm"]
+[ext_resource type="Texture2D" uid="uid://dxbrhv2x0tl2r" path="res://Minigames/RedRidingHood/Assets/wolfleg.svg" id="3_60bcw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ntbkr"]
+radius = 35.0
+height = 196.0
+
+[sub_resource type="Animation" id="Animation_5i1rd"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BigBadWolf/Wolf:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BigBadWolf/Wolfleg:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.3703724, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BigBadWolf/Wolfleg2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.38397244]
+}
+
+[sub_resource type="Animation" id="Animation_c7efg"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BigBadWolf/Wolf:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(2, 2, 2),
+"points": PackedFloat32Array(0.005, -0.25, 0, 0.25, 0, -0.005, -0.083333336, 0, 0, 0, 0.005, -0.083333336, -0.0016666667, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BigBadWolf/Wolfleg:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(2),
+"points": PackedFloat32Array(0.38397244, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BigBadWolf/Wolfleg2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.38397244]
+}
+
+[sub_resource type="Animation" id="Animation_1vfqo"]
+resource_name = "walk"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BigBadWolf/Wolfleg:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.3839724354387525, 0.5235987755982988, -0.5235987755982988, 0.3839724354387525]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BigBadWolf/Wolfleg2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.36666667, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.38397244, 0.5235987755982988, -0.5235987755982988, -0.3839724354387525]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_drfae"]
+_data = {
+&"RESET": SubResource("Animation_5i1rd"),
+&"idle": SubResource("Animation_c7efg"),
+&"walk": SubResource("Animation_1vfqo")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rub7e"]
+radius = 24.0
+height = 78.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i75m2"]
+radius = 92.0
+height = 234.0
+
+[node name="Wolf" type="CharacterBody2D" unique_id=693911775]
+script = ExtResource("1_ib02w")
+dlg_path = "uid://c3bqei8f4py0o"
+dlgs = Dictionary[String, bool]({
+"dlg_wfe": false
+})
+
+[node name="BigBadWolf" type="Node2D" parent="." unique_id=1381048965]
+
+[node name="Wolf" type="Sprite2D" parent="BigBadWolf" unique_id=998626871]
+position = Vector2(0, -2.0000005)
+texture = ExtResource("2_ytwkm")
+offset = Vector2(12.66, -4.55)
+flip_h = true
+
+[node name="Wolfleg" type="Sprite2D" parent="BigBadWolf" unique_id=537175177]
+position = Vector2(0, 61)
+rotation = 0.3703724
+texture = ExtResource("3_60bcw")
+offset = Vector2(0, 16)
+
+[node name="Wolfleg2" type="Sprite2D" parent="BigBadWolf" unique_id=1010856600]
+position = Vector2(0, 61)
+rotation = -0.38397244
+texture = ExtResource("3_60bcw")
+offset = Vector2(0, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2127958832]
+position = Vector2(0, 6)
+shape = SubResource("CapsuleShape2D_ntbkr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1763317471]
+libraries/ = SubResource("AnimationLibrary_drfae")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1893108333]
+position = Vector2(16, -86)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_rub7e")
+
+[node name="TalkTrigger" type="Area2D" parent="." unique_id=1881933529]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TalkTrigger" unique_id=1311631909]
+position = Vector2(0, -5)
+shape = SubResource("CapsuleShape2D_i75m2")
+
+[connection signal="body_entered" from="TalkTrigger" to="." method="_on_talk_trigger_body_entered"]

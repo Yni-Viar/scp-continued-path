@@ -1,0 +1,172 @@
+[gd_scene format=3 uid="uid://8x1sk1n5vmdg"]
+
+[ext_resource type="Script" uid="uid://blhuew2a00cpe" path="res://Minigames/RedRidingHood/Scripts/Level3o.gd" id="1_n0xal"]
+[ext_resource type="Texture2D" uid="uid://rr3iyfh8r74m" path="res://Minigames/RedRidingHood/Assets/backgrounds/tree.svg" id="2_s5ygf"]
+[ext_resource type="PackedScene" uid="uid://nfog8h78pcfx" path="res://Minigames/RedRidingHood/PlayerController/Player.tscn" id="3_s5ygf"]
+[ext_resource type="Texture2D" uid="uid://dfpq52u3bpur4" path="res://Minigames/RedRidingHood/Assets/backgrounds/grass2v.svg" id="11_ee46o"]
+
+[sub_resource type="Gradient" id="Gradient_2h8qs"]
+colors = PackedColorArray(0, 0, 0, 1, 0.6394111, 0.84295267, 0.913965, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ntbkr"]
+gradient = SubResource("Gradient_2h8qs")
+width = 1024
+height = 600
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iukft"]
+distance = -544.0
+
+[sub_resource type="Gradient" id="Gradient_bdlbp"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ntbkr"]
+gradient = SubResource("Gradient_bdlbp")
+
+[node name="Game" type="Node2D" unique_id=1637921429]
+script = ExtResource("1_n0xal")
+
+[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=2017871814]
+repeat_size = Vector2(1024, 0)
+repeat_times = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D3" unique_id=2088139863]
+texture = SubResource("GradientTexture2D_ntbkr")
+centered = false
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=637666976]
+repeat_size = Vector2(1024, 0)
+repeat_times = 2
+
+[node name="Tree" type="Sprite2D" parent="Parallax2D" unique_id=470611721]
+position = Vector2(81, 226)
+texture = ExtResource("2_s5ygf")
+
+[node name="Tree2" type="Sprite2D" parent="Parallax2D" unique_id=891191612]
+position = Vector2(134, 278)
+texture = ExtResource("2_s5ygf")
+
+[node name="Tree3" type="Sprite2D" parent="Parallax2D" unique_id=116986238]
+position = Vector2(173, 244)
+texture = ExtResource("2_s5ygf")
+
+[node name="Tree4" type="Sprite2D" parent="Parallax2D" unique_id=1174970710]
+position = Vector2(224, 406)
+texture = ExtResource("2_s5ygf")
+
+[node name="Tree5" type="Sprite2D" parent="Parallax2D" unique_id=1385382901]
+position = Vector2(281, 245)
+texture = ExtResource("2_s5ygf")
+
+[node name="Tree6" type="Sprite2D" parent="Parallax2D" unique_id=533169408]
+position = Vector2(335, 327)
+texture = ExtResource("2_s5ygf")
+
+[node name="Tree7" type="Sprite2D" parent="Parallax2D" unique_id=1869091529]
+position = Vector2(405, 246)
+texture = ExtResource("2_s5ygf")
+
+[node name="Tree8" type="Sprite2D" parent="Parallax2D" unique_id=289042349]
+position = Vector2(457, 453)
+texture = ExtResource("2_s5ygf")
+
+[node name="Tree9" type="Sprite2D" parent="Parallax2D" unique_id=124779285]
+position = Vector2(488, 294)
+texture = ExtResource("2_s5ygf")
+
+[node name="Tree10" type="Sprite2D" parent="Parallax2D" unique_id=12633307]
+position = Vector2(571, 261)
+texture = ExtResource("2_s5ygf")
+
+[node name="Tree11" type="Sprite2D" parent="Parallax2D" unique_id=407796483]
+position = Vector2(633, 334)
+texture = ExtResource("2_s5ygf")
+
+[node name="Tree12" type="Sprite2D" parent="Parallax2D" unique_id=622794538]
+position = Vector2(706, 269)
+texture = ExtResource("2_s5ygf")
+
+[node name="Tree13" type="Sprite2D" parent="Parallax2D" unique_id=580162000]
+position = Vector2(786, 366)
+texture = ExtResource("2_s5ygf")
+
+[node name="Tree14" type="Sprite2D" parent="Parallax2D" unique_id=2117716526]
+position = Vector2(815, 233)
+texture = ExtResource("2_s5ygf")
+
+[node name="Tree15" type="Sprite2D" parent="Parallax2D" unique_id=2086571114]
+position = Vector2(889, 252)
+texture = ExtResource("2_s5ygf")
+
+[node name="Tree16" type="Sprite2D" parent="Parallax2D" unique_id=606681193]
+position = Vector2(963, 228)
+texture = ExtResource("2_s5ygf")
+
+[node name="Tree17" type="Sprite2D" parent="Parallax2D" unique_id=978663179]
+position = Vector2(1037, 330)
+texture = ExtResource("2_s5ygf")
+
+[node name="WorldCollider" type="StaticBody2D" parent="." unique_id=568361888]
+position = Vector2(4, -84)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldCollider" unique_id=215630683]
+position = Vector2(-4, -4)
+shape = SubResource("WorldBoundaryShape2D_iukft")
+
+[node name="Player" parent="." unique_id=693911775 instance=ExtResource("3_s5ygf")]
+position = Vector2(512, 360)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1753340496]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=511974345]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fade" type="ColorRect" parent="CanvasLayer/Control" unique_id=1421222287]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=273727858]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -94.0
+offset_right = 194.0
+offset_bottom = 75.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "Outsmart Ending"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1473820119]
+repeat_size = Vector2(1024, 0)
+repeat_times = 2
+
+[node name="Grass" type="Sprite2D" parent="Parallax2D2" unique_id=154034206]
+position = Vector2(0, 425)
+texture = ExtResource("11_ee46o")
+centered = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2" unique_id=928644376]
+position = Vector2(0, 553)
+scale = Vector2(4, 223)
+texture = SubResource("GradientTexture1D_ntbkr")
+centered = false

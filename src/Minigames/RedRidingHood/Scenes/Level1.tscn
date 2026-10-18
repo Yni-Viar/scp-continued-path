@@ -1,0 +1,232 @@
+[gd_scene format=3 uid="uid://cab4vw5w13i1v"]
+
+[ext_resource type="Script" uid="uid://b0vqi68bl2yvj" path="res://Minigames/RedRidingHood/Scripts/Level1.gd" id="1_2irst"]
+[ext_resource type="PackedScene" uid="uid://nfog8h78pcfx" path="res://Minigames/RedRidingHood/PlayerController/Player.tscn" id="1_iukft"]
+[ext_resource type="Texture2D" uid="uid://rr3iyfh8r74m" path="res://Minigames/RedRidingHood/Assets/backgrounds/tree.svg" id="2_bdlbp"]
+[ext_resource type="PackedScene" uid="uid://dxsnb6gju86e0" path="res://Minigames/RedRidingHood/Assets/Wolf.tscn" id="2_gl6un"]
+[ext_resource type="Script" uid="uid://d2p44uvd2dsa1" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="3_7lihs"]
+[ext_resource type="Script" uid="uid://b433w3r1hhutv" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="4_fgofq"]
+[ext_resource type="Theme" uid="uid://b4f152moh4ayu" path="res://addons/dialogue_nodes/themes/bubblyClean.theme" id="4_mtow7"]
+[ext_resource type="Script" uid="uid://dvil74f7w4m8p" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="5_2irst"]
+[ext_resource type="Resource" uid="uid://c3bqei8f4py0o" path="res://Minigames/RedRidingHood/Dialogues/dialogue.tres" id="6_2h8qs"]
+[ext_resource type="Script" uid="uid://dd42qh1cpvys1" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="6_bf53h"]
+[ext_resource type="Texture2D" uid="uid://dfpq52u3bpur4" path="res://Minigames/RedRidingHood/Assets/backgrounds/grass2v.svg" id="10_bdlbp"]
+
+[sub_resource type="Gradient" id="Gradient_2h8qs"]
+colors = PackedColorArray(0, 0, 0, 1, 0.6394111, 0.84295267, 0.913965, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ntbkr"]
+gradient = SubResource("Gradient_2h8qs")
+width = 1024
+height = 600
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iukft"]
+distance = -535.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ntbkr"]
+normal = Vector2(1, 0)
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_71axn"]
+script = ExtResource("4_fgofq")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_dahhg"]
+script = ExtResource("5_2irst")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_3so38"]
+script = ExtResource("6_bf53h")
+
+[sub_resource type="Gradient" id="Gradient_bdlbp"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ntbkr"]
+gradient = SubResource("Gradient_bdlbp")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntbkr"]
+size = Vector2(36, 699)
+
+[node name="Game" type="Node2D" unique_id=1637921429]
+script = ExtResource("1_2irst")
+
+[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=2017871814]
+repeat_size = Vector2(1024, 0)
+repeat_times = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D3" unique_id=2088139863]
+texture = SubResource("GradientTexture2D_ntbkr")
+centered = false
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=637666976]
+repeat_size = Vector2(1024, 0)
+repeat_times = 2
+
+[node name="Tree" type="Sprite2D" parent="Parallax2D" unique_id=470611721]
+position = Vector2(81, 226)
+texture = ExtResource("2_bdlbp")
+
+[node name="Tree2" type="Sprite2D" parent="Parallax2D" unique_id=891191612]
+position = Vector2(134, 278)
+texture = ExtResource("2_bdlbp")
+
+[node name="Tree3" type="Sprite2D" parent="Parallax2D" unique_id=116986238]
+position = Vector2(173, 244)
+texture = ExtResource("2_bdlbp")
+
+[node name="Tree4" type="Sprite2D" parent="Parallax2D" unique_id=1174970710]
+position = Vector2(224, 406)
+texture = ExtResource("2_bdlbp")
+
+[node name="Tree5" type="Sprite2D" parent="Parallax2D" unique_id=1385382901]
+position = Vector2(281, 245)
+texture = ExtResource("2_bdlbp")
+
+[node name="Tree6" type="Sprite2D" parent="Parallax2D" unique_id=533169408]
+position = Vector2(335, 327)
+texture = ExtResource("2_bdlbp")
+
+[node name="Tree7" type="Sprite2D" parent="Parallax2D" unique_id=1869091529]
+position = Vector2(405, 246)
+texture = ExtResource("2_bdlbp")
+
+[node name="Tree8" type="Sprite2D" parent="Parallax2D" unique_id=289042349]
+position = Vector2(457, 453)
+texture = ExtResource("2_bdlbp")
+
+[node name="Tree9" type="Sprite2D" parent="Parallax2D" unique_id=124779285]
+position = Vector2(488, 294)
+texture = ExtResource("2_bdlbp")
+
+[node name="Tree10" type="Sprite2D" parent="Parallax2D" unique_id=12633307]
+position = Vector2(571, 261)
+texture = ExtResource("2_bdlbp")
+
+[node name="Tree11" type="Sprite2D" parent="Parallax2D" unique_id=407796483]
+position = Vector2(633, 334)
+texture = ExtResource("2_bdlbp")
+
+[node name="Tree12" type="Sprite2D" parent="Parallax2D" unique_id=622794538]
+position = Vector2(706, 269)
+texture = ExtResource("2_bdlbp")
+
+[node name="Tree13" type="Sprite2D" parent="Parallax2D" unique_id=580162000]
+position = Vector2(786, 366)
+texture = ExtResource("2_bdlbp")
+
+[node name="Tree14" type="Sprite2D" parent="Parallax2D" unique_id=2117716526]
+position = Vector2(815, 233)
+texture = ExtResource("2_bdlbp")
+
+[node name="Tree15" type="Sprite2D" parent="Parallax2D" unique_id=2086571114]
+position = Vector2(889, 252)
+texture = ExtResource("2_bdlbp")
+
+[node name="Tree16" type="Sprite2D" parent="Parallax2D" unique_id=606681193]
+position = Vector2(963, 228)
+texture = ExtResource("2_bdlbp")
+
+[node name="Tree17" type="Sprite2D" parent="Parallax2D" unique_id=978663179]
+position = Vector2(1037, 330)
+texture = ExtResource("2_bdlbp")
+
+[node name="WorldCollider" type="StaticBody2D" parent="." unique_id=568361888]
+position = Vector2(4, -84)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldCollider" unique_id=215630683]
+shape = SubResource("WorldBoundaryShape2D_iukft")
+
+[node name="Player" parent="." unique_id=693911775 instance=ExtResource("1_iukft")]
+position = Vector2(64, 345)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1358785686]
+position = Vector2(-674, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1499283371]
+shape = SubResource("WorldBoundaryShape2D_ntbkr")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1753340496]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=511974345]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="LeftBar" type="TextureButton" parent="CanvasLayer/Control" unique_id=1383961613]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_vertical = 0
+toggle_mode = true
+
+[node name="RightBar" type="TextureButton" parent="CanvasLayer/Control" unique_id=1784843819]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+toggle_mode = true
+
+[node name="DialogueBox" type="Panel" parent="CanvasLayer/Control" unique_id=450406176]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 141.0
+grow_horizontal = 2
+theme = ExtResource("4_mtow7")
+script = ExtResource("3_7lihs")
+data = ExtResource("6_2h8qs")
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_71axn"), SubResource("RichTextEffect_dahhg"), SubResource("RichTextEffect_3so38")])
+metadata/_custom_type_script = "uid://d2p44uvd2dsa1"
+
+[node name="Fade" type="ColorRect" parent="CanvasLayer/Control" unique_id=1421222287]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Wolf" parent="." unique_id=1024599284 instance=ExtResource("2_gl6un")]
+position = Vector2(1199, 331)
+dlg_index = 0
+face_right = false
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1473820119]
+repeat_size = Vector2(1024, 0)
+repeat_times = 2
+
+[node name="Grass" type="Sprite2D" parent="Parallax2D2" unique_id=154034206]
+position = Vector2(0, 425)
+texture = ExtResource("10_bdlbp")
+centered = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2" unique_id=928644376]
+position = Vector2(0, 553)
+scale = Vector2(4, 223)
+texture = SubResource("GradientTexture1D_ntbkr")
+centered = false
+
+[node name="NoWayBack" type="Area2D" parent="." unique_id=1934955456]
+position = Vector2(-672, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NoWayBack" unique_id=105366497]
+position = Vector2(8, 184.5)
+shape = SubResource("RectangleShape2D_ntbkr")
+
+[connection signal="toggled" from="CanvasLayer/Control/LeftBar" to="." method="_on_left_bar_toggled"]
+[connection signal="toggled" from="CanvasLayer/Control/RightBar" to="." method="_on_right_bar_toggled"]
+[connection signal="dialogue_ended" from="CanvasLayer/Control/DialogueBox" to="Player" method="_on_dialogue_box_dialogue_ended"]
+[connection signal="dialogue_signal" from="CanvasLayer/Control/DialogueBox" to="." method="_on_dialogue_box_dialogue_signal"]
+[connection signal="body_entered" from="NoWayBack" to="." method="_on_no_way_back_body_entered"]

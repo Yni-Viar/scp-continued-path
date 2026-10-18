@@ -2,6 +2,15 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
+## v10.5.0
+### Red Riding Hood minigame
+- The minigame spawns in Research Zone. Find it!
+  - It spawns only in Casual mode!
+### Misc changes
+- \[Compatibility breakage\] \[Casual mode\] SCP-023 event was changed to 1/4 (25%) chance of activation (was 1/2 (50%))
+- \[Thirdparty\] Update Mila.gd to latest revision.
+- Added Godette plush to the game.
+
 ## v10.4.3 (2026.10.11)
 
 - Aligned more props

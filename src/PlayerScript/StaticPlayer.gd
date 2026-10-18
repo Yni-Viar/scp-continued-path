@@ -120,11 +120,11 @@ func intersect_shape(intersect_position: Vector3) -> Array[Dictionary]:
 func interact(value: String) -> void:
 	if get_node_or_null(target_puppet_path) == null:
 		get_tree().root.get_node("Game").finish_game(false, "GAME_OVER_DIE")
-	else:
+	elif !(get_node(target_puppet_path).movement_freeze || get_node(target_puppet_path).platform_moving):
 		match value:
 			"Point":
 				var result: Dictionary = intersect()
-				if result.keys().size() > 0 && !(get_node(target_puppet_path).movement_freeze || get_node(target_puppet_path).platform_moving):
+				if result.keys().size() > 0:
 					# Shape cast for items
 					var shape_result: Array[Dictionary] = intersect_shape(result["position"])
 					for s_result in shape_result:

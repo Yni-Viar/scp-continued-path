@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1007"
+   width="61.439999"
+   height="61.439999"
+   viewBox="0 0 61.439999 61.439999"
+   sodipodi:docname="wolfleg.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1011" />
+  <sodipodi:namedview
+     id="namedview1009"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     showgrid="false"
+     inkscape:zoom="13.492839"
+     inkscape:cx="30.682943"
+     inkscape:cy="30.757056"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1013" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1013">
+    <path
+       style="fill:#ffffff;stroke:none;fill-opacity:1"
+       d="m 22.382243,54.325113 h 16.156719 l 1.926948,-0.741133 0.741134,-1.334041 0.22234,-1.926949 v -1.556381 l -0.592907,-0.741134 -0.963474,-0.518793 -1.408155,-0.07411 -15.934378,0.444681 -1.259928,0.592907 -0.88936,1.259927 v 0.889361 l 0.07411,1.259928 0.44468,1.185814 0.444681,0.815247 z"
+       id="path1694" />
+  </g>
+</svg>

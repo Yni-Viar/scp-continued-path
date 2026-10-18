@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CharacterList" format=3 uid="uid://ctbwvsnn0sweu"]
+
+[ext_resource type="Script" uid="uid://urh5p4atyoyi" path="res://addons/dialogue_nodes/objects/Character.gd" id="1_2xlur"]
+[ext_resource type="Resource" uid="uid://dv0m75f6cfaeq" path="res://Minigames/RedRidingHood/Dialogues/Characters/red.tres" id="2_byy4s"]
+[ext_resource type="Script" uid="uid://bqqa8okdheslq" path="res://addons/dialogue_nodes/objects/CharacterList.gd" id="2_sjq1t"]
+[ext_resource type="Resource" uid="uid://cplv8qvkv5mbj" path="res://Minigames/RedRidingHood/Dialogues/Characters/wolf.tres" id="3_15ins"]
+[ext_resource type="Resource" uid="uid://bxpdojsioto8" path="res://Minigames/RedRidingHood/Dialogues/Characters/granny.tres" id="4_8qucu"]
+[ext_resource type="Resource" uid="uid://c2aq2d80bpgr0" path="res://Minigames/RedRidingHood/Dialogues/Characters/granny_wolf.tres" id="5_80ei6"]
+
+[resource]
+script = ExtResource("2_sjq1t")
+characters = Array[ExtResource("1_2xlur")]([ExtResource("2_byy4s"), ExtResource("3_15ins"), ExtResource("4_8qucu"), ExtResource("5_80ei6")])
+metadata/_custom_type_script = "uid://bqqa8okdheslq"

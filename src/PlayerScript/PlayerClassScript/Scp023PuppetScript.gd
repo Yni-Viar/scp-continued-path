@@ -13,7 +13,7 @@ var timer: Timer
 func on_spawned() -> void:
 	plugin_api_function("start")
 	if get_tree().root.get_node_or_null("Game/StoryModeNode") == null:
-		glow_enabled = false if get_tree().root.get_node("Game").rng.randi_range(0, 1) == 1 else true
+		glow_enabled = true if get_tree().root.get_node("Game").rng.randi_range(0, 3) == 1 else false
 	await get_tree().create_timer(0.5).timeout
 	if glow_enabled:
 		if !get_tree().root.get_node("Game/FoundationTask").has_task("task_023_emergency"):
