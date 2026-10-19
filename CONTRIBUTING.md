@@ -11,7 +11,7 @@ Godot 4.4 is no longer supported anymore since 6.0 - Cleanlight update.
 ### Building regular version
 
 1. Project->Export
-2. Choose your platform (e.g. Windows/Linux/Android)
+2. Choose your platform (e.g. Windows/Linux/Android/Web)
 3. Navigate to Resource tab and type in "Filter to exclude files/folders": `*.glb, *.gltf, Assets/*.bin, */Lite/*`. You may also want to add `, *.ico` to that filter, if you are not building for Windows.
 4. (Optional) You can also navigate to Resource tab and type in "Filters to export non-resource files/folders": `*.zip` - used by Hikkan easter egg.
 
@@ -19,7 +19,7 @@ Godot 4.4 is no longer supported anymore since 6.0 - Cleanlight update.
 ### Feature flags
 #### Building lite version (for Web)
 **In Lite version, some components are missing:**
-There are no SCP-080, SCP-178 (item exists, but has no effect), *SCP: Unity* SCP-173 model, SCP-266, SCP-791, SCP-914, SCP-938.
+There are no SCP-080, SCP-178 (item exists, but has no effect), *SCP: Unity* SCP-173 and SCP-131 models, SCP-791, SCP-914, Stories module + related SCPs.
 1. Project->Export
 2. Choose your platform (e.g. Web)
 3. Navigate to Resource tab and type in "Filter to exclude files/folders": `*.glb, *.gltf, Assets/*.bin, */Optional/*, res://Stories/*`. You may also want to add `, *.ico` to that filter, if you are not building for Windows.
@@ -61,6 +61,7 @@ You can:
       - 📁 sublevels - Here is a place for all static sublevels
    - 📁 VFX - VFX stuff.
 - 📁 Inventory - Here is a place for inventory and items
+- 📁 Minigames - Here is a place for minigames (currently only Red Riding Hood)
 - 📁 MapGen - Map generator module
    - 📁 Resources - Here is a place for all room resources for map generator
 - 📁 PlayerScript - Here is a place for all NPCs
@@ -69,6 +70,7 @@ You can:
    - 📁 PlayerClassRagdoll - Here is a place for all NPC ragdolls
    - 📁 PlayerClassResource - Here is a place for all NPC resources for registry
    - 📁 PlayerClassScript - Here is a place for all NPC-related code
+- 📁 PluginSystem - Here is a place for Plugin Script / mila.gd module
 - 📁 Scenes - Here is a place for all game scenes (such as Game, Menu, etc)
 - 📁 Scripts - Here is a place for the most code
    - 📁 ElevatorSystem - Here is a place for the elevator stuff

@@ -2,7 +2,7 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
-## v10.5.0
+## v10.5.0 (2026.10.19)
 ### Red Riding Hood minigame
 - The minigame spawns in Research Zone. Find it!
   - It spawns only in Casual mode!

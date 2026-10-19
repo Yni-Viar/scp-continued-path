@@ -55,6 +55,7 @@ More gestures you can see in the in-game settings.
 |-----------|------|------------------|
 |Stories|✅, >10.0.0|❌|
 |Plugins|✅, >10.0.0|❓, >10.0.0 (Web platform **disabled by default**, and only custom plugins are supported)|
+|Red Riding Hood minigame|✅, >10.5.0|✅, >10.5.0|
 
 #### Included SCPs
 | SCP# | Full | Lite/Web version | Functionality |

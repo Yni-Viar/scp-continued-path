@@ -29,8 +29,17 @@ var last_event_time: float = -1.0
 @onready var node_quad: MeshInstance3D = $CSGBakedMeshInstance3D/MeshInstance3D
 @onready var node_area: Area3D = $Area3D
 
+var movable_npc_player: Node3D
+
+var health_check_timer: float = 2.0
+
 func interact(player: Node3D):
+	if movable_npc_player is MovableNpc:
+		for i in range(movable_npc_player.current_health.size()):
+			if movable_npc_player.current_health[i] / movable_npc_player.health[i] < 0.375:
+				return
 	active = true
+	movable_npc_player = player
 
 func _unhandled_input(event: InputEvent) -> void:
 	if active:
@@ -49,16 +58,25 @@ func _unhandled_input(event: InputEvent) -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	if active:
-		if abs(get_node("Camera3D").rotation_degrees.y) > 100.0:
-			active = false
-			get_node("Camera3D").current = false
-			node_viewport.render_target_clear_mode = SubViewport.CLEAR_MODE_ALWAYS
-			node_viewport.process_mode = Node.PROCESS_MODE_DISABLED
-			node_quad.hide()
-			if get_tree().root.get_node("Game").protagonist != null:
-				get_tree().root.get_node("Game").protagonist.movement_freeze = false
-				get_tree().root.get_node("Game/UI").show()
+		if health_check_timer < 0.0:
+			if movable_npc_player is MovableNpc:
+				for i in range(movable_npc_player.current_health.size()):
+					if movable_npc_player.current_health[i] / movable_npc_player.health[i] < 0.375:
+						deactivate()
+					health_check_timer = 2.0
+		health_check_timer -= delta
+		if abs(get_node("Camera3D").rotation_degrees.y) > 85.0:
+			deactivate()
 
+func deactivate() -> void:
+	active = false
+	get_node("Camera3D").current = false
+	node_viewport.render_target_clear_mode = SubViewport.CLEAR_MODE_ALWAYS
+	node_viewport.process_mode = Node.PROCESS_MODE_DISABLED
+	node_quad.hide()
+	if get_tree().root.get_node("Game").protagonist != null:
+		get_tree().root.get_node("Game").protagonist.movement_freeze = false
+		get_tree().root.get_node("Game/UI").show()
 
 ## CODE BELOW USED FROM GODOT DEMO
 ## https://github.com/godotengine/godot-demo-projects/blob/master/viewport/gui_in_3d/gui_3d.gd
