@@ -29,7 +29,7 @@ jobs:
           EXPORT_DIR="$(readlink -f build)"
           cd $PROJECT_PATH
           godot --headless --verbose --export-release "Windows Desktop x86-64" "$EXPORT_DIR/windows-x86-64/$EXPORT_NAME.exe"
-          rm "$EXPORT_DIR/windows-x86-64/$EXPORT_NAME.full.pck.bak"
+          rm -f $EXPORT_DIR/windows-x86-64/$EXPORT_NAME.full.pck.bak
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
@@ -56,7 +56,7 @@ jobs:
           EXPORT_DIR="$(readlink -f build)"
           cd $PROJECT_PATH
           godot --headless --verbose --export-release "Windows Desktop arm64" "$EXPORT_DIR/windows-arm64/$EXPORT_NAME.exe"
-          rm "$EXPORT_DIR/windows-arm64/$EXPORT_NAME.full.pck.bak"
+          rm -f $EXPORT_DIR/windows-arm64/$EXPORT_NAME.full.pck.bak
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
@@ -81,7 +81,7 @@ jobs:
           EXPORT_DIR="$(readlink -f build)"
           cd $PROJECT_PATH
           godot --headless --verbose --export-release "Linux x86-64" "$EXPORT_DIR/linux-x86-64/$EXPORT_NAME.x86_64"
-          rm "$EXPORT_DIR/linux-x86-64/$EXPORT_NAME.full.pck.bak"
+          rm -f $EXPORT_DIR/linux-x86-64/$EXPORT_NAME.full.pck.bak
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
@@ -106,7 +106,7 @@ jobs:
           EXPORT_DIR="$(readlink -f build)"
           cd $PROJECT_PATH
           godot --headless --verbose --export-release "Linux arm64" "$EXPORT_DIR/linux-arm64/$EXPORT_NAME.x86_64"
-          rm "$EXPORT_DIR/linux-arm64/$EXPORT_NAME.full.pck.bak"
+          rm -f $EXPORT_DIR/linux-arm64/$EXPORT_NAME.full.pck.bak
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
