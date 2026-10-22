@@ -1,25 +1,29 @@
 {
-	"version": "2.0.0",
+	"version": 3.0,
 	"lowest_1": {
 		"Corn": ["health:20.0:3"],
 		"Apple seed": ["message:You received 100 apple seeds"],
 		"Artifical Coffee drink": ["health:5.0:3", "message:Such an disgusting drink"],
-		"American air": ["message:It is an usual air"]
+		"American air": ["message:It is an usual air"],
+		"Selected city pigeon meat": ["health:-50.0:0", "message:It was not worth eating this..."]
 	},
 	"lowest_2": {
 		"Disease Curer": ["health:100.0:0"],
 		"Eetmees": ["health:15.0:3"],
-		"Tasty transistors": ["health:-50.0:0", "message:I feel, that that's food made NOT for people..."]
+		"Tasty transistors": ["health:-50.0:0", "message:I feel, that that's food made NOT for people..."],
+		"Kiviak": ["health:-100.0:0"]
 	},
 	"lowest_3": {
 		"Beefy fedora hat": ["health:30.0:3"],
-		"Penguin bottle with liquid": ["health:-2.0:0", "health:2.0:2"]
+		"Penguin bottle with liquid": ["health:-2.0:0", "health:2.0:2"],
+		"Kopalkhen": ["health:-100.0:0"]
 	},
 	"low_1": {
 		"Instant Ramen": ["health:30.0:3"],
 		"A banana": ["health:45.0:3"],
 		"BEEF!": ["health:5.0:3", "message:It was a raw meat..."],
-		"Apple seed": ["message:You received 300 apple seeds"]
+		"Apple seed": ["message:You received 300 apple seeds"],
+		"Candycane": ["health:15.0:3"]
 	},
 	"low_2": {
 		"Applexplosion": ["health:-2.5:0", "health:5.0:3"],
@@ -28,7 +32,8 @@
 	},
 	"low_3": {
 		"TASTE ME!!!": ["health:-100.0:0"],
-		"Chicken Candy Can": ["health:70.0:3"]
+		"Chicken Candy Can": ["health:70.0:3"],
+		"Fugu's liver": ["health:-100.0:0"]
 	},
 	"mid_1": {
 		"An usual cookie" : ["health:15.0:3"],
@@ -37,17 +42,24 @@
 		"Candy Pistol": ["health:-1.0:0", "health:15.0:3"],
 		"Apple seed": ["message:You received 500 apple seeds"],
 		"X-treme chips": ["health:50.0:3", "message:You want to climb mountains"],
-		"SCP-1657 EGGS": ["health:25.0:0", "health:25.0:3", "message:The eggs were very tasty. I became a REAL MAN!!1!"]
+		"SCP-1657 EGGS": ["health:25.0:0", "health:25.0:3", "message:The eggs were very tasty. I became a REAL MAN!!1!"],
+		"Well-cooked fugu": ["health:30.0:3"],
+		"Box of strawberries": ["health:20.0:3"],
+		"Box of raspberries": ["health:20.0:3"],
+		"Box of hazelnuts": ["health:20.0:3"],
+		"Box of blueberries": ["health:20.0:3"]
 	},
 	"mid_2": {
 		"Spice Bomb": ["health:-5.0:0"],
 		"Hardtack": ["health:10.0:3"],
+		"Box of chestnuts": ["health:20.0:3"],
 		"Mr. Godot's Crunchy Cookies": ["health:30.0:0", "health:30.0:3", "message:A cookie in shape of a robot? Anyways, it was tasty..."]
 	},
 	"mid_3": {
 		"Water with creatures": ["health:10.0:2"],
 		"SCP-417 fruit": ["health:-200.0:0"],
-		"SCP-3238": ["health:-100.0:0"]
+		"SCP-3238": ["health:-100.0:0"],
+		"Box of wolfberries": ["health:20.0:3"]
 	},
 	"high_1": {
 		"Fruit drink": ["health:30.0:2"],
@@ -68,7 +80,8 @@
 		"Six-legged blue turtle": ["health:-120.0:0"],
 		"Rat on stick": ["health:30.0:3"],
 		"Apple seed": ["message:You received 1000 apple seeds"],
-		"Pythia's choice": ["health:-100.0:0"]
+		"Pythia's choice": ["health:-100.0:0"],
+		"Manna": ["health:100.0:-1"]
 	},
 	"highest_2": {
 		"Orange Radiation": ["effect:Scp261Orange"],

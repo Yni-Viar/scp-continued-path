@@ -28,7 +28,7 @@ func _ready() -> void:
 		var internal_file: FileAccess = FileAccess.open("res://Scripts/Scps/Scp261Data/Scp261_en.json", FileAccess.READ)
 		meals = JSON.parse_string(internal_file.get_as_text())
 	
-	if OS.get_name() == "Web" && !Settings.ALLOW_PLUGINS_IN_WEB:
+	if OS.get_name() != "Web" || Settings.ALLOW_PLUGINS_IN_WEB:
 		if !FileAccess.file_exists("user://Scp261.json"):
 			var result_json: String = JSON.stringify(meals)
 			var file: FileAccess = FileAccess.open("user://Scp261.json", FileAccess.WRITE)
@@ -39,9 +39,10 @@ func _ready() -> void:
 			var meals_text: String = file.get_as_text()
 			if meals_text.begins_with("{"):
 				var result_meals: Dictionary = JSON.parse_string(meals_text)
-				if !result_meals.has("version"):
+				if !result_meals.has("version") || result_meals["version"] is String:
 					# New versioning system, if loading SCP-261 data from 9.x.x (SCP-261 1.x)
 					# rewrite it.
+					# Loads old SCP-261 1.x (used in 9.x.x versions of the game), or 2.0 (used in 10.0-10.5.0 versions of the game)
 					file.close()
 					var result_json: String = JSON.stringify(meals)
 					file = FileAccess.open("user://Scp261.json", FileAccess.WRITE)
@@ -112,7 +113,7 @@ func scp_261(value: int):
 				get_tree().root.get_node("Game").protagonist.money["YEN"] -= 100
 			else:
 				return
-			match _iterations / 2:
+			match _iterations:
 				0:
 					current_category = "lowest_1"
 					current_item = meals["lowest_1"].keys().pick_random()

@@ -2,6 +2,13 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
+## v10.5.1 (2026.10.23)
+### SCP-261 code refactor
+- Fix impossibility to get all available food.
+- SCP-261 code refactor
+### Misc changes
+- Added CI/CD to the game for Windows, Linux and Web.
+
 ## v10.5.0 (2026.10.19)
 ### Red Riding Hood minigame
 - The minigame spawns in Research Zone. Find it!

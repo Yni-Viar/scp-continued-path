@@ -1,5 +1,8 @@
 name: "godot-ci export"
-on: push
+on: 
+  push: 
+    tags:
+      "v*"
 
 # NOTE: If your `project.godot` is at the repository root, set `PROJECT_PATH` below to ".".
 
@@ -12,6 +15,7 @@ jobs:
   export-windows-x86-64:
     name: Windows x86-64 Export
     runs-on: ubuntu-24.04  # Use 24.04 with godot 4
+    timeout-minutes: 20
     container:
       image: barichello/godot-ci:4.7.1
     steps:
@@ -39,6 +43,7 @@ jobs:
   export-windows-arm64:
     name: Windows arm64 Export
     runs-on: ubuntu-24.04  # Use 24.04 with godot 4
+    timeout-minutes: 20
     container:
       image: barichello/godot-ci:4.7.1
     steps:
@@ -66,6 +71,7 @@ jobs:
   export-linux-x86-64:
     name: Linux x86-64 Export
     runs-on: ubuntu-24.04  # Use 24.04 with godot 4
+    timeout-minutes: 20
     container:
       image: barichello/godot-ci:4.7.1
     steps:
@@ -91,6 +97,7 @@ jobs:
   export-linux-arm64:
     name: Linux arm64 Export
     runs-on: ubuntu-24.04  # Use 24.04 with godot 4
+    timeout-minutes: 20
     container:
       image: barichello/godot-ci:4.7.1
     steps:
@@ -116,6 +123,7 @@ jobs:
   export-web:
     name: Web Export
     runs-on: ubuntu-24.04  # Use 24.04 with godot 4
+    timeout-minutes: 20
     container:
       image: barichello/godot-ci:4.7.1
     steps:
