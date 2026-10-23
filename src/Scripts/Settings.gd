@@ -295,7 +295,9 @@ func dialogue_window(text: String, title: String = "", fixed_size: bool = true, 
 			button.action = action
 			button.dlg_host = window
 			hbox_container.add_child(button)
-	add_child(window)
+		get_tree().root.get_node("Game").add_child(window)
+	else:
+		add_child(window)
 
 ## Works ONLY on PCs
 func change_renderer():

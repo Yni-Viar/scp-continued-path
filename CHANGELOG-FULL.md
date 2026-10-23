@@ -2,6 +2,9 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
+## v10.5.2 (Emergency fix, 2026.10.23)
+- Fix SCP-261 window being present, if game is closed.
+
 ## v10.5.1 (2026.10.23)
 ### SCP-261 code refactor
 - Fix impossibility to get all available food.
