@@ -143,7 +143,7 @@ More gestures you can see in the in-game settings.
 > Achievements are also not given, if this SCP does not exist in this build (e.g. SCP-791, which is missing in Lite version) or season (e.g. SCP-649 is available only in December, so is achievement for it).
 
 ## Note to Google Android users:
-Please, check [tutorial to install apps without Google verification (effective since Sep 2026)](https://android-developers.googleblog.com/2026/03/android-developer-verification.html), since I don't plan to give all data and pay a fee to Google.
+Please, check [tutorial to install apps without Google verification (effective since Jan 2027)](https://android-developers.googleblog.com/2026/03/android-developer-verification.html), since I don't plan to give all data and pay a fee to Google.
 
 We **do not** distribute dangerous things in this app!
 
