@@ -2,6 +2,11 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
+## v10.5.3 (Security fix, 2026.10.31)
+- \[Full version\] Add SCP-SL variation of SCP-173. Happy Halloween 🎃!
+- Lower SCP-1507 room spawn in priority.
+- Move to custom build of Godot Engine to improve security.
+
 ## v10.5.2 (Emergency fix, 2026.10.23)
 - Fix SCP-261 window being present, if game is closed.
 

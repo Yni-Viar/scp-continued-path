@@ -25,7 +25,7 @@
 [resource]
 script = ExtResource("20_25ogj")
 endrooms = Array[ExtResource("2_r1mwm")]([ExtResource("8_ob58e")])
-endrooms_single = Array[ExtResource("2_r1mwm")]([ExtResource("9_dvmdw"), ExtResource("10_r8imm"), ExtResource("11_4wncd"), ExtResource("12_n0ja3"), ExtResource("11_hkjbf"), ExtResource("13_hacfo"), ExtResource("14_gx032")])
+endrooms_single = Array[ExtResource("2_r1mwm")]([ExtResource("9_dvmdw"), ExtResource("10_r8imm"), ExtResource("12_n0ja3"), ExtResource("11_hkjbf"), ExtResource("13_hacfo"), ExtResource("11_4wncd"), ExtResource("14_gx032")])
 hallways = Array[ExtResource("2_r1mwm")]([ExtResource("15_gouin"), ExtResource("16_lqkos")])
 hallways_single = Array[ExtResource("2_r1mwm")]([ExtResource("17_eih06"), ExtResource("18_3m7i0"), ExtResource("19_kfsji")])
 checkpoint_hallway = Array[ExtResource("2_r1mwm")]([ExtResource("3_0r8dp")])

@@ -7,6 +7,7 @@ Godot 4.5 is no longer supported anymore since 10.0 - Megarework update.
 Godot 4.4 is no longer supported anymore since 6.0 - Cleanlight update.
 
 > Godot 4.6 was used in 5.8.0-5.8.2
+> Starting with v10.5.3, default builds are compiled with custom Godot 4.7.1 build to improve security
 
 ### Building regular version
 

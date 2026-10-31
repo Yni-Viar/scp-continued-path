@@ -7,6 +7,7 @@ script = ExtResource("1_b0s8h")
 single_type_per_group = true
 single_type_group_name = "Scp173"
 available_puppets = Dictionary[String, int]({
+"res://PlayerScript/PlayerClassPrefab/Variations/Scp173/Optional/SL/Scp173_SL.tscn": 1,
 "res://PlayerScript/PlayerClassPrefab/Variations/Scp173/Optional/Scp173_U.tscn": 1,
 "res://PlayerScript/PlayerClassPrefab/Variations/Scp173/Scp173_OWN.tscn": 0
 })
