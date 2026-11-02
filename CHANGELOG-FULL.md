@@ -2,6 +2,12 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
+## v10.5.4 (2026.11.02)
+
+- Fixed SCP-2845 texture
+- Fixed a typo in Red Riding Hood minigame
+- Added Half resolution optimization setting (disabled by default on all platforms)
+
 ## v10.5.3 (Security fix, 2026.10.31)
 - \[Full version\] Add SCP-SL variation of SCP-173. Happy Halloween 🎃!
 - Lower SCP-1507 room spawn in priority.

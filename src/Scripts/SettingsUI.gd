@@ -20,6 +20,7 @@ func _ready() -> void:
 	$Music/MusicVolume.value = Settings.setting_res.music_volume
 	$Tonemapper.selected = Settings.setting_res.tonemapper
 	$AdvancedSky.button_pressed = Settings.setting_res.enable_advanced_sky
+	$HalfResolution.button_pressed = Settings.setting_res.half_resolution
 	if OS.get_name() == "Web":
 		# Disable advanced tonemappers and non-WebGL renderers
 		$Tonemapper.set_item_disabled(2, true)
@@ -115,4 +116,10 @@ func _on_hunger_in_casual_mode_toggled(toggled_on: bool) -> void:
 
 func _on_advanced_sky_toggled(toggled_on: bool) -> void:
 	Settings.setting_res.enable_advanced_sky = toggled_on
+	Settings.save_resource(Settings.setting_res)
+
+
+func _on_half_resolution_toggled(toggled_on: bool) -> void:
+	get_tree().root.scaling_3d_scale = 0.5 if toggled_on else 1.0
+	Settings.setting_res.half_resolution = toggled_on
 	Settings.save_resource(Settings.setting_res)

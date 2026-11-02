@@ -71,7 +71,7 @@ nodes = {
 "text": "Why do you have big teeth."
 }
 },
-"size": Vector2(300.00037, 271.00024),
+"size": Vector2(300.00037, 271.0003),
 "speaker": 3
 },
 &"1_11": {
@@ -84,7 +84,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.00024, 240.00024),
+"size": Vector2(300.0003, 240.0003),
 "speaker": 3
 },
 &"1_12": {
@@ -97,7 +97,7 @@ nodes = {
 "text": "I brought some pies to you"
 }
 },
-"size": Vector2(300, 270.99988),
+"size": Vector2(300, 270.99994),
 "speaker": 2
 },
 &"1_13": {
@@ -123,7 +123,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.00018, 240.00012),
+"size": Vector2(300.00012, 240),
 "speaker": 2
 },
 &"1_15": {
@@ -136,7 +136,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.00012, 240.00012),
+"size": Vector2(300.0001, 240),
 "speaker": 1
 },
 &"1_16": {
@@ -149,7 +149,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.0003, 240.00012),
+"size": Vector2(300.00034, 240),
 "speaker": ""
 },
 &"1_17": {
@@ -162,7 +162,7 @@ nodes = {
 "text": "I brought some pies to you"
 }
 },
-"size": Vector2(300, 270.99988),
+"size": Vector2(300, 271),
 "speaker": 2
 },
 &"1_18": {
@@ -193,7 +193,7 @@ nodes = {
 "text": "Yes, please."
 }
 },
-"size": Vector2(300, 304),
+"size": Vector2(300, 304.00003),
 "speaker": 1
 },
 &"1_3": {
@@ -207,7 +207,7 @@ I can carry your basket very quickly!",
 "text": "To the grandmother's house."
 }
 },
-"size": Vector2(319.9994, 320),
+"size": Vector2(319.99933, 320),
 "speaker": 1
 },
 &"1_4": {
@@ -263,7 +263,7 @@ I can carry your basket very quickly!",
 1: {
 "condition": {},
 "link": &"1_2",
-"text": "Maybe... you could halp me a bit."
+"text": "Maybe... you could help me a bit."
 }
 },
 "size": Vector2(300, 304),
@@ -292,7 +292,7 @@ I can carry your basket very quickly!",
 "text": "I brought some pies to you"
 }
 },
-"size": Vector2(300, 271.00024),
+"size": Vector2(300, 271.0003),
 "speaker": 3
 },
 &"1_9": {
@@ -305,7 +305,7 @@ I can carry your basket very quickly!",
 "text": "Why do you have big ears?"
 }
 },
-"size": Vector2(300.00043, 271.00024),
+"size": Vector2(300.00043, 271.0003),
 "speaker": 3
 },
 &"2_1": {

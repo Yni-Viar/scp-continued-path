@@ -512,3 +512,9 @@ msgstr ""
 
 msgid "GAME_END_XK_SCP_2845"
 msgstr ""
+
+msgid "HALF_RESOLUTION"
+msgstr ""
+
+msgid "HALF_RESOLUTION_INFO"
+msgstr ""

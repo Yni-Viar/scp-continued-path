@@ -173,6 +173,23 @@ visible = false
 layout_mode = 2
 text = "ADVANCED_SKY_INFO"
 
+[node name="HSeparator6" type="HSeparator" parent="ScrollContainer/SettingsUI" unique_id=46828583]
+layout_mode = 2
+
+[node name="HalfResolution" type="CheckButton" parent="ScrollContainer/SettingsUI" unique_id=194556336]
+layout_mode = 2
+text = "HALF_RESOLUTION"
+
+[node name="FoldableContainer5" type="FoldableContainer" parent="ScrollContainer/SettingsUI" unique_id=2145343648]
+layout_mode = 2
+folded = true
+title = "INFO"
+
+[node name="Label2" type="Label" parent="ScrollContainer/SettingsUI/FoldableContainer5" unique_id=871741349]
+visible = false
+layout_mode = 2
+text = "HALF_RESOLUTION_INFO"
+
 [node name="HSeparator5" type="HSeparator" parent="ScrollContainer/SettingsUI" unique_id=405439181]
 layout_mode = 2
 
@@ -316,6 +333,7 @@ text = "PLUGIN_DELETE"
 [connection signal="toggled" from="ScrollContainer/SettingsUI/SSAO" to="ScrollContainer/SettingsUI" method="_on_ssao_toggled"]
 [connection signal="item_selected" from="ScrollContainer/SettingsUI/Tonemapper" to="ScrollContainer/SettingsUI" method="_on_tonemapper_item_selected"]
 [connection signal="toggled" from="ScrollContainer/SettingsUI/AdvancedSky" to="ScrollContainer/SettingsUI" method="_on_advanced_sky_toggled"]
+[connection signal="toggled" from="ScrollContainer/SettingsUI/HalfResolution" to="ScrollContainer/SettingsUI" method="_on_half_resolution_toggled"]
 [connection signal="drag_ended" from="ScrollContainer/SettingsUI/Music/MusicVolume" to="ScrollContainer/SettingsUI" method="_on_music_volume_drag_ended"]
 [connection signal="pressed" from="ScrollContainer/SettingsUI/GridContainer/CButton" to="ScrollContainer/SettingsUI/GridContainer" method="_on_c_button_pressed"]
 [connection signal="pressed" from="ScrollContainer/SettingsUI/GridContainer/CRLButton" to="ScrollContainer/SettingsUI/GridContainer" method="_on_crl_button_pressed"]

@@ -81,3 +81,5 @@ enum Renderer {OPENGL, RD_MOBILE, RD_FORWARD_PLUS}
 @export var casual_mode_hunger: bool = true
 ## Enables advanced sky
 @export var enable_advanced_sky: bool = false
+## Enables half resolution
+@export var half_resolution: bool = false

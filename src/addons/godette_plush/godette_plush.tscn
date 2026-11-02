@@ -139,24 +139,27 @@ blend_shape_mode = 0
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g8s81"]
 radius = 0.026367188
-height = 0.061279297
+height = 0.09313965
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4v0f5"]
-radius = 0.013671875
-height = 0.05456543
+radius = 0.019042969
+height = 0.08685303
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_4v0f5"]
-radius = 0.05475329
+radius = 0.071968764
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_e5p54"]
-radius = 0.020175025
+radius = 0.025098622
 
 [node name="GodettePlush" type="RigidBody3D" unique_id=1521205680]
 mass = 0.1
 physics_material_override = SubResource("PhysicsMaterial_4v0f5")
 gravity_scale = 0.5
 
-[node name="Skeleton3D" type="Skeleton3D" parent="." unique_id=2061576459]
+[node name="Node3D" type="Node3D" parent="." unique_id=185144833]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="Skeleton3D" type="Skeleton3D" parent="Node3D" unique_id=2061576459]
 bones/0/name = "spine"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, -7.105427e-15, 2.3841854e-07, -7.1054274e-15, 0.99999994, 5.9604645e-08, -2.3841855e-07, -5.9604645e-08, 0.99999994, 0, 0, 0)
@@ -361,17 +364,15 @@ bones/28/position = Vector3(-1.3774214e-09, 0.009587568, 5.2676685e-09)
 bones/28/rotation = Quaternion(3.7537298e-09, 8.523751e-17, -5.050559e-10, 1)
 bones/28/scale = Vector3(1, 1, 1)
 
-[node name="body" type="MeshInstance3D" parent="Skeleton3D" unique_id=1370725821]
+[node name="body" type="MeshInstance3D" parent="Node3D/Skeleton3D" unique_id=1370725821]
 mesh = SubResource("ArrayMesh_cvrxy")
 skin = SubResource("Skin_110qi")
-skeleton = NodePath("..")
 
-[node name="head" type="MeshInstance3D" parent="Skeleton3D" unique_id=264386622]
+[node name="head" type="MeshInstance3D" parent="Node3D/Skeleton3D" unique_id=264386622]
 mesh = SubResource("ArrayMesh_jogfg")
 skin = SubResource("Skin_110qi")
-skeleton = NodePath("..")
 
-[node name="HeadSpringBoneSimulator3D" type="SpringBoneSimulator3D" parent="Skeleton3D" unique_id=1481087617]
+[node name="HeadSpringBoneSimulator3D" type="SpringBoneSimulator3D" parent="Node3D/Skeleton3D" unique_id=1481087617]
 setting_count = 1
 settings/0/root_bone_name = "head_2"
 settings/0/root_bone = 3
@@ -397,7 +398,7 @@ settings/0/joints/1/bone = 4
 settings/0/enable_all_child_collisions = true
 settings/0/exclude_collision_count = 0
 
-[node name="BunsSpringBoneSimulator3D" type="SpringBoneSimulator3D" parent="Skeleton3D" unique_id=398843362]
+[node name="BunsSpringBoneSimulator3D" type="SpringBoneSimulator3D" parent="Node3D/Skeleton3D" unique_id=398843362]
 setting_count = 3
 settings/0/root_bone_name = "bun.Top"
 settings/0/root_bone = 5
@@ -469,7 +470,7 @@ settings/2/joints/1/bone = 10
 settings/2/enable_all_child_collisions = true
 settings/2/exclude_collision_count = 0
 
-[node name="ArmsSpringBoneSimulator3D" type="SpringBoneSimulator3D" parent="Skeleton3D" unique_id=1459217304]
+[node name="ArmsSpringBoneSimulator3D" type="SpringBoneSimulator3D" parent="Node3D/Skeleton3D" unique_id=1459217304]
 setting_count = 2
 settings/0/root_bone_name = "arm.L"
 settings/0/root_bone = 13
@@ -526,7 +527,7 @@ settings/1/joints/3/bone = 20
 settings/1/enable_all_child_collisions = true
 settings/1/exclude_collision_count = 0
 
-[node name="LegsSpringBoneSimulator3D" type="SpringBoneSimulator3D" parent="Skeleton3D" unique_id=1984364210]
+[node name="LegsSpringBoneSimulator3D" type="SpringBoneSimulator3D" parent="Node3D/Skeleton3D" unique_id=1984364210]
 setting_count = 2
 settings/0/root_bone_name = "leg.L"
 settings/0/root_bone = 21
@@ -584,29 +585,29 @@ settings/1/enable_all_child_collisions = true
 settings/1/exclude_collision_count = 0
 
 [node name="BodyCollisionShape3D" type="CollisionShape3D" parent="." unique_id=790561207]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.026977539, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.042907715, 0)
 shape = SubResource("CapsuleShape3D_g8s81")
 
 [node name="RightLegCollisionShape3D" type="CollisionShape3D" parent="." unique_id=1823661144]
-transform = Transform3D(0.96541804, 0.26070672, 1.1395853e-08, 0, -4.371139e-08, 1, 0.26070672, -0.96541804, -4.2199762e-08, -0.019428505, 0.011495145, 0.03143096)
+transform = Transform3D(0.96541804, 0.26070672, 1.1395853e-08, 0, -4.371139e-08, 1, 0.26070672, -0.96541804, -4.2199762e-08, -0.029996939, 0.011495146, 0.04510859)
 shape = SubResource("CapsuleShape3D_4v0f5")
 
 [node name="LeftLegCollisionShape3D" type="CollisionShape3D" parent="." unique_id=615188452]
-transform = Transform3D(0.96547264, -0.2605045, -1.1387014e-08, 0, -4.371139e-08, 1, -0.2605045, -0.96547264, -4.220215e-08, 0.019, 0.011, 0.031)
+transform = Transform3D(0.96547264, -0.2605045, -1.1387014e-08, 0, -4.371139e-08, 1, -0.2605045, -0.96547264, -4.220215e-08, 0.027816853, 0.011, 0.04462604)
 shape = SubResource("CapsuleShape3D_4v0f5")
 
 [node name="HeadCollisionShape3D" type="CollisionShape3D" parent="." unique_id=302810373]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09232247, -0.0040695593)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14357471, -0.0040695593)
 shape = SubResource("SphereShape3D_4v0f5")
 
 [node name="LeftBunCollisionShape3D" type="CollisionShape3D" parent="." unique_id=1104900403]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.053412974, 0.12615067, -0.02365432)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08067483, 0.18939815, -0.02365432)
 shape = SubResource("SphereShape3D_e5p54")
 
 [node name="TopBunCollisionShape3D" type="CollisionShape3D" parent="." unique_id=1288859449]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00025434792, 0.14878759, -0.02365432)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00025434792, 0.22239459, -0.02365432)
 shape = SubResource("SphereShape3D_e5p54")
 
 [node name="RightBunCollisionShape3D" type="CollisionShape3D" parent="." unique_id=101226605]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.052904256, 0.12487893, -0.02365432)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0785304, 0.1881264, -0.02365432)
 shape = SubResource("SphereShape3D_e5p54")
