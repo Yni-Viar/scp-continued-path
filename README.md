@@ -16,9 +16,11 @@ More gestures you can see in the in-game settings.
 
 ## Requirements to play
 
-- 🐧Linux distribution from 2024 and newer
+- 🐧Linux distribution from 2024 (or 2026 if custom build is used) and newer
 
-   > x86-64 or arm64 binaries available
+   > x86-64 or arm64 (if official build is used) binaries available
+
+   > Linux distribution from 2022-2023 is not supported since v8.0
 
 - 🪟Windows 10 (all updates (build 14393 and higher is recommended)) and 11 (all updates)
    > x86-64 or arm64 binaries available
