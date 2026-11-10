@@ -19,9 +19,16 @@ func on_spawned() -> void:
 			return
 		elif rng.randi_range(0, 32) < 30 && Settings.current_season == Settings.Season.AUTUMN:
 			deer_god_state = Scp2845State.SCP2845J
+			puppet_node.queue_free()
+			var prefab: Node3D = load(scp_2845_j_model).instantiate()
+			prefab.scale = Vector3(1.5, 1.5, 1.5)
+			add_child(prefab)
+			puppet_node = prefab
 	if deer_god_state != Scp2845State.SCP2845J:
 		get_tree().root.get_node("Game/StaticPlayer").apply_overlay("FeyWorld", 1.0)
 		Console.print_info("THE DEER GOD CAME TO THIS FACILITY!", true)
+	else:
+		Console.print_info("THE DEER GOD CAME TO THIS FACILITY?", true)
 	plugin_api_function("start")
 
 
