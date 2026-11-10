@@ -95,6 +95,7 @@ More gestures you can see in the in-game settings.
 |🟢SCP-2306|✅, > 8.1.0|✅, > 8.1.0|📃 Task only/repairs SCP-5270|
 |🟢SCP-2471\*|✅, > 8.0.0|✅, > 8.0.0|✅ Full|
 |🔵SCP-2845\*|❓, > 10.3.0|❓, > 10.3.0|❓ Their containment procedures are too bad written - using own fantasy. **Available only in Casual mode!**|
+|🔵SCP-2845-J\*|❓, > 10.6.0|❓, > 10.6.0|❌ It is another identity of SCP-2845, who learned about joke article, and tried to pretend that creature 🙂 **Available only in Casual mode!**|
 |🟢SCP-5270|✅, > 8.1.0|✅, > 8.1.0|❓ Implemented only one event out of three|
 
 ##### SCP-261-only SCPs

@@ -2,6 +2,13 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
+## v10.6.0
+### New SCPs
+- [ ] SCP-2075
+- [x] SCP-2845-J
+### Misc changes
+- [x] Fixed bug, where SCP-2845 could be activated more, than 1 time.
+
 ## v10.5.4 (2026.11.02)
 
 - Fixed SCP-2845 texture

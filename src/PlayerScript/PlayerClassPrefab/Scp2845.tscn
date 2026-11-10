@@ -4,6 +4,7 @@
 
 [node name="Puppet" type="Node3D" unique_id=1674538391 groups=["Scp2845", "SinglePuppet"]]
 script = ExtResource("1_5jdip")
+scp_2845_j_model = "uid://ciwb88mhq8tr2"
 single_type_per_group = true
 single_type_group_name = "Scp2845"
 available_puppets = Dictionary[String, int]({

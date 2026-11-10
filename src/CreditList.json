@@ -339,6 +339,16 @@
 				"license": "MIT License"
 			}
 		],
+		"Elk model (used as SCP-2845-J)": [
+			{
+				"author": "WildMesh 3D (https://sketchfab.com/WildMesh_3D)",
+				"license": "CC-BY-4.0"
+			},
+			{
+				"author": "Yni Viar (minor edit to the model)",
+				"license": "CC-BY 4.0"
+			}
+		],
 		"\"Local Forecast - Elevator\"": [
 			{
 				"author": "Kevin MacLeod (incompetech.com)",
@@ -400,6 +410,7 @@
 		"SCP-2471 by WrongJohnSilver",
 		"SCP-2845 by Djoric",
 		"SCP-5270 by penguin6, gerrymanderbassist",
+		"SCP-2845-J by Harmacy",
 		"\"Experiment Log 261 Ad De\" by Dr Gears",
 		"Serpent's Hand logo by Zyn",
 		"---",
