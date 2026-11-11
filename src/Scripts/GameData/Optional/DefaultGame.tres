@@ -65,18 +65,20 @@
 [ext_resource type="Resource" uid="uid://dqfejxd1qicrc" path="res://PlayerScript/PlayerClassResources/Optional/Scp080.tres" id="47_eqti2"]
 [ext_resource type="Resource" uid="uid://do5omahxr33bm" path="res://Scripts/TaskSystem/Tasks/Scp914Task.tres" id="47_kxf2q"]
 [ext_resource type="Resource" uid="uid://ds43lxdn780le" path="res://Scripts/StatusEffects/StatusEffects/Scp2028.tres" id="47_xdnw7"]
+[ext_resource type="Resource" uid="uid://c4h28vfl0f7ay" path="res://PlayerScript/PlayerClassResources/Optional/Scp2075.tres" id="48_msxkb"]
 [ext_resource type="Resource" uid="uid://dfoo1haub0n52" path="res://Scripts/StatusEffects/StatusEffects/Scp261Orange.tres" id="50_8owkr"]
 [ext_resource type="Resource" uid="uid://8w5evo6p3hmj" path="res://Scripts/StatusEffects/StatusEffects/Scp261KleinBottle.tres" id="51_5dgmg"]
 [ext_resource type="Resource" uid="uid://b21ty1ovsxbia" path="res://Scripts/TaskSystem/Tasks/Scp914Exp5.tres" id="56_4i85c"]
 [ext_resource type="Resource" uid="uid://dp5a3j32mc0fl" path="res://Scripts/StatusEffects/StatusEffects/EdgeVision.tres" id="59_msxkb"]
 [ext_resource type="Resource" uid="uid://bfiwkhemjuc38" path="res://Scripts/StatusEffects/StatusEffects/Fatigue.tres" id="59_rwd6j"]
+[ext_resource type="Resource" uid="uid://caxiqvgii3gqm" path="res://Scripts/StatusEffects/StatusEffects/Scp2075.tres" id="62_eqti2"]
 [ext_resource type="Resource" uid="uid://6620y8j00bvt" path="res://Scripts/TaskSystem/Tasks/Scp5270_2306Task.tres" id="68_4bugr"]
 [ext_resource type="Resource" uid="uid://de6nywsyvpmjq" path="res://Scripts/TaskSystem/Tasks/Scp080Task.tres" id="73_rwd6j"]
 
 [resource]
 script = ExtResource("2_2kq0r")
 player_class = Array[ExtResource("1_uwdlv")]([ExtResource("3_4lkqw")])
-puppet_classes = Array[ExtResource("1_uwdlv")]([ExtResource("2_iio3u"), ExtResource("3_qajj2"), ExtResource("27_rvhxd"), ExtResource("5_ujd5j"), ExtResource("6_qajj2"), ExtResource("7_ujd5j"), ExtResource("8_jbef1"), ExtResource("12_0coki"), ExtResource("22_5ss25"), ExtResource("30_khbkx"), ExtResource("41_ey1gg"), ExtResource("42_xathw"), ExtResource("45_4bugr"), ExtResource("46_msxkb"), ExtResource("47_eqti2"), ExtResource("46_hm1xk"), ExtResource("47_4bugr")])
+puppet_classes = Array[ExtResource("1_uwdlv")]([ExtResource("2_iio3u"), ExtResource("3_qajj2"), ExtResource("27_rvhxd"), ExtResource("5_ujd5j"), ExtResource("6_qajj2"), ExtResource("7_ujd5j"), ExtResource("8_jbef1"), ExtResource("12_0coki"), ExtResource("22_5ss25"), ExtResource("30_khbkx"), ExtResource("41_ey1gg"), ExtResource("42_xathw"), ExtResource("45_4bugr"), ExtResource("46_msxkb"), ExtResource("47_eqti2"), ExtResource("46_hm1xk"), ExtResource("47_4bugr"), ExtResource("48_msxkb")])
 tasks = Array[ExtResource("10_jbef1")]([ExtResource("38_m7n8e"), ExtResource("14_r6dwf"), ExtResource("68_4bugr"), ExtResource("42_5ro56"), ExtResource("42_hwqmy"), ExtResource("45_5ro56"), ExtResource("15_0coki"), ExtResource("39_7ipmw"), ExtResource("47_kxf2q"), ExtResource("56_4i85c"), ExtResource("73_rwd6j")])
 items = Array[ExtResource("1_teai8")]([ExtResource("2_6lojy"), ExtResource("3_3myvo"), ExtResource("4_s78ub"), ExtResource("5_y38bq"), ExtResource("6_y38bq"), ExtResource("7_hinnn"), ExtResource("8_jeue1"), ExtResource("9_pwoua"), ExtResource("10_mywb3"), ExtResource("12_fvju1"), ExtResource("13_e07no"), ExtResource("14_ebeek"), ExtResource("15_wooqq"), ExtResource("16_kg1fs"), ExtResource("17_5ro56"), ExtResource("17_ncw05"), ExtResource("18_hwqmy"), ExtResource("21_ddnqw"), ExtResource("22_vsq7x"), ExtResource("23_4i85c"), ExtResource("24_e7xpc"), ExtResource("25_ojslu"), ExtResource("26_eirrn"), ExtResource("27_y4gkj"), ExtResource("28_hm1xk")])
 custom_scientists_offices = Array[PackedScene]([ExtResource("1_dsb5r"), ExtResource("2_ddnqw")])
@@ -89,6 +91,7 @@ status_effects = Dictionary[String, ExtResource("28_7yeqa")]({
 "Scp067": ExtResource("36_kg1fs"),
 "Scp178": ExtResource("33_0bwjp"),
 "Scp2028": ExtResource("47_xdnw7"),
+"Scp2075": ExtResource("62_eqti2"),
 "Scp261KleinBottle": ExtResource("51_5dgmg"),
 "Scp261Orange": ExtResource("50_8owkr"),
 "Scp686": ExtResource("30_67p03")

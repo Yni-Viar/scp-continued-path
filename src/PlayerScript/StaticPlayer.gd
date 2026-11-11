@@ -31,12 +31,7 @@ const RAY_LENGTH = 512
 func _ready() -> void:
 	$Head/Camera3D.current = true
 	# OpenGL Compatibility renderer supports SSAO since Godot 4.6
-	# As for May 2026, we stay on 4.5 just because it is the most stable\
-	# Godot release.
-	#if Settings.setting_res.ssao && (RenderingServer.get_current_rendering_method() == "mobile" || \
-	 #(RenderingServer.get_current_rendering_method() == "gl_compatibility" && \
-	  #Engine.get_version_info()["minor"] < 6)):
-		## No longer used, since we updated to Godot 4.7
+	#if Settings.setting_res.ssao && RenderingServer.get_current_rendering_method() == "mobile":
 		#$Head/Camera3D/Overlays/OverlayCompositor.apply_shader(1)
 
 func _input(event: InputEvent) -> void:

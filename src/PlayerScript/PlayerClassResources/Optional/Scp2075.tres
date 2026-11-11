@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="PuppetClass" format=3 uid="uid://c4h28vfl0f7ay"]
+
+[ext_resource type="PackedScene" uid="uid://3wsxbpvn8fvg" path="res://PlayerScript/PlayerClassPrefab/Optional/Scp2075.tscn" id="1_r7v0s"]
+[ext_resource type="PackedScene" uid="uid://cnpsqw06xileu" path="res://PlayerScript/PlayerClassRagdoll/Nalka.tscn" id="2_537jw"]
+[ext_resource type="Script" uid="uid://d08svv1nclb1r" path="res://PlayerScript/PlayerClassResources/PuppetResource.gd" id="3_3c06e"]
+
+[resource]
+script = ExtResource("3_3c06e")
+puppet_class_name = "SCP-2075"
+prefab = ExtResource("1_r7v0s")
+spawn_point_group = "Scp2075Spawn"
+initial_amount = 1
+footstep_sounds = {
+"run": PackedStringArray("res://Sounds/Character/Human/Step/step_1.ogg", "res://Sounds/Character/Human/Step/step_2.ogg", "res://Sounds/Character/Human/Step/step_3.ogg", "res://Sounds/Character/Human/Step/step_4.ogg", "res://Sounds/Character/Human/Step/step_5.ogg", "res://Sounds/Character/Human/Step/step_6.ogg", "res://Sounds/Character/Human/Step/step_7.ogg", "res://Sounds/Character/Human/Step/step_8.ogg", "res://Sounds/Character/Human/Step/step_9.ogg"),
+"walk": PackedStringArray("res://Sounds/Character/Human/Step/step_1.ogg", "res://Sounds/Character/Human/Step/step_2.ogg", "res://Sounds/Character/Human/Step/step_3.ogg", "res://Sounds/Character/Human/Step/step_4.ogg", "res://Sounds/Character/Human/Step/step_5.ogg", "res://Sounds/Character/Human/Step/step_6.ogg", "res://Sounds/Character/Human/Step/step_7.ogg", "res://Sounds/Character/Human/Step/step_8.ogg", "res://Sounds/Character/Human/Step/step_9.ogg")
+}
+fraction = 1
+apply_height_bugfix = false
+wandering_system = 1
+health = Array[float]([100.0, 50.0, 50.0, 50.0])
+enable_avoidance = false
+ragdoll_prefab = ExtResource("2_537jw")
+can_ride = false

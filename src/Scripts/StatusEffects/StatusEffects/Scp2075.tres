@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="StatusEffect" format=3 uid="uid://caxiqvgii3gqm"]
+
+[ext_resource type="Script" uid="uid://dcmkhvqt24ups" path="res://Scripts/StatusEffects/StatusEffectCommand.gd" id="1_u47gk"]
+[ext_resource type="Script" uid="uid://c4fqc7mfbrm1o" path="res://Scripts/StatusEffects/StatusEffect.gd" id="2_m8ph1"]
+
+[sub_resource type="Resource" id="Resource_k2qvc"]
+script = ExtResource("1_u47gk")
+action_node_path = "PlayerModel/Puppet"
+action_method_name = "effect_manager_start"
+metadata/_custom_type_script = "uid://dcmkhvqt24ups"
+
+[resource]
+script = ExtResource("2_m8ph1")
+effect_name = "Scp2075"
+update_command = Array[ExtResource("1_u47gk")]([SubResource("Resource_k2qvc")])
+metadata/_custom_type_script = "uid://c4fqc7mfbrm1o"

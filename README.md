@@ -92,6 +92,7 @@ More gestures you can see in the in-game settings.
 |🟢SCP-1223\*|✅, > 6.1.0|✅, > 6.1.0|✅ Full|
 |🟡SCP-1507|✅, > 9.0.0|✅, > 9.0.0|✅ Full, supports custom models|
 |🟢SCP-2028|✅, > 8.0.0|✅, > 8.0.0|✅ Full|
+|🟡SCP-2075|✅, > 10.6.0|❌|❓ Supports control of the player|
 |🟢SCP-2306|✅, > 8.1.0|✅, > 8.1.0|📃 Task only/repairs SCP-5270|
 |🟢SCP-2471\*|✅, > 8.0.0|✅, > 8.0.0|✅ Full|
 |🔵SCP-2845\*|❓, > 10.3.0|❓, > 10.3.0|❓ Their containment procedures are too bad written - using own fantasy. **Available only in Casual mode!**|

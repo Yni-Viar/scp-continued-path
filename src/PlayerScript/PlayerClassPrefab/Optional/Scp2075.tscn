@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://3wsxbpvn8fvg"]
+
+[ext_resource type="Script" uid="uid://cgo4kkkn8yu8i" path="res://PlayerScript/PlayerClassScript/Scp2075PuppetScript.gd" id="1_vh4sy"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vh4sy"]
+radius = 10.622428
+
+[node name="Puppet" type="Node3D" unique_id=835406393 groups=["Scp2075"]]
+script = ExtResource("1_vh4sy")
+default_puppet_to_spawn = 0
+available_puppets = Dictionary[String, int]({
+"res://PlayerScript/PlayerClassPrefab/Variations/Guard/Guard_SL.tscn": 0
+})
+enable_vision_scan = true
+vision_class_detect = Array[int]([2, 3])
+
+[node name="Trigger" type="Area3D" parent="." unique_id=2021496037]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Trigger" unique_id=821938304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0379398, 0)
+shape = SubResource("SphereShape3D_vh4sy")
+
+[connection signal="body_entered" from="Trigger" to="." method="_on_trigger_body_entered"]
+[connection signal="body_exited" from="Trigger" to="." method="_on_trigger_body_exited"]

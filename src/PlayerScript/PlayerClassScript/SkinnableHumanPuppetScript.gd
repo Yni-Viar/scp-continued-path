@@ -243,6 +243,7 @@ func effect_manager_start_custom(effect: String, strength: float):
 	pass
 
 func effect_manager_update(effect: String, strength: float):
+	var tick: float = 0.0
 	match effect:
 		"Scp686":
 			if !resistance_scp686:
@@ -250,6 +251,15 @@ func effect_manager_update(effect: String, strength: float):
 					var value: float = get_physics_process_delta_time() * 2 * strength
 					puppet_node.get_node(torso_node_path).mesh.surface_get_material(0).set_shader_parameter("tint", puppet_node.get_node(torso_node_path).mesh.surface_get_material(0).get_shader_parameter("tint") + Color(value, value, value))
 				get_parent().get_parent().health_manage(-get_physics_process_delta_time() * strength, 2, "GAME_OVER_SCP_686")
+		"Scp2075":
+			tick += get_physics_process_delta_time()
+			if tick > 6.3:
+				var choice: int = rng.randi_range(0, 3)
+				if choice == 3:
+					get_parent().get_parent().follow_target = get_tree().get_first_node_in_group("Scp2075")
+				else:
+					get_parent().get_parent().follow_target = ""
+				tick = 0.0
 	effect_manager_update_custom(effect, strength)
 
 func effect_manager_update_custom(effect: String, strength: float):
