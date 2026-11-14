@@ -86,13 +86,7 @@ func _ready() -> void:
 		$WorldEnvironment.environment.tonemap_white = 2.0
 	else:
 		$WorldEnvironment.environment.tonemap_white = 1.0
-	## Enable/disable reflection probes (cubemap)
-	for node in get_tree().get_nodes_in_group("ReflectionProbe"):
-		if node is ReflectionProbe:
-			if !Settings.setting_res.reflection_probe: # || Settings.setting_res.ssr:
-				node.hide()
-			else:
-				node.show()
+	
 	
 	if Settings.setting_res.lighting != SettingsResource.Lighting.LIGHTMAP:
 		if Settings.setting_res.lighting == SettingsResource.Lighting.NONE:
@@ -101,6 +95,17 @@ func _ready() -> void:
 		for node in get_tree().get_nodes_in_group("Lightmap"):
 			if node is LightmapGI:
 				node.queue_free()
+	
+	## Enable/disable reflection probes (cubemap)
+	for node in get_tree().get_nodes_in_group("ReflectionProbe"):
+		if node is ReflectionProbe:
+			if !Settings.setting_res.reflection_probe: # || Settings.setting_res.ssr:
+				node.hide()
+			else:
+				node.show()
+				if Settings.setting_res.lighting == SettingsResource.Lighting.NONE:
+					node.ambient_mode = ReflectionProbe.AMBIENT_COLOR
+					node.ambient_color = Color(0.25, 0.25, 0.25, 1.0)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

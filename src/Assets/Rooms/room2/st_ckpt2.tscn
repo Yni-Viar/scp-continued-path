@@ -16,8 +16,8 @@
 [ext_resource type="Script" uid="uid://7wruw00caufk" path="res://Scripts/WaypointLabel.gd" id="13_moykc"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_swyoh"]
-vertices = PackedVector3Array(1.2034044, -0.76905704, -9.73975, -1.0465956, -0.76905704, -9.73975, -1.2965956, -0.76905704, -8.98975, 1.9534044, -0.76905704, -8.73975, -2.0465956, -0.76905704, -8.73975, -1.7965956, -0.76905704, -2.98975, 1.7034044, -0.76905704, -2.98975, 9.453404, -0.76905704, 1.0102501, 9.453404, -0.76905704, -1.2397499, 8.703404, -0.76905704, -1.4897499, 6.9534044, -0.76905704, 1.2602501, 9.453404, -0.76905704, 9.76025, 9.453404, -0.76905704, 8.26025, 6.9534044, -0.76905704, 8.01025, -6.5465956, -0.76905704, 8.01025, -9.296596, -0.76905704, 8.26025, -9.296596, -0.76905704, 9.76025, -9.296596, -0.76905704, -2.48975, -9.296596, -0.76905704, 1.0102501, -6.5465956, -0.76905704, 1.2602501, -2.0465956, -0.76905704, -2.48975, 8.453404, -0.76905704, -2.48975, 1.9534044, -0.76905704, -2.48975)
-polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(2, 0, 4), PackedInt32Array(4, 0, 3), PackedInt32Array(4, 3, 6), PackedInt32Array(4, 6, 5), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 10), PackedInt32Array(12, 11, 13), PackedInt32Array(13, 11, 14), PackedInt32Array(14, 11, 15), PackedInt32Array(15, 11, 16), PackedInt32Array(18, 17, 19), PackedInt32Array(19, 17, 20), PackedInt32Array(9, 10, 21), PackedInt32Array(21, 10, 22), PackedInt32Array(6, 22, 5), PackedInt32Array(5, 22, 20), PackedInt32Array(20, 22, 19), PackedInt32Array(19, 22, 10), PackedInt32Array(19, 10, 13), PackedInt32Array(19, 13, 14)]
+vertices = PackedVector3Array(1.2034044, -0.76905704, -9.73975, -1.0465956, -0.76905704, -9.73975, -1.2965956, -0.76905704, -8.98975, 1.9534044, -0.76905704, -8.73975, -2.0465956, -0.76905704, -8.73975, -1.7965956, -0.76905704, -2.98975, 1.7034044, -0.76905704, -2.98975, 9.453404, -0.76905704, 1.0102501, 9.453404, -0.76905704, -1.2397499, 8.703404, -0.76905704, -1.4897499, 6.7034044, -0.76905704, 1.2602501, 9.453404, -0.76905704, 9.76025, 9.453404, -0.76905704, 8.26025, 6.7034044, -0.76905704, 8.01025, -9.296596, -0.76905704, 9.76025, 1.9534044, -0.76905704, -2.48975, -2.0465956, -0.76905704, -2.48975, -9.296596, -0.76905704, -2.48975, 8.453404, -0.76905704, -2.48975)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(2, 0, 4), PackedInt32Array(4, 0, 3), PackedInt32Array(4, 3, 6), PackedInt32Array(4, 6, 5), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 10), PackedInt32Array(12, 11, 13), PackedInt32Array(13, 11, 14), PackedInt32Array(16, 15, 10), PackedInt32Array(6, 15, 5), PackedInt32Array(5, 15, 16), PackedInt32Array(10, 13, 16), PackedInt32Array(16, 13, 17), PackedInt32Array(17, 13, 14), PackedInt32Array(9, 10, 18), PackedInt32Array(18, 10, 15)]
 agent_max_climb = 0.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_fgqcq"]
@@ -185,9 +185,6 @@ skeleton = NodePath("")
 [node name="Table" parent="NavigationRegion3D/hc_ckpt2" unique_id=1874804665 instance=ExtResource("6_vv27k")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.581519, -0.23305118, 4.6770344)
 
-[node name="Table2" parent="NavigationRegion3D/hc_ckpt2" unique_id=915595270 instance=ExtResource("6_vv27k")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.418481, -0.23305118, 4.6770344)
-
 [node name="LightmapGI" type="LightmapGI" parent="." unique_id=691939502 groups=["Lightmap"]]
 quality = 0
 bounces = 1
@@ -264,7 +261,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.65232, 4.138063, 7.277753)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.34768, 4.138063, 7.277753)
 
 [node name="Waypoints" type="MeshInstance3D" parent="." unique_id=1800534532]
-transform = Transform3D(-3.2584137e-07, 0, 2, 0, 2, 0, -2, 0, -3.2584137e-07, -10.051636, 2.6874046, -0.06650829)
+transform = Transform3D(-3.2584137e-07, 0, 2, 0, 2, 0, -2, 0, -3.2584137e-07, -10.051636, 2.6874046, 3.230053)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_fgqcq")
 script = ExtResource("13_moykc")
@@ -274,9 +271,10 @@ waypoints_and_groups = Dictionary[String, String]({
 "SCP-109": "st_testroom",
 "SCP-1223": "st_testroom",
 "SCP-2028": "Scp2028",
+"SCP-2075": "Scp2075Spawn",
 "SCP-249": "Scp249",
 "SCP-5270": "st_testroom",
 "SCP-686": "st_testroom",
 "SCP-988": "Scp988"
 })
-delimiter_after = 1
+delimiter_after = 2

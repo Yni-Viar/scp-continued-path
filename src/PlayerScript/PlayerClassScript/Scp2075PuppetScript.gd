@@ -14,7 +14,7 @@ func _on_trigger_body_entered(body: Node3D) -> void:
 
 func _on_trigger_body_exited(body: Node3D) -> void:
 	if body is MovableNpc && bodies_to_control.has(body.get_path()):
-		bodies_to_control.append(body.get_path())
+		bodies_to_control.erase(body.get_path())
 
 func special_action():
 	if control_counter < CONTROL_THRESHOLD:

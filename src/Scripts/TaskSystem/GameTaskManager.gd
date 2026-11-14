@@ -121,6 +121,7 @@ func trigger_event(event_type: SpecialEvent, res: GameTaskResource = null):
 		else:
 			all_tasks[res.internal_name] = GameTaskStruct.new(res, "")
 		_special_event_internal_task_name = res.internal_name
+		await get_tree().physics_frame
 		task_done.emit()
 
 ## Returns true if task exist (requires task's internal name)

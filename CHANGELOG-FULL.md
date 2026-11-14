@@ -4,10 +4,11 @@ This list contains all features, added in the game, or will be added in upcoming
 
 ## v10.6.0
 ### New SCPs
-- [ ] SCP-2075
-- [x] SCP-2845-J
+- SCP-2075
+- SCP-2845-J
 ### Misc changes
-- [x] Fixed bug, where SCP-2845 could be activated more, than 1 time.
+- Fixed bug, where SCP-2845 could be activated more, than 1 time.
+- Fixed bug, where activated SCP-023 would not show the task, if the game was restarted several times.
 
 ## v10.5.4 (2026.11.02)
 
