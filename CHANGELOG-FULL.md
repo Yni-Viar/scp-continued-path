@@ -2,7 +2,7 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
-## v10.6.0
+## v10.6.0 (2026.11.14)
 ### New SCPs
 - SCP-2075
 - SCP-2845-J
