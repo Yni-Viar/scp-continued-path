@@ -133,27 +133,12 @@ All files must have extension `.script`
 
 ### Common
 
-`start.script` - does the same, as `_ready` function (from Godot). Supported in all SkinnablePuppetScripts.
+`start.script` - does the same, as `_ready` function (from Godot).
 
-`update.script` - does the same, as `_physics_process` function (from Godot). Supported in all SkinnablePuppetScripts.
+`update.script` - does the same, as `_physics_process` function (from Godot).
 
-`special_action.script` - do something on interaction. Supported in custom classes, SCP-023 (since v10.1.0), SCP-737 (since v10.1.0) and SCP-1507 (since v10.1.0)
+`special_action.script` - do something on interaction.
 
-### Built-in classes
-
-`attack.script` - do something, when attacking. Only supported with SCP-1507 and SCP-939.
-
-`blink_started.script` - do something, when blink started. Only supported with SCP-347.
-
-`blink_ended.script` - do something, when blink ended. Only supported with SCP-173 and SCP-347.
-
-`crunch.script` - do something on neck snap. Only supported with SCP-173.
-
-`near_trigger_changed.script` - do something, if player enters your vision trigger. Only supported with SCP-939.
-
-`teleport.script` - do something on teleport. Only supported with SCP-650.
-
-### Custom classes
 #### Scripts
 
 `custom_action_1.script`, `custom_action_2.script`, `custom_action_3.script`, `custom_action_4.script` - do something in these 4 functions.

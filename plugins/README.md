@@ -2,9 +2,7 @@
 
 Plugin system allows to customize SCP: Continued Path via code.
 
-You can create either new NPCs, or customize existing ones.
-> You can customize only SCP-131, SCP-173, SCP-650, SCP-737 or SCP-1507
-> Several API functions are not supported in built-in puppets.
+Currently, only creating new NPCs is supported, modifying existing ones is no longer supported after v10.6.1
 
 **⚠️ Attention to Windows users - Make sure your plugin scripts use LF as end-of-line**
 > Default Windows CRLF will cause errors in your script.
@@ -17,7 +15,7 @@ Windows - `%APPDATA%\\SCPContPr\\mods\\puppets\\custom\\`
 
 ^nix/Linux - `~/.local/share/SCPContPr/mods/puppets/custom/`
 
-### Builtin plugins (or built-in NPCs)
+### built-in NPCs (you can change only their model)
 
 Windows - `%APPDATA%\\SCPContPr\\mods\\puppets\\builtin\\`
 
