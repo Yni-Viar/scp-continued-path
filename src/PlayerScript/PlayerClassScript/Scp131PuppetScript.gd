@@ -8,13 +8,11 @@ class_name Scp131PuppetScript
 @export var elapsed_time: float = 0.0
 
 # Called when the node enters the scene tree for the first time.
-func on_spawned():
-	
-	plugin_api_function("start")
+#func on_spawned():
+	#pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	plugin_api_function("update")
 	## Look at enemy
 	if active_puppets.size() > 0 && state == States.IDLE:
 		var prev_entity_distance: float = 16777216

@@ -11,12 +11,10 @@ var has_animations: bool = true
 func on_spawned() -> void:
 	if puppet_node.get_node_or_null("AnimationPlayer") == null:
 		has_animations = false
-	plugin_api_function("start")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	plugin_api_function("update")
 	#If is not watching
 	if watching_puppets.size() == 0:
 		#Wait
@@ -34,7 +32,6 @@ func _physics_process(delta: float) -> void:
 			if has_animations:
 				var pose: String = "Pose " + str(rng.randi_range(4, 10))
 				set_state(pose)
-			plugin_api_function("teleport")
 			# Look at player
 			look_at(random_human.global_position)
 			# reset timer

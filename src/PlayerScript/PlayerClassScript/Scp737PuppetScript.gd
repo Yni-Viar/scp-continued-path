@@ -12,7 +12,6 @@ var current_target: Node3D
 
 # Called when the node enters the scene tree for the first time.
 func on_spawned() -> void:
-	plugin_api_function("start")
 	if !get_parent().get_parent().get_node("ActionArea").body_entered.is_connected(on_action_area_body_entered):
 		get_parent().get_parent().get_node("ActionArea").connect("body_entered", on_action_area_body_entered)
 	if !get_parent().get_parent().get_node("ActionArea").body_exited.is_connected(on_action_area_body_exited):
@@ -21,12 +20,10 @@ func on_spawned() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	plugin_api_function("update")
 	if attacking && unlocked:
 		attack()
 
 func special_action():
-	plugin_api_function("special_action")
 	if get_tree().root.get_node_or_null("Game/StoryModeNode") != null:
 		get_tree().root.get_node("Game").finish_game(false, "GAME_OVER_SCP_737_BREACH")
 	if active_puppets.size() == 0:
@@ -43,7 +40,6 @@ func attack():
 		current_target = get_node(get_parent().get_parent().follow_target)
 		if current_target != null:
 			if current_target is MovableNpc:
-				plugin_api_function("attack")
 				if current_target.current_health[0] - 25.0 <= 0.0:
 					current_target.health_manage(-25.0, 0, "GAME_OVER_SCP_737")
 					active_puppets.erase(current_target)
@@ -62,7 +58,6 @@ func _on_active_puppets_changed() -> void:
 			get_parent().get_parent().follow_target = ""
 			get_parent().get_parent().wandering_system = MovableNpc.WanderingSystem.GENERIC_WANDER
 		else:
-			plugin_api_function("near_trigger_changed")
 			#Achievement
 			if Settings.setting_res.scp_study_progress_all.has("SCP-737"):
 				if !Settings.setting_res.scp_study_progress_all["SCP-737"]:

@@ -2,9 +2,10 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
-## v10.6.1
+## v10.6.1 (2026.11.15)
 
-- [x] Fully automate GitHub builds
+- Remove remains of builtin plugins - only changing SCP model is supported
+- Fully automate GitHub builds
 
 ## v10.6.0 (2026.11.14)
 ### New SCPs

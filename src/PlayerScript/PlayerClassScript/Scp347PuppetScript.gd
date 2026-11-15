@@ -11,13 +11,12 @@ var infrared_visibility: bool = false:
 		puppet_node.get_node(armature_name).visible = infrared_visibility
 
 # Called when the node enters the scene tree for the first time.
-func on_start_human() -> void:
-	super.on_start_human()
+#func on_start_human() -> void:
+	#super.on_start_human()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func on_update_human(delta: float) -> void:
-	super.on_update_human(delta)
 	scp_347_infrared_blink(delta)
 
 ## Shows for 8 seconds 347 position
@@ -26,10 +25,8 @@ func scp_347_infrared_blink(delta: float):
 		blink_timer -= delta
 	elif !infrared_visibility:
 		infrared_visibility = true
-		plugin_api_function("blink_started")
 		await get_tree().create_timer(0.5).timeout
 		infrared_visibility = false
-		plugin_api_function("blink_ended")
 		blink_timer = 8.0
 
 

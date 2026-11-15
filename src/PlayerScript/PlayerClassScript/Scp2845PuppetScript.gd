@@ -29,13 +29,10 @@ func on_spawned() -> void:
 		Console.print_info("THE DEER GOD CAME TO THIS FACILITY!", true)
 	else:
 		Console.print_info("THE DEER GOD CAME TO THIS FACILITY?", true)
-	plugin_api_function("start")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	plugin_api_function("update")
-	
 	match state:
 		States.IDLE:
 			set_state("Idle")

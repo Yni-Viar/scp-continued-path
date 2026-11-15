@@ -11,7 +11,6 @@ var eye_glow_strength: float = 0.25
 var timer: Timer
 
 func on_spawned() -> void:
-	plugin_api_function("start")
 	if get_tree().root.get_node_or_null("Game/StoryModeNode") == null:
 		glow_enabled = true if get_tree().root.get_node("Game").rng.randi_range(0, 3) == 2 else false
 	await get_tree().create_timer(0.5).timeout
@@ -21,7 +20,6 @@ func on_spawned() -> void:
 			timer = get_node(get_tree().root.get_node("Game/FoundationTask").all_tasks["task_023_emergency"].timer_path)
 
 func _physics_process(delta: float) -> void:
-	plugin_api_function("update")
 	match state:
 		States.IDLE:
 			call("set_state", "idle")
@@ -45,7 +43,6 @@ func set_state(anim_name: String) -> void:
 	#get_tree().root.get_node("Game").finish_game(false, "GAME_OVER_SCP_023")
 
 func special_action():
-	plugin_api_function("special_action")
 	if glow_enabled:
 		eye_glow_strength = 0.25
 		timer.stop()

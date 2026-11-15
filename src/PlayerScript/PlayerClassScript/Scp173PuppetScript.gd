@@ -29,7 +29,6 @@ var crunched_trigger: bool = false
 # Called when the node enters the scene tree for the first time.
 func on_spawned() -> void:
 	raycast = get_parent().get_parent().get_node("RayCastLow")
-	plugin_api_function("start")
 	#get_parent().get_parent().get_node("ActionArea").connect("body_entered", on_action_area_body_entered)
 	#get_parent().get_parent().get_node("ActionArea").connect("body_exited", on_action_area_body_exited)
 	#set_face()
@@ -37,7 +36,6 @@ func on_spawned() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	plugin_api_function("update")
 	scp_173_blink(delta)
 	# If is watching, set velocity to zero, else - go to player.
 	if ((is_blinking && watching_puppets.size() > 0 && current_human != null) || (watching_puppets.size() == 0 && current_human != null)) && !freeze:
@@ -51,7 +49,6 @@ func _physics_process(delta: float) -> void:
 					 load("res://Sounds/Character/Scp173/SCPSL/173_Hume_Shield_Break.ogg") if rng.randi_range(0, 15) == 15 else \
 					 load("res://Sounds/Character/Scp173/DNesov/NeckSnap.ogg")
 					get_parent().get_parent().get_node("InteractSound").play()
-					plugin_api_function("crunch")
 					collider.health_manage(-16777216, 0, "GAME_OVER_SCP_173")
 					crunched_trigger = true
 					active_puppets.erase(current_human)
@@ -81,7 +78,6 @@ func scp_173_blink(delta: float):
 				Settings.save_resource(Settings.setting_res)
 		blink_timer = blink_timer_default
 		await get_tree().create_timer(0.3).timeout
-		plugin_api_function("blink_ended")
 		is_blinking = false
 ## Movement control
 func scp_173_movement():

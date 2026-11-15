@@ -24,7 +24,6 @@ func on_spawned() -> void:
 	  !puppet_node.get_node("AnimationPlayer").has_animation("move"):
 			has_animations = false
 	get_parent().get_parent().follow_target = get_tree().get_first_node_in_group("PoI1507").get_path()
-	plugin_api_function("start")
 	if !get_parent().get_parent().get_node("ActionArea").body_entered.is_connected(on_action_area_body_entered):
 		get_parent().get_parent().get_node("ActionArea").connect("body_entered", on_action_area_body_entered)
 	if !get_parent().get_parent().get_node("ActionArea").body_exited.is_connected(on_action_area_body_exited):
@@ -33,7 +32,6 @@ func on_spawned() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	plugin_api_function("update")
 	if has_animations:
 		match state:
 			States.IDLE:
@@ -56,7 +54,6 @@ func set_state(anim: String):
 
 ## If tapped on SCP-1507, they will attack
 func special_action():
-	plugin_api_function("special_action")
 	scp_1507_state = Scp1507State.PURSUING
 	get_parent().get_parent().follow_target = get_tree().root.get_node("Game").protagonist.get_path()
 
@@ -64,7 +61,6 @@ func special_action():
 func attack(collider_path: String):
 	var test = get_node(collider_path)
 	if test != null:
-		plugin_api_function("attack")
 		test.health_manage(-5.0, 0, "GAME_OVER_SCP_1507")
 
 func on_action_area_body_entered(body: Node3D) -> void:
