@@ -2,6 +2,10 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
+## v10.6.3
+
+- [x] Make ReflectionProbes default on the Web
+
 ## v10.6.2 (2026.11.16)
 
 - Balance changes:
