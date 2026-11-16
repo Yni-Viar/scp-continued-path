@@ -19,7 +19,7 @@ msgid "S_JOHN_CROW"
 msgstr "Джон Кроу"
 
 msgid "S_ANDREW_WHITE"
-msgstr "Андрей Белый"
+msgstr "Андрей Белов"
 
 msgid "S_TASK_1"
 msgstr "Найдите ключ-карту в складской комнате."
@@ -32,7 +32,7 @@ msgstr "Поинтересуйтесь у SCP-347 насчет ключ-карт
 
 msgid "S_TASK_4"
 msgstr ""
-"Пойдите к Андрею Белому к\n"
+"Пойдите к Андрею Белову к\n"
 "камере содержания SCP-079."
 
 msgid "S_TASK_5"
