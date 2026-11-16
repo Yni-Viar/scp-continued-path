@@ -18,7 +18,7 @@ config/name="SCP: Continued Path"
 config/description="Play the game about Janusz Krzystofski...
 Choose your story path!
 Or do your daily job at Site-19."
-config/version="10.6.2"
+config/version="10.6.3"
 config/tags=PackedStringArray("game", "scp_foundation", "singleplayer", "story")
 run/main_scene="uid://b25hrjnoos5me"
 config/use_custom_user_dir=true
@@ -279,9 +279,8 @@ renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_s3tc_bptc=true
 textures/vram_compression/import_etc2_astc=true
-reflections/reflection_atlas/reflection_size.mobile=16
 reflections/reflection_atlas/reflection_count=256
 environment/ssao/quality=1
 lightmapping/denoising/denoiser=1
-reflections/reflection_atlas/reflection_size.web=4
 shading/overrides/force_vertex_shading.web=true
+reflections/reflection_atlas/reflection_size.web=64
