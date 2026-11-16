@@ -223,17 +223,11 @@ transform = Transform3D(1.31134e-07, 1, 4.37114e-08, -1, 1.31134e-07, 4.37114e-0
 [node name="industrial_wall_lamp6" parent="NavigationRegion3D/Props" unique_id=205893904 instance=ExtResource("8_ggo7t")]
 transform = Transform3D(1.31134e-07, 1, 4.37114e-08, -1, 1.31134e-07, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, -2.879815, -1.70225, -13.7078)
 
-[node name="industrial_wall_lamp28" parent="NavigationRegion3D/Props" unique_id=706682005 instance=ExtResource("8_ggo7t")]
-transform = Transform3D(1.31134e-07, 1, 4.37114e-08, -1, 1.31134e-07, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, -3.2787108, 3.37412, -22.7127)
-
 [node name="industrial_wall_lamp32" parent="NavigationRegion3D/Props" unique_id=1118803455 instance=ExtResource("8_ggo7t")]
 transform = Transform3D(8.7422606e-08, 1, 8.74228e-08, 8.742278e-08, -8.742279e-08, 1, 1, -8.742262e-08, -8.7422784e-08, -11.792703, 0.5732753, -15.7250805)
 
 [node name="industrial_wall_lamp38" parent="NavigationRegion3D/Props" unique_id=1393616193 instance=ExtResource("8_ggo7t")]
 transform = Transform3D(8.7422606e-08, 1, 8.74228e-08, 8.742278e-08, -8.742279e-08, 1, 1, -8.742262e-08, -8.7422784e-08, -11.792703, 0.5732753, -9.818796)
-
-[node name="industrial_wall_lamp29" parent="NavigationRegion3D/Props" unique_id=675072050 instance=ExtResource("8_ggo7t")]
-transform = Transform3D(1.31134e-07, 1, 4.37114e-08, -1, 1.31134e-07, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 2.8576422, 3.37412, -22.7127)
 
 [node name="industrial_wall_lamp8" parent="NavigationRegion3D/Props" unique_id=1124744855 instance=ExtResource("8_ggo7t")]
 transform = Transform3D(1.31134e-07, 1, 4.37114e-08, -1, 1.31134e-07, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 11.4068, -1.70225, -13.7078)
@@ -336,16 +330,31 @@ mesh = SubResource("TextMesh_sobq7")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.069623, -0.5846578, -13.066563)
 
 [node name="Light" parent="NavigationRegion3D/Props" unique_id=1422735351 instance=ExtResource("12_pxsbx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.471367, 6.722679, -9.427788)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.471092, 6.722679, -9.427788)
 
 [node name="Light2" parent="NavigationRegion3D/Props" unique_id=1877613080 instance=ExtResource("12_pxsbx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.471367, 6.722679, -18.003769)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.471092, 6.722679, -14.190217)
 
-[node name="Light3" parent="NavigationRegion3D/Props" unique_id=62854554 instance=ExtResource("12_pxsbx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.627253, 6.722679, -9.427788)
+[node name="Light5" parent="NavigationRegion3D/Props" unique_id=283716627 instance=ExtResource("12_pxsbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.471092, 6.722679, -18.190216)
 
-[node name="Light4" parent="NavigationRegion3D/Props" unique_id=1438586523 instance=ExtResource("12_pxsbx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.627253, 6.722679, -18.003769)
+[node name="Light3" parent="NavigationRegion3D/Props" unique_id=263790179 instance=ExtResource("12_pxsbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5842948, 6.722679, -9.427788)
+
+[node name="Light4" parent="NavigationRegion3D/Props" unique_id=565550796 instance=ExtResource("12_pxsbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5842948, 6.722679, -14.190217)
+
+[node name="Light6" parent="NavigationRegion3D/Props" unique_id=183948210 instance=ExtResource("12_pxsbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5842948, 6.722679, -18.190216)
+
+[node name="Light7" parent="NavigationRegion3D/Props" unique_id=1898704150 instance=ExtResource("12_pxsbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.335618, 6.722679, -9.427788)
+
+[node name="Light8" parent="NavigationRegion3D/Props" unique_id=1528281998 instance=ExtResource("12_pxsbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.335618, 6.722679, -14.190217)
+
+[node name="Light9" parent="NavigationRegion3D/Props" unique_id=1658622010 instance=ExtResource("12_pxsbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.335618, 6.722679, -18.190216)
 
 [node name="FireExtinguisher" parent="NavigationRegion3D/Props" unique_id=1929674108 instance=ExtResource("13_vligh")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -13.853614, -0.64040357, 9.9475)

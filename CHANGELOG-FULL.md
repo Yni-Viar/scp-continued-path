@@ -2,6 +2,13 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
+## v10.6.2 (2026.11.16)
+
+- Balance changes:
+  - Autumn and Halloween - SCP-2845-J spawns in 50% chance, SCP-2845 spawns in ~9% chance.
+  - Other seasons - SCP-2845-J does not spawn, SCP-2845 spawns in ~9% chance.
+- Lighten SCP-812 chamber.
+
 ## v10.6.1 (2026.11.15)
 
 - Remove remains of builtin plugins - only changing SCP model is supported

@@ -305,16 +305,28 @@ transform = Transform3D(-1.31134e-07, -1, -1.3113417e-07, -1, 1.31134e-07, 4.371
 [node name="industrial_wall_lamp36" parent="NavigationRegion3D/Props" unique_id=1403268237 instance=ExtResource("10_53pin")]
 transform = Transform3D(-1.31134e-07, -1, -1.3113417e-07, -1, 1.31134e-07, 4.37114e-08, -4.371139e-08, 1.3113417e-07, -1, -11.062899, -1.70225, 4.3425875)
 
+[node name="Light" parent="NavigationRegion3D/Props" unique_id=1031467019 instance=ExtResource("13_lfmvw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.91865, 6.722679, -9.427788)
+
+[node name="Light2" parent="NavigationRegion3D/Props" unique_id=1782896019 instance=ExtResource("13_lfmvw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.91865, 6.722679, -14.190217)
+
+[node name="Light5" parent="NavigationRegion3D/Props" unique_id=282887960 instance=ExtResource("13_lfmvw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.91865, 6.722679, -18.190216)
+
+[node name="Light3" parent="NavigationRegion3D/Props" unique_id=525165791 instance=ExtResource("13_lfmvw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6397505, 6.722679, -9.427788)
+
+[node name="Light4" parent="NavigationRegion3D/Props" unique_id=644905161 instance=ExtResource("13_lfmvw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6397505, 6.722679, -14.190217)
+
+[node name="Light6" parent="NavigationRegion3D/Props" unique_id=1915113081 instance=ExtResource("13_lfmvw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6397505, 6.722679, -18.190216)
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Props" unique_id=937740123]
 transform = Transform3D(16, 0, -2.27374e-13, 0, 16, 0, 2.27374e-13, 0, 16, -8.64336, 7.10485, -22.5862)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_eaxjk")
-
-[node name="Light" parent="NavigationRegion3D/Props" unique_id=1618619544 instance=ExtResource("13_lfmvw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.471367, 6.722679, -9.427788)
-
-[node name="Light2" parent="NavigationRegion3D/Props" unique_id=303028822 instance=ExtResource("13_lfmvw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.471367, 6.722679, -18.003769)
 
 [node name="FireExtinguisher" parent="NavigationRegion3D/Props" unique_id=1724110773 instance=ExtResource("23_3j8ej")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -13.853614, -0.64040357, 9.9475)
@@ -472,7 +484,7 @@ visible = false
 mesh = SubResource("QuadMesh_ntbkr")
 
 [node name="GodettePlush" parent="." unique_id=1521205680 instance=ExtResource("21_lfmvw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.866111, -1.3187697, -13.855705)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.730034, -1.3187697, -13.855705)
 
 [connection signal="body_entered" from="WaterFlow/SplashTrigger" to="." method="_on_splash_trigger_body_entered"]
 [connection signal="body_entered" from="Scp812Trigger" to="." method="_on_scp_812_trigger_body_entered"]

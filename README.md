@@ -1,6 +1,6 @@
 # SCP: Continued Path
 
-Available on [GameJolt](https://gamejolt.com/games/scpcontpr/998566), [itch.io](https://yniviar.itch.io/scp-continued-path)
+Available on [GameJolt](https://gamejolt.com/games/scpcontpr/998566) (browser version available), [itch.io](https://yniviar.itch.io/scp-continued-path)
 
 ## About
 
@@ -16,13 +16,13 @@ More gestures you can see in the in-game settings.
 
 ## Requirements to play
 
+> Since v10.6.1, only official Godot versions are used, since automatic CI/CD build is used by-default.
+
 - 🐧Linux distributions from 2024 and newer
 
-   > x86-64 or arm64 (if official build is used) binaries available
+   > x86-64 or arm64 binaries available
 
    > Linux distributions from 2022-2023 is not supported since v8.0
-
-   > Linux distributions from 2024-2025 were not supported in v10.5.3-10.5.4, but became supported again in 10.6.0
 
 - 🪟Windows 10 (all updates (build 14393 and higher is recommended)) and 11 (all updates)
    > x86-64 or arm64 binaries available
@@ -98,8 +98,15 @@ More gestures you can see in the in-game settings.
 |🟢SCP-2306|✅, > 8.1.0|✅, > 8.1.0|📃 Task only/repairs SCP-5270|
 |🟢SCP-2471\*|✅, > 8.0.0|✅, > 8.0.0|✅ Full|
 |🔵SCP-2845\*|❓, > 10.3.0|❓, > 10.3.0|❓ Their containment procedures are too bad written - using own fantasy. **Available only in Casual mode!**|
-|🔵SCP-2845-J\*|🍁❓, > 10.6.0|🍁❓, > 10.6.0|❌ It is another identity of SCP-2845, who learned about joke article, and tried to pretend that creature 🙂 **Available only in Casual mode!**|
+|🔵SCP-2845-J\*|🎃🍁❓, > 10.6.0|🎃🍁❓, > 10.6.0|❌ It is another identity of SCP-2845, who learned about joke article, and tried to pretend that creature 🙂. **Available only in Casual mode!**|
 |🟢SCP-5270|✅, > 8.1.0|✅, > 8.1.0|❓ Implemented only one event out of three|
+
+> SCP-649 always spawns in December, in other seasons it never spawns
+
+> In Autumn, 16/32 spawn chance of SCP-2845 will spawn SCP-2845-J and 3/32 chance - regular SCP-2845. In other cases, the SCP will be despawned.
+> In other seasons, SCP-2845-J never spawns, and SCP-2845 chance will spawn with 3/32 chance.
+
+> SCP-023 critical state happens in 25% chance.
 
 ##### SCP-261-only SCPs
 > All mentioned SCPs exist in both Lite and Full versions, as SCP-261
@@ -136,8 +143,8 @@ More gestures you can see in the in-game settings.
 <!-- ❄️ - Spawns only in January and February -->
 <!-- 🌿 - Spawns only in Spring -->
 <!-- ☀️ - Spawns only in Summer -->
-<!-- 🎃 - Spawns only in October -->
 🍁 - Spawns only in September and November
+🎃 - Spawns only in October
 ⛄ - Spawns only in December.
 ⛔ - Deprecated for Lite version only, and will be removed, if 200 MB limit (for Web version) is exceeded.
 
