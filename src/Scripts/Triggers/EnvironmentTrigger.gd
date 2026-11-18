@@ -41,4 +41,4 @@ func apply_environment(environment: Environment, default_background: bool = fals
 		get_tree().root.get_node("Game/WorldEnvironment").environment.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
 		get_tree().root.get_node("Game/WorldEnvironment").environment.ambient_light_color = Color(0.5, 0.5, 0.5)
 	else:
-		get_tree().root.get_node("Game/WorldEnvironment").environment.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
+		get_tree().root.get_node("Game/WorldEnvironment").environment.ambient_light_source = Environment.AMBIENT_SOURCE_SKY if !default_background else Environment.AMBIENT_SOURCE_COLOR

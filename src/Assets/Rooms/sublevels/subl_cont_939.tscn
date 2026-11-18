@@ -101,6 +101,7 @@ mesh_paths = Array[NodePath]([NodePath("NavigationRegion3D/Cube_003")])
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="." unique_id=1523512698 groups=["ReflectionProbe"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007019043, 4.645158, 6.509674)
+visible = false
 size = Vector3(42.222046, 10.329834, 60.524353)
 origin_offset = Vector3(0, -2.085, 29.275)
 

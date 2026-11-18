@@ -2,9 +2,11 @@
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 
-## v10.6.3
+## v10.6.3 (2026.11.18)
 
-- [x] Make ReflectionProbes default on the Web
+- Reflection probe optimization:
+  - Made this effect default on Web and Android
+  - Fixed stutter on startup caused by Reflection Probe, at the cost of longer loading times.
 
 ## v10.6.2 (2026.11.16)
 

@@ -160,6 +160,7 @@ delimiter_after = 1
 
 [node name="ReflectionProbe2" type="ReflectionProbe" parent="." unique_id=1817110273 groups=["ReflectionProbe"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0497649, 2.3899384, -0.0816641)
+visible = false
 blend_distance = 0.4
 size = Vector3(19.8978, 7.407487, 20.4)
 box_projection = true

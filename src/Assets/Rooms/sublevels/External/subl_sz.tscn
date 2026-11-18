@@ -1239,6 +1239,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.573662, 7.5126076, -7.7139
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="." unique_id=1710325338 groups=["ReflectionProbe"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7261658, -9.300934, -0.26837158)
+visible = false
 max_distance = 128.0
 size = Vector3(184.3056, 64.52985, 168.73743)
 origin_offset = Vector3(0, 16.975, -33.57)

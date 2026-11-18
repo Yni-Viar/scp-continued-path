@@ -58,40 +58,6 @@ func _ready() -> void:
 		rng.randomize()
 	$FacilityGenerator.generate_rooms()
 	
-	# Apply settings
-	# Enable or disable glow
-	$WorldEnvironment.environment.glow_enabled = Settings.setting_res.glow
-	# Enable SSAO in OpenGL only in Godot 4.6
-	if RenderingServer.get_current_rendering_method() == "forward_plus" || \
-	 RenderingServer.get_current_rendering_method() == "gl_compatibility":
-		$WorldEnvironment.environment.ssao_enabled = Settings.setting_res.ssao
-	
-	$WorldEnvironment.environment.tonemap_mode = Settings.setting_res.tonemapper
-	if Settings.setting_res.tonemapper != Environment.TONE_MAPPER_LINEAR || \
-	 Settings.setting_res.tonemapper != Environment.TONE_MAPPER_AGX:
-		$WorldEnvironment.environment.tonemap_white = 2.0
-	else:
-		$WorldEnvironment.environment.tonemap_white = 1.0
-	
-	
-	if Settings.setting_res.lighting != SettingsResource.Lighting.LIGHTMAP:
-		if Settings.setting_res.lighting == SettingsResource.Lighting.NONE:
-			$WorldEnvironment.environment.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-			$WorldEnvironment.environment.ambient_light_color = Color(0.5, 0.5, 0.5)
-		for node in get_tree().get_nodes_in_group("Lightmap"):
-			if node is LightmapGI:
-				node.queue_free()
-	
-	## Enable/disable reflection probes (cubemap)
-	for node in get_tree().get_nodes_in_group("ReflectionProbe"):
-		if node is ReflectionProbe:
-			if !Settings.setting_res.reflection_probe: # || Settings.setting_res.ssr:
-				node.hide()
-			else:
-				node.show()
-				if Settings.setting_res.lighting == SettingsResource.Lighting.NONE:
-					node.ambient_mode = ReflectionProbe.AMBIENT_COLOR
-					node.ambient_color = Color(0.25, 0.25, 0.25, 1.0)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -108,8 +74,54 @@ func _process(delta: float) -> void:
 			return
 		
 
+func apply_settings():
+	# Apply settings
+	# Enable or disable glow
+	$WorldEnvironment.environment.glow_enabled = Settings.setting_res.glow
+	# Enable SSAO
+	if RenderingServer.get_current_rendering_method() == "forward_plus" || \
+	 RenderingServer.get_current_rendering_method() == "gl_compatibility":
+		$WorldEnvironment.environment.ssao_enabled = Settings.setting_res.ssao
+	
+	$WorldEnvironment.environment.tonemap_mode = Settings.setting_res.tonemapper
+	if Settings.setting_res.tonemapper != Environment.TONE_MAPPER_LINEAR || \
+	 Settings.setting_res.tonemapper != Environment.TONE_MAPPER_AGX:
+		$WorldEnvironment.environment.tonemap_white = 2.0
+	else:
+		$WorldEnvironment.environment.tonemap_white = 1.0
+	
+	$WorldEnvironment.environment.ambient_light_color = Color(0.5, 0.5, 0.5)
+	
+	if Settings.setting_res.lighting != SettingsResource.Lighting.LIGHTMAP:
+		for node in get_tree().get_nodes_in_group("Lightmap"):
+			if node is LightmapGI:
+				node.queue_free()
+	
+	## Enable/disable reflection probes (cubemap)
+	for node in get_tree().get_nodes_in_group("ReflectionProbe"):
+		if node is ReflectionProbe:
+			if !Settings.setting_res.reflection_probe: # || Settings.setting_res.ssr:
+				node.hide()
+			else:
+				node.max_distance = 56.0
+				
+				if Settings.setting_res.lighting == SettingsResource.Lighting.NONE:
+					node.ambient_mode = ReflectionProbe.AMBIENT_COLOR
+					node.ambient_color = Color(0.25, 0.25, 0.25, 1.0)
+				
+				node.show()
+				
+				## Reflection probe generation workaround
+				const WAIT_PER_PROBE: int = 18
+				for i in WAIT_PER_PROBE:
+					await get_tree().process_frame
+	if Settings.setting_res.lighting != SettingsResource.Lighting.NONE:
+		$WorldEnvironment.environment.ambient_light_color = Color(0.0, 0.0, 0.0, 1.0)
+	else:
+		$WorldEnvironment.environment.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
 
 func _on_facility_generator_generated() -> void:
+	apply_settings()
 	# Spawn surface zone
 	#var sz: Node3D = load("res://Assets/Rooms/sublevels/External/subl_sz.tscn").instantiate()
 	#sz.position.y = 256.0

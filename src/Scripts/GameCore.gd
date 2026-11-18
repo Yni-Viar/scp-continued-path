@@ -72,10 +72,21 @@ func _ready() -> void:
 		rng.randomize()
 	$FacilityGenerator.generate_rooms()
 	
+	
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if Settings.setting_res.casual_mode_hunger && protagonist != null:
+		# Hunger and thirst mechanic
+		protagonist.health_manage(-delta * 0.25, 2, "GAME_OVER_THIRST")
+		protagonist.health_manage(-delta * 0.1875, 3, "GAME_OVER_HUNGER")
+
+func apply_settings():
 	# Apply settings
 	# Enable or disable glow
 	$WorldEnvironment.environment.glow_enabled = Settings.setting_res.glow
-	# Enable SSAO in OpenGL only in Godot 4.6
+	# Enable SSAO
 	if RenderingServer.get_current_rendering_method() == "forward_plus" || \
 	 RenderingServer.get_current_rendering_method() == "gl_compatibility":
 		$WorldEnvironment.environment.ssao_enabled = Settings.setting_res.ssao
@@ -87,11 +98,9 @@ func _ready() -> void:
 	else:
 		$WorldEnvironment.environment.tonemap_white = 1.0
 	
+	$WorldEnvironment.environment.ambient_light_color = Color(0.5, 0.5, 0.5)
 	
 	if Settings.setting_res.lighting != SettingsResource.Lighting.LIGHTMAP:
-		if Settings.setting_res.lighting == SettingsResource.Lighting.NONE:
-			$WorldEnvironment.environment.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-			$WorldEnvironment.environment.ambient_light_color = Color(0.5, 0.5, 0.5)
 		for node in get_tree().get_nodes_in_group("Lightmap"):
 			if node is LightmapGI:
 				node.queue_free()
@@ -102,21 +111,25 @@ func _ready() -> void:
 			if !Settings.setting_res.reflection_probe: # || Settings.setting_res.ssr:
 				node.hide()
 			else:
-				node.show()
+				node.max_distance = 56.0
+				
 				if Settings.setting_res.lighting == SettingsResource.Lighting.NONE:
 					node.ambient_mode = ReflectionProbe.AMBIENT_COLOR
 					node.ambient_color = Color(0.25, 0.25, 0.25, 1.0)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if Settings.setting_res.casual_mode_hunger && protagonist != null:
-		# Hunger and thirst mechanic
-		protagonist.health_manage(-delta * 0.25, 2, "GAME_OVER_THIRST")
-		protagonist.health_manage(-delta * 0.1875, 3, "GAME_OVER_HUNGER")
-
+				
+				node.show()
+				
+				## Reflection probe generation workaround
+				const WAIT_PER_PROBE: int = 18
+				for i in WAIT_PER_PROBE:
+					await get_tree().process_frame
+	if Settings.setting_res.lighting != SettingsResource.Lighting.NONE:
+		$WorldEnvironment.environment.ambient_light_color = Color(0.0, 0.0, 0.0, 1.0)
+	else:
+		$WorldEnvironment.environment.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
 
 func _on_facility_generator_generated() -> void:
+	apply_settings()
 	await get_tree().create_timer(0.375).timeout
 	$LoadingScreen/LoadProgress.value = 75.0
 	set_process(false)

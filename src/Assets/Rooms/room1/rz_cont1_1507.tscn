@@ -223,6 +223,7 @@ transform = Transform3D(0.9731871, 0, -0.23001568, 0, 1, 0, 0.23001568, 0, 0.973
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="." unique_id=2142830666 groups=["ReflectionProbe"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.834656, 2.36401, 1.47607)
+visible = false
 blend_distance = 0.4
 max_distance = 64.0
 size = Vector3(16.9332, 7.24658, 17.0479)

@@ -131,6 +131,7 @@ visible = false
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="." unique_id=1972108830 groups=["ReflectionProbe"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.36942, 0)
+visible = false
 blend_distance = 0.4
 max_distance = 64.0
 size = Vector3(20.4, 5.36684, 20.4)

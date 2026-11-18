@@ -415,6 +415,7 @@ light_data = ExtResource("16_5njnc")
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="." unique_id=1139405735 groups=["ReflectionProbe"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008231908, 1.9568753, 0.416464)
+visible = false
 blend_distance = 0.4
 max_distance = 64.0
 size = Vector3(19.472944, 6.4287205, 20.0845)
